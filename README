@@ -1,0 +1,8 @@
+This project is primarily about learning. This is the third iteration of a website I'll use as a blog, hub for contacts, and to showcase my work. 
+
+About the time I finished the last version, I decided the layout was no longer appealing, and that the coding required in the stylesheets was especially unappealing. I'm working toward understanding how best to implement tools like Sass and Compass to speed up my workflow, make my stylesheets more organized, and allow for changes to the site to be more seamless and less likely to break the layout.
+
+Other than looking professional, my end goal for the site is to be a place to try new techniques and tools. Thus, the site should be in constant flux; fail forward!
+
+-JS
+2/5/2014
