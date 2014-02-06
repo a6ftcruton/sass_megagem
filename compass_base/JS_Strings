@@ -1,0 +1,40 @@
+var somestring = "stringy"
+
+// Find length (1-based)
+somestring.length
+
+// Find character at a specific index (zero-based)
+somestring.charAt(0);
+
+// Conver to uppercase
+somestring.toUpperCase();
+
+// Convert to lowercase
+somestring.toLowerCase();
+
+// Concatenation
+var string2 = "second string here!"
+somestring.concat(" " + string2 + "!");
+
+// Indexing from beginnging of string
+var word1 = "first string"
+word1.indexOf("t")
+
+// Indexing from end of string
+var word1 = "first string"
+word1.lastIndexOf("t")
+
+// Retrieve matches of any part of a string matching a regular expression
+syntax = str.match(regexp);
+var str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+var regexp = /[A-E]/gi;
+var matches_array = str.match(regexp);
+console.log(matches_array);
+// returns -> ["A", "B", "C", "D", "E", "a", "b", "c", "d", "e"] 
+
+// Replacing any occurring matches that you specify with new characters
+var regex = /apples/gi;
+var str = "Apples are round, and apples are juicy.";
+var newstr = str.replace(regex, "oranges");
+print(newstr);
+// returns -> oranges are round, and oranges are juicy.

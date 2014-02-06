@@ -1,0 +1,49 @@
+// Colors based on Solarized Palette
+// https://gist.github.com/6479462.git
+// =============================================
+$lightgray      : #819090;
+$gray           : #708284;
+$mediumgray     : #536870;
+$darkgray       : #475B62;
+$darkblue       : #0A2933;
+$darkerblue     : #042029;
+$paleryellow    : #FCF4DC;
+$paleyellow     : #EAE3CB;
+$yellow         : #A57706;
+$orange         : #BD3613;
+$red            : #D11C24;
+$pink           : #C61C6F;
+$purple         : #595AB7;
+$blue           : #2176C7;
+$cyan           : #259286;
+$green          : #738A05;
+
+//Legacy colors from original Megagem site
+//=============================================
+$chartreuse			: #7FFF00;
+$bg-blue				: #006699;
+$dark-header    : #00344D; // 
+
+//Experimental Colors:
+$color1: darken(#006699, 15%);  			// header/footer bg
+$color2: #FAE9A4; 										// header links 
+$hover : #B8B3D6;
+$color3: lighten(#4B88A6, 20%);				// body bg
+$color4: #002232; 										// body text and headings
+$color5: #819090;  							 	 	  // alt for a tags
+$color6: #575C62; 										//alt for body
+$color7: #E1FAC3;   									// CREAM1
+$color8: #EAFFC4; 										// CREAM2
+$color9: desaturate(#FAE9A4, 35%);		// CREAMISH
+
+// Font Stacks
+//=============================================
+
+$font-body: Tenor Sans, Georgia, serif;
+$font-header: PT Serif, Helvetica, serif;
+$font-link: PT Sans, serif;
+
+$Medium: 45em;	// < ~ 750px wide with 16px body font
+$Large: 60em; // < ~ 1200px wide with 16px body font
+$XL: 78em; 
+

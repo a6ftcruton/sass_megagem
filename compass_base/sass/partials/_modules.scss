@@ -1,0 +1,320 @@
+// ============================================ //
+// -----------------  HEADER ------------------ //
+// ============================================ //
+
+
+.layout-header {
+	position: relative;
+	display: block;	
+/*	width: 100%;		
+*/	vertical-align: middle;
+	
+	@include single-box-shadow;
+	height: 4.5em;
+	max-height: 4.5em;
+		.nav-container, .soc-container {
+		display: none;
+}
+	/* MEDIUM STYLES*/
+		@include at-breakpoint($Medium) {
+				.soc-container {
+					display: table;    /*Works to vertically center (inline) child  elements*/
+					text-align: center;
+					height: 50%;
+					max-width: 30%;
+					position: absolute;
+		  		top: 0; left: 0; bottom: 0; right: 0;
+		  		margin: auto;
+		  		@include span-columns(2 omega);
+		  		@include post(1);
+/*		  		@include post(1.5);  			/* Susy doesn't like floating numbers for this*/
+		  			.soc-link {
+							display: table-cell;
+							vertical-align: middle;
+							padding: 0 0.5em;
+						} /*soc-link*/
+				} 
+						/*.nav-link {
+							margin: auto 3%;
+							font-size: 1.2em;
+							display: table-cell;
+							vertical-align: middle;
+						}*/
+				}
+			@include at-breakpoint($Large) {
+				.soc-container {
+						@include span-columns(2 omega);
+						@include post(1);
+							.soc-link {
+								padding-right: 1em;
+								font-size: 0.8em;
+							}
+				}
+				.nav-container {
+					display: block;
+					height: 100%;
+					width: 50%;
+					margin-left: 12.5rem;
+					text-align: center;
+					letter-spacing: 0.2em;
+					white-space: nowrap;
+					overflow: hidden;
+					padding: 0;					
+		  			.nav-link {
+		  				display: inline-block;
+		  				width: 5.5em;
+		  				line-height: 3.8em;
+		  				font-size: 1.2rem;
+		  			}
+
+				}				
+			}
+/*	min-height: 50%;	
+*/		/*.nav-container {
+			text-align: center;
+				.nav-link {
+					margin: 0.5em;
+				}
+		} // nav-container
+		.soc-container {
+			text-align: center;
+			padding-top: 0.7em;
+				.soc-link {
+					margin: 0 7%;
+				}
+		}*/
+}
+.menu {	
+			// sassy-button in _base
+			height: 3rem;
+			float: right;
+			margin-top: 0.7rem;
+			font-size: 0.9rem;
+
+}
+.menu:hover {
+	background-color: lighten($color1, 5%);
+}
+.menu:hover i {
+	color: $color9;
+}
+
+.header-logo {
+	height: 1.1rem;		/*Absolute Vert Centering: define a height, pos=abs, margin=auto; Container's pos=rel*/
+	float: left;
+	position: absolute;
+	margin: auto 0 auto 2em;
+	top: 0; right: 0; bottom:0; left: 0;
+	opacity:(0.90);
+	
+/*	vertical-align: middle;
+	margin-top: 8%;
+	margin-left: 5%;*/
+
+}
+.title {
+	border-top: 3px solid $color4;
+	border-bottom: 3px solid $color4;
+	text-align: center;
+		h2, h4 {
+			margin: 0.5em 0;
+			}
+	@include at-breakpoint($Large) {
+		position: relative;
+		float: left;
+		clear: both;
+		max-width: 15em;
+		margin-right: 1em;
+		margin-top: 1em;
+		/*margin-left: 15vw;*/
+	}
+}
+.title h2 {
+	@include at-breakpoint($Large){
+	padding-top: 0.6rem;
+		}
+	}
+.title h4 {
+	@include at-breakpoint($Large){
+	padding-bottom: 0.6rem;
+	}
+}
+
+// =========== INTRO ===========
+.intro {
+	display: table;
+	position: relative;
+	text-align: center;
+	vertical-align: middle;
+	width: 100%;
+	padding: 2rem 2rem;
+	@include single-box-shadow;
+}
+.intro-pic {
+min-width: 125px;
+max-width: 45%;
+@include box-shadow(0 0 10px $color1);
+}
+
+// ============================================ //
+// ----------------- CONTENT ------------------ //
+// ============================================ //
+.archive-wrapper {
+	display:none;  // change to display for larger layouts
+}
+
+article {
+	margin-top: 2em;
+	padding-top: 1em;
+	padding-bottom: 3em;
+	@include at-breakpoint($Medium) {
+		@include span-columns(11, 12);
+		@include pad(1, 0, 12);		// Look up the second argument of this, ya big dummy!
+		padding-top: 1.5em;
+	}
+	@include at-breakpoint($Large) {
+		@include span-columns(10, 12);
+		@include pad(2, 0, 12);
+	}
+}
+
+
+
+// ============================================ //
+// ----------------- FOOTER  ------------------ //
+// ============================================ //
+.layout-footer {
+	width: 100%;
+	text-align: center;
+	position: relative;
+	padding: 1em;
+	@include single-box-shadow;
+	display: block;
+}
+.footer-navigate {
+	display: none;
+}
+/*.footer-bio {
+	display: none;
+}*/
+/*	@include at-breakpoint($Medium) {
+		display: block;
+		width: 20em;
+		border: 1px dashed white;
+		display: block;
+		margin: 2em 5%;
+		float: left;
+}
+	}*/
+
+.footer-connect,
+.footer-share {
+	border: 1px dashed white;
+	display: block;
+	width: 50%;
+	line-height: 1.5em;
+	font-size: 1em;
+	ul {
+			margin: 0;
+			padding: 0;
+		}
+			[class^="footer-link"] {
+				padding: 0.2em;
+			}
+				[class^="fa"] {
+					margin-right: 0.5em;
+					margin-left: 0.2em;
+				}
+}
+.footer-connect {
+	float: left;
+	text-align: left;
+}
+.footer-share {
+	float: right;
+	text-align: right;
+}
+/*.footer-link-share {
+	float: right;
+}*/
+.footer-link-connect,
+.footer-link-share {
+	display: block;
+	width: 100%;
+	border-bottom: 1px solid $color1;
+}
+.footer-logo {
+	width: 50%;
+}
+
+.copyright {
+	clear: both;
+	text-align: center;
+	font-size: 0.5em;
+	padding-top: 2em;
+/*	padding: 0.5em;
+*/
+}
+/*.footer-bio {
+	width: 200px;
+	height: auto;
+	padding: 1em;
+}
+.footer-logo {
+	width: 100%;
+	height: auto;
+	padding: 1em;
+}*/
+// SAVED OLD STYLE for FOOTER (if you screw it up) ======================================
+/*
+.footer-bio {
+	display: none;
+	@include at-breakpoint($Medium){
+		@include span-columns(6, 12);
+		display: inline-block;
+		width: 20em;
+		.footer-logo {
+			width: 50%;
+			margin: 2em, auto, 0, auto;
+		}
+		.footer-bio-text {
+			text-align: left;
+			font-size: 1em;
+		}
+		.footer-mypic {
+			float: left;
+			margin: 5%;
+			padding-top: 3%;
+		}
+		.footer-bio-text {
+			text-align: left;
+			font-size: 0.85em;
+		}
+		
+}
+} // footer-bio 
+.footer-navigate {
+	display: none;     /*Change for lrg display? or just add an up arrow (jQuery?) or menu button?*/
+/*}
+.footer-connect, .footer-share {
+	width: 8em;			
+	max-width: 50%;
+	margin: 2em auto;
+	display: inline-block;
+	border: 1px solid white;
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+			[class^="footer-link"] {
+				padding: 0.2em;
+				text-align: left;
+			}
+				[class^="fa"] {
+					margin-right: 0.5em;
+					margin-left: 0.2em;
+				}
+	}
+
+
+*/

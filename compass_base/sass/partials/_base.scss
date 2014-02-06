@@ -1,0 +1,145 @@
+@import "susy";
+
+// Font Awesome Fonts and Icons
+@import url('http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
+
+// Google Fonts
+@import url('http://fonts.googleapis.com/css?family=Tenor+Sans');
+@import url('http://fonts.googleapis.com/css?family=PT+Sans');
+@import url('http://fonts.googleapis.com/css?family=PT+Serif');
+
+// ================================================
+//  Define Constant Styles (device-width independent)
+//    ** Defaults: colors and font styes ONLY ** 
+// ================================================
+
+* {
+	list-style: none; 
+}
+html {
+	height: 100%
+}
+[href*="/"], 
+.mailto {
+	text-decoration: none;
+}
+//
+// 
+//
+// Default Font Sizes
+		body {
+			font-size: 1em;
+			line-height: 1.4;
+		}
+// Font Family
+body {
+	background-color: $color9;
+}
+p {
+	font-family: $font-body;
+}
+a {
+	font-family: $font-link;
+}
+h1, h2, h3, h4, h5, h6, lh {
+	font-family: $font-link;
+}
+// Font Size
+article {
+	font-size: 0.9em;
+	@include at-breakpoint($Medium) {
+				font-size: 1.2em;
+				} 
+				@include at-breakpoint($Large) {
+				font-size:1.25em;
+				}
+				@include at-breakpoint($XL) {
+				font-size: 1.5em;
+				}
+}
+.intro {
+	font-size: 1rem;
+	&.intro-headline {font-size: larger}
+	@include at-breakpoint($Medium) {
+		font-size: 1.2rem;
+	};
+	@include at-breakpoint($Large) {
+	font-size: 1.3rem;
+	}
+	@include at-breakpoint($XL) {
+	font-size: 1.5rem;
+	}
+}
+.intro-headline {
+	font-weight: 800;
+}
+// Default COLORS 
+		header, footer {
+			background-color: $color1;
+		}
+		.menu {	
+			@include sassy-button("matte", 5px, 19px, $color1, saturate($color1, 35%), #fff, "raised");
+		}
+		[class="fa fa-bars fa-2x"]{   	//Selecting only icons in header  
+			color: $color3;
+			// opacity: (0.90);
+		}
+		.nav-link, .soc-link {
+			color: $color3;
+			background-color: $color1;
+		}
+		.intro {
+		background-color: $color3;
+		}
+		article p, 
+		.title {
+			color: $color4;
+		}
+
+		a, i {
+			color: $color3;
+		}	
+
+			a:hover, i:hover, .nav-link:hover, .footer-link-connect:hover>i {
+				@include transition-property(color, background-color);
+				@include transition-duration(0.2s);
+				color: $color9;
+			}
+			.nav-link:hover{
+				@include transition-property(color, background-color);
+				@include transition-duration(0.2s);
+				background-color: lighten($color1, 5%);
+				}
+			.footer-link-connect:hover, .footer-link-share:hover {
+				@include transition-property(color, background-color, border-bottom);
+				@include transition-duration(0.2s);
+				color: $color9;
+				background-color: lighten($color1, 5%);
+				border-bottom: 1px solid $color9;
+			}
+
+			
+		
+			lh, .footer-bio-text, .copyright{
+				color: darken($color9, 15%);
+			}
+			.footer-link-connect {
+			color: $color3;
+			}
+			
+
+			
+		
+
+::-moz-selection {
+	text-shadow: none;
+}
+::selection {
+	text-shadow: none;
+}
+
+
+
+
+
+
