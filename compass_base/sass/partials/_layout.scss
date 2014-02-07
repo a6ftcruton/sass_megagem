@@ -10,40 +10,9 @@ $container-style: fluid;
 
 $border-box-sizing: true;					// '@include border-box-sizing' also valid way to do this
 
-// Set all elements with a class beginning 'layout' to a container (grid context)
+// Define Container elements
+// =====================================================================
 [class ^="layout"] { 
 	@include container;
 	//@include susy-grid-background;
-}
-
-// SUSY Breakpoint Variables (Called in Variables file)
-// =====================================================================
-// $Medium: 45em;	// < ~ 750px wide with 16px body font
-// $Large: 60em; // < ~ 1200px wide with 16px body font
-// $XL: 78em; 
-
-* {
-	@include bs(border-box); 
-}
-.footer-connect, .footer-share {
-	@include at-breakpoint($Medium){
-	max-width: 30%
-  }
-}
-.footer-bio {
-	display: none;
-	//$Med
-	@include at-breakpoint($Medium){
-	display: block;
-	width: 30%; //5%;
-	height: 10em;
-	border: 1px dashed black;
-	position: absolute;
-	bottom: 0; left: 0; right: 0; top: 0;
-	margin: 0 auto;
-	padding: 0.5em;
-		.footer-bio-text {
-		display: none;
-		}
-	}
 }

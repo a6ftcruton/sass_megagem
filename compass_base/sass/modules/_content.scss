@@ -1,0 +1,22 @@
+// ============================================ //
+// ----------------- CONTENT ------------------ //
+// ============================================ //
+.archive-wrapper {
+	display:none;  // change to display for larger layouts
+}
+
+article {
+	margin-top: 2em;
+	padding-top: 1em;
+	padding-bottom: 3em;
+	@include at-breakpoint($Medium) {
+		@include span-columns(11, 12);
+		@include pad(1, 0, 12);		// Look up the second argument of this, ya big dummy!
+		padding-top: 1.5em;
+	}
+	@include at-breakpoint($Large) {
+		@include span-columns(10, 12);
+		@include pad(2, 0, 12);
+	}
+}
+

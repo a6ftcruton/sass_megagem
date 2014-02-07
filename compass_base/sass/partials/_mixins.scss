@@ -3,3 +3,83 @@
 	-moz-box-sizing: $bs-type;
 	box-sizing: $bs-type;
 }
+
+@mixin transition-hover($color, $background: "", $border-btm:""){
+	@include transition-property(color, background-color, border-bottom);
+	@include transition-duration(0.2s);
+	color: $color;
+	background-color: $background;
+	border-bottom: $border-btm;
+}
+
+@mixin mq-font-sizes($default, $M, $L, $X) {
+	font-size: $default;
+	@include at-breakpoint($Medium) {font-size: $M;}
+	@include at-breakpoint($Large) {font-size: $L;}
+	@include at-breakpoint($XL) {font-size: $X;}
+}
+@mixin mq-padding($default, $M, $L, $X) {
+	padding: $default;
+	@include at-breakpoint($Medium) {padding: $M;}
+	@include at-breakpoint($Large) {padding: $L;}
+	@include at-breakpoint($XL) {padding: $X;}
+}
+
+// Footer Logo Width based on Media Query
+//========================================
+@mixin mq-f-logo($default, $M, $L, $X) {
+	max-width: $default;
+	@include at-breakpoint($Medium) {max-width: $M;}
+	@include at-breakpoint($Large) {max-width: $L;}
+	@include at-breakpoint($XL) {max-width: $X;}
+}
+
+
+@mixin position($position: false, $float: false, $clear: false, $top: false, $right:false, $bottom:false, $left:false )
+{
+	position: $position;
+	float: $float;
+	clear: $clear;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+}
+
+@mixin display($display: inline, $overflow: visible, $width: auto, $height: auto) {
+	display: $display;
+	overflow: $overflow;
+	width: $width;
+	height: $height;
+}
+
+// Anytime you must define both background color and color
+@mixin color($color, $background) {
+	color: $color;
+	background-color: $background;
+}
+
+
+
+// defaults = you don't have to state them, they are what compile automatically unless you give a different argument in their place
+// i.e. only call values whose default you want to override
+// optional arguments must come at the end of your chain of arguments
+// for any argument that requires commas (e.g. a transition: color 0.3s ease, background 0.5 ease-out)
+
+// You can pass a variable as an argument to a mixin:
+// e.g. $property: 4px, #FFF;
+// @mixin button ($radius, $color){
+//    border-radius: $radius;
+//		background: $color;
+//
+//		btn {
+//			@include button($properties...)  <-- since the $properties variable is a list variable (i.e it defines a comma separated list of values), sass will split each value in the list and apply them to their appropriate property
+
+
+// should I include if statements? how can I use a function to tell Sass that arguments that aren't entered are ignored.
+
+// if separation of concerns and modularity are the order of the day in CSS (within reason), which is reflected in the file structure of sass (base, partials, vendor), then doesn't it follow that wen defining style rules in CSS, there should be some rhyme or reason? Imposing structure on your (or your teams) approach to layout in this way seems reasonable and, after just a few minutes of working on a project, it seems to become more second nature that a new chore that requires you to constantly open your mixin file and look for the order. 
+
+//The power of defining a sass mixin with defaults means that you can start with as few rules for each style module as you like. Adding then in later is simply a matter of updating the arguments you supply your mixin.
+
+// don't need a mixin like this for font because the short hand declaration already handles it this way--this is what Im defining the mixins to do for all the other major declarations that might logically be grouped by type
