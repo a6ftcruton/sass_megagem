@@ -1,88 +1,70 @@
 // ============================================ //
 // -----------------  HEADER ------------------ //
 // ============================================ //
-
-
 .layout-header {
 	position: relative;
 	display: block;	
-/*	width: 100%;		
-*/	vertical-align: middle;
-	
+	vertical-align: middle;
 	@include single-box-shadow;
 	height: 4.5em;
 	max-height: 4.5em;
-		.nav-container, .soc-container {
-		display: none;
-}
-	/* MEDIUM STYLES*/
+//------------  NAV and SOC STYLES -------------//
+		.nav-container, 
+		.soc-container {display: none;}
+	 // MEDIUM STYLES
 		@include at-breakpoint($Medium) {
-				.soc-container {
-					position: absolute;
-		  		top: 0; left: 0; bottom: 0; right: 0;
-					display: table;    /*Works to vertically center (inline) child  elements*/
-					height: 50%;
-					max-width: 30%;
-					margin: auto;
-					text-align: center;
-		  		@include span-columns(2 omega);
-		  		@include post(1);
-		  			.soc-link {
-							display: table-cell;
-							vertical-align: middle;
-							padding: 0 0.5em;
-						} 
-				} 
+			.soc-container {
+				position: absolute;
+	  		top: 0; left: 0; bottom: 0; right: 0;
+				display: table;    
+				height: 50%;
+				max-width: 30%;
+				margin: auto;
+				text-align: center;
+	  		@include span-columns(2 omega);
+	  		@include post(1);
+	  			.soc-link {
+						display: table-cell;
+						vertical-align: middle;
+						padding: 0 0.5em;
+					} 
+			} 
 		}
-			@include at-breakpoint($Large) {
-				.soc-container {
-						@include span-columns(2 omega);
-						@include post(1);
-							.soc-link {
-								padding-right: 1em;
-								font-size: 0.8em;
-							}
-				}
-				.nav-container {
-					display: block;
-					height: 100%;
-					width: 50%;
-					margin-left: 12.5rem;
-					text-align: center;
-					letter-spacing: 0.2em;
-					white-space: nowrap;
-					overflow: hidden;
-					padding: 0;					
-		  			.nav-link {
-		  				display: inline-block;
-		  				width: 5.5em;
-		  				line-height: 3.8em;
-		  				font-size: 1.2rem;
-		  			}
-
-				}				
+		// LARGE STYLES
+		@include at-breakpoint($Large) {
+			.soc-container {
+					@include span-columns(2 omega);
+					@include post(1);
+						.soc-link {
+							padding-right: 1em;
+							font-size: 0.8em;
+						}
 			}
-/*	min-height: 50%;	
-*/		/*.nav-container {
-			text-align: center;
-				.nav-link {
-					margin: 0.5em;
-				}
-		} // nav-container
-		.soc-container {
-			text-align: center;
-			padding-top: 0.7em;
-				.soc-link {
-					margin: 0 7%;
-				}
-		}*/
+			.nav-container {
+				display: block;
+				height: 100%;
+				width: 50%;
+				margin-left: 12.5rem;
+				text-align: center;
+				letter-spacing: 0.2em;
+				white-space: nowrap;
+				overflow: hidden;
+				padding: 0;					
+	  			.nav-link {
+	  				display: inline-block;
+	  				width: 5.5em;
+	  				line-height: 3.8em;
+	  				font-size: 1.2rem;
+	  			}
+			}				
+		}
 }
 .menu {	
-			@include sassy-button("matte", 5px, 19px, $color1, lighten($color1, 3%), #fff, "raised");
-			height: 3rem;
-			float: right;
-			margin-top: 0.7rem;
-			font-size: 0.9rem;
+	@include sassy-button("matte", 5px, 19px, $color1, lighten($color1, 3%), #fff, "raised");
+	height: 3rem;
+	float: right;
+	margin-top: 0.7rem;
+	font-size: 0.9rem;
 }
 .menu:hover i {
 	@include transition-hover($color9);
@@ -94,19 +76,12 @@
 	margin: auto 0 auto 2em;
 	top: 0; right: 0; bottom:0; left: 0;
 	opacity:(0.90);
-	
-/*	vertical-align: middle;
-	margin-top: 8%;
-	margin-left: 5%;*/
-
 }
 .title {
 	border-top: 3px solid $color4;
 	border-bottom: 3px solid $color4;
 	text-align: center;
-		h2, h4 {
-			margin: 0.5em 0;
-			}
+		h2, h4 {margin: 0.5em 0;}
 		@include at-breakpoint($Large) {
 			position: relative;
 			float: left;
@@ -114,20 +89,16 @@
 			max-width: 15em;
 			margin-right: 1em;
 			margin-top: 1em;
-			/*margin-left: 15vw;*/
 		}
 }
 .title h2 {
 	@include at-breakpoint($Large){
 	padding-top: 0.6rem;
-		}
-	}
-.title h4 {
-	@include at-breakpoint($Large){
-	padding-bottom: 0.6rem;
 	}
 }
-
+.title h4 {
+	@include at-breakpoint($Large){padding-bottom: 0.6rem;}
+}
 // =========== INTRO ===========
 .intro {
 	position: relative;	
@@ -135,27 +106,28 @@
 	vertical-align: middle;
 	@include single-box-shadow;
 	@include mq-padding(2em, 1.5em, 1.5em, 1em);
+	}
+.intro-wrapper {
+	text-align: center;
 	@include at-breakpoint($Large) {
-
-	};
-	.intro-wrapper {
-		text-align: center;
-		@include at-breakpoint($Large) {
-				padding-left: 18%;
-		}
-	 }
-	.intro-pic {
-		min-width: 125px;
-		max-width: 45%;
-		position: relative;
-		@include box-shadow(0 0 10px $color1);
-		@include at-breakpoint($Large) {
-			position: absolute;
-			top:25%; left:15%;
-			margin-right: 5em;
-		}
-		@include at-breakpoint($XL) {
-			left: 18%;
-		}
-  }		
+		padding-left: 25%; // push .intro-headline away from pic
+		padding-right: 12%; // to match left position of pic
+	}
+ }
+.intro-headline {
+	font-weight: 600; 
+	letter-spacing: 0.05em;
+	width: 100%;
+}
+.intro-pic {
+	min-width: 125px;
+	max-width: 45%;
+	position: relative;
+	@include box-shadow(0 0 10px $color1);
+	@include at-breakpoint($Large) {
+		position: absolute;
+		top:25%; 
+		left:12%;
+	}
+	@include at-breakpoint($XL) {left: 16%;}
 }

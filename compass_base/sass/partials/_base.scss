@@ -12,6 +12,7 @@
 @import url('http://fonts.googleapis.com/css?family=Tenor+Sans');
 @import url('http://fonts.googleapis.com/css?family=PT+Sans');
 @import url('http://fonts.googleapis.com/css?family=PT+Serif');
+@import url('http://fonts.googleapis.com/css?family=Oswald');
 
 
 //   Default Styles 
@@ -21,19 +22,14 @@
 	@include bs(border-box); 
 	list-style: none; 
 }
-html {
-	height: 100%
-}
+html {height: 100%}
+
 [href*="/"], 
-.mailto {
-	text-decoration: none;
-}
-::-moz-selection {
-	text-shadow: none;
-}
-::selection {
-	text-shadow: none;
-}
+.mailto {text-decoration: none;}
+
+::-moz-selection {text-shadow: none;}
+
+::selection {text-shadow: none;}
 
 
 // Default Font Size
@@ -41,66 +37,40 @@ html {
 body {	
 	font-size: 1em;
 	line-height: 1.4;
-		}
+}
 
 
 // Font Family
 // ================================================
 
-body {
-	background-color: $color9;
-}
-p {
-	font-family: $font-body;
-}
-a {
-	font-family: $font-link;
-}
-h1, h2, h3, h4, h5, h6, lh {
-	font-family: $font-link;
-}
+body {background-color: $color9;}
+p {font-family: $font-body;}
+a {font-family: $font-link;}
+h1, h2, h3, h4, h5, h6, lh, .nav-link {font-family: $font-head;}
+
 
 
 // Font Size
 // ================================================
+
 article {
 	@include mq-font-sizes(0.9em, 1.2em, 1.3em, 1.5em);
 }
 
-// REFACTORED - see above
-/*article {
-	font-size: 0.9em;
-	@include at-breakpoint($Medium) {
-		font-size: 1.2em;
-		} 
-	@include at-breakpoint($Large) {	
-		font-size:1.25em;	
-		}
-	@include at-breakpoint($XL) {
-		font-size: 1.5em;
-		}
-}*/
 .intro {
-	@include mq-font-sizes(1rem, 1.3rem, 1.4rem, 1.6rem);
-	&.intro-headline {font-size: larger}
+	@include mq-font-sizes(1rem, 1.2rem, 1.35rem, 1.6rem);
 }
-// REFACTORED - see above
-/*.intro {
-	@include mq-font-sizes(1rem, 1.2rem, 1.3rem, 1.5rem);
-	font-size: 1rem;
-	&.intro-headline {font-size: larger}
-	@include at-breakpoint($Medium) {
-		font-size: 1.2rem;
-	};
-	@include at-breakpoint($Large) {
-	font-size: 1.3rem;
-	}
-	@include at-breakpoint($XL) {
-	font-size: 1.5rem;
-	}
-}*/
 .intro-headline {
-	font-weight: 800;
+	font-weight: 600;
+	.intro-enlarge {
+		font-size: 110%; letter-spacing: 0.08em;
+	}
+	.quote {
+		font-size: 90%;
+	}
+}
+[class^="footer-"] {
+	@include mq-font-sizes(1rem, 1.1rem, 1.2rem, 1.35rem);
 }
 
 
@@ -120,7 +90,7 @@ header,
 	color: $color4;
 	border-color: $color4;
 }
-[class="fa fa-bars fa-2x"]{   				//Selecting only icons in header  
+[class="fa fa-bars fa-2x"]{   				
 	color: $color3;
 }
 .nav-link, 
@@ -128,12 +98,13 @@ header,
 	@include color($color3, $color1);
 }
 lh, .footer-bio-text, .copyright{
-		color: darken($color9, 15%);			// Adjust this color for better fit???
+		color: darken($color9, 15%);			
 	}
 a, i, .footer-link-connect {
 	color: $color3;
 	}
 		
+
 // Link & Icon Transitions
 // ================================================
 
@@ -146,12 +117,7 @@ i:hover,
 	@include transition-hover($color9, lighten($color1, 5%));
 }
 .footer-link-connect:hover, .footer-link-share:hover {
-	@include transition-hover($color9, lighten($color1, 5%), 1px solid $color9);
+	@include transition-hover(background-image(linear-gradient(left, white, #dddddd)));
+		/*@include transition-hover($color9, lighten($color1, 5%), 1px solid $color9);*/
+
 }
-
-
-
-
-
-
-

@@ -1,32 +1,28 @@
-//Legacy colors from original Megagem site
-//=============================================
-$chartreuse			: #7FFF00;
-$bg-blue				: #006699;
-$dark-header    : #00344D; // this is bg-blue darkened
 
-//Experimental Colors:
+// Colors:
+//=============================================================
+
 $color1: darken(#006699, 15%);  			// header/footer bg
-$color2: #FAE9A4; 										// header links 
-$hover : #B8B3D6;
 $color3: lighten(#4B88A6, 20%);				// body bg
 $color4: #002232; 										// body text and headings
-$color5: #819090;  							 	 	  // alt for a tags
-$color6: #575C62; 										//alt for body
-$color7: #E1FAC3;   									// CREAM1
-$color8: #EAFFC4; 										// CREAM2
 $color9: desaturate(#FAE9A4, 35%);		// CREAMISH
+$hover : #B8B3D6;
+
+
 
 // Font Stacks
-//=============================================
+//=============================================================
 
 $font-body: Tenor Sans, Georgia, serif;
 $font-header: PT Serif, Helvetica, serif;
 $font-link: PT Sans, serif;
+$font-head: Oswald, Helvetica, serif;
+
+
 
 // Media Query Variables (default styles < 45em | Mobile First)
+//=============================================================
+
 $Medium: 45em;	// < ~ 750px wide with 16px body font
 $Large: 60em; // < ~ 1200px wide with 16px body font
-$XL: 78em; 
-
-// Shorthand
-//=============================================
+$XL: 78em;
