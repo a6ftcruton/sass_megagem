@@ -1,9 +1,44 @@
 // ============================================ //
 // ----------------- CONTENT ------------------ //
 // ============================================ //
+
 .archive-wrapper {
 	display:none;  // changes to display for larger layouts
 }
+
+
+.menu {	
+	@include sassy-button("matte", 5px, 19px, $color1, lighten($color1, 3%), #fff, "raised");
+	height: 3rem;
+	float: right;
+	margin-top: 0.7rem;
+	margin-right: 4%;
+	font-size: 0.9rem;
+}
+.menu:hover i {
+	@include transition-hover($color9);
+}
+.header-logo {
+	height: 1.1rem;		// Absolute Vert Centering: define a height, pos=abs, margin=auto; Container's pos=rel
+	float: left;
+	position: absolute;
+	margin: auto 0;
+	top: 0; right: 0; bottom:0; left: 8%;
+	opacity:(0.90);
+}
+
+// Section Styles
+
+[class*="section"]{
+	min-height: 40em;
+	margin:0;
+	padding: 4% 16%;
+	font-size: 1.3em;
+	@include single-box-shadow;
+}
+
+/*// Blog Styles
+
 article {
 	margin-top: 2em;
 	padding-top: 1em;
@@ -19,3 +54,26 @@ article {
 	}
 }
 
+.blogtitle {
+	border-top: 3px solid $color4;
+	border-bottom: 3px solid $color4;
+	text-align: center;
+		h2, h4 {margin: 0.5em 0;}
+		@include at-breakpoint($Large) {
+			position: relative;
+			float: left;
+			clear: both;
+			max-width: 15em;
+			margin-right: 1em;
+			margin-top: 1em;
+		}
+}
+.blogtitle h2 {
+	@include at-breakpoint($Large){
+	padding-top: 0.6rem;
+	}
+}
+.blogtitle h4 {
+	@include at-breakpoint($Large){padding-bottom: 0.6rem;}
+}
+*/

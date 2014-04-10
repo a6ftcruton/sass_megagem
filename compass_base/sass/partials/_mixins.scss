@@ -6,15 +6,28 @@
 	box-sizing: $bs-type;
 }
 
+
 // Hover Transition
 //========================================
-@mixin transition-hover($color, $background: "", $border-btm:""){
+@mixin transition-hover($color, $background: "", $box-shadow:""){
 	@include transition-property(color, background-color, border-bottom);
-	@include transition-duration(0.2s);
+	@include transition-duration(0.3s);
 	color: $color;
 	background-color: $background;
-	border-bottom: $border-btm;
+	-webkit-box-shadow: $box-shadow;
+	-moz-box-shadow: $box-shadow;
+	box-shadow: $box-shadow;
 }
+
+// Active Link
+//========================================
+@mixin active-link($color){
+	@include transition-property(color);
+	@include transition-duration(0.3s);
+	color: $color;
+}
+
+
 
 // Media Query-based font-sizes
 //========================================

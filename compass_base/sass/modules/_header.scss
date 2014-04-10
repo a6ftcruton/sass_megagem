@@ -1,107 +1,77 @@
 // ============================================ //
 // -----------------  HEADER ------------------ //
 // ============================================ //
+
 .layout-header {
-	position: relative;
+	position: fixed;
+	top:0;
+	z-index: 999;
+	width: 100%;
 	display: block;	
 	vertical-align: middle;
 	@include single-box-shadow;
-	height: 4.5em;
-	max-height: 4.5em;
-//------------  NAV and SOC STYLES -------------//
-		.nav-container, 
-		.soc-container {display: none;}
-	 // MEDIUM STYLES
-		@include at-breakpoint($Medium) {
-			.soc-container {
-				position: absolute;
-	  		top: 0; left: 0; bottom: 0; right: 0;
-				display: table;    
-				height: 50%;
-				max-width: 30%;
-				margin: auto;
-				text-align: center;
-	  		@include span-columns(2 omega);
-	  		@include post(1);
-	  			.soc-link {
-						display: table-cell;
-						vertical-align: middle;
-						padding: 0 0.5em;
-					} 
-			} 
-		}
-		// LARGE STYLES
-		@include at-breakpoint($Large) {
-			.soc-container {
-					@include span-columns(2 omega);
-					@include post(1);
-						.soc-link {
-							padding-right: 1em;
-							font-size: 0.8em;
-						}
-			}
-			.nav-container {
-				display: block;
-				height: 100%;
-				width: 50%;
-				margin-left: 12.5rem;
-				text-align: center;
-				letter-spacing: 0.2em;
-				white-space: nowrap;
-				overflow: hidden;
-				padding: 0;					
-	  			.nav-link {
-	  				display: inline-block;
-	  				width: 5.5em;
-	  				line-height: 3.8em;
-	  				font-size: 1.2rem;
-	  			}
-			}				
-		}
-}
-.menu {	
-	@include sassy-button("matte", 5px, 19px, $color1, lighten($color1, 3%), #fff, "raised");
-	height: 3rem;
-	float: right;
-	margin-top: 0.7rem;
-	font-size: 0.9rem;
-}
-.menu:hover i {
-	@include transition-hover($color9);
-}
-.header-logo {
-	height: 1.1rem;		// Absolute Vert Centering: define a height, pos=abs, margin=auto; Container's pos=rel
-	float: left;
-	position: absolute;
-	margin: auto 0 auto 2em;
-	top: 0; right: 0; bottom:0; left: 0;
-	opacity:(0.90);
-}
-.title {
-	border-top: 3px solid $color4;
-	border-bottom: 3px solid $color4;
-	text-align: center;
-		h2, h4 {margin: 0.5em 0;}
-		@include at-breakpoint($Large) {
-			position: relative;
-			float: left;
-			clear: both;
-			max-width: 15em;
-			margin-right: 1em;
-			margin-top: 1em;
-		}
-}
-.title h2 {
-	@include at-breakpoint($Large){
-	padding-top: 0.6rem;
+	height: $content-margin;
+	 			// must match content margin-top!
+	max-height: $content-margin;
+	margin: 0;
+
+	.highlight-link {
+		@include transition-hover( $color9 );
 	}
-}
-.title h4 {
-	@include at-breakpoint($Large){padding-bottom: 0.6rem;}
-}
+	
+//------------  NAV STYLES -------------//
+	.nav-container {
+		display: none;
+	}
+
+ // MEDIUM STYLES
+	@include at-breakpoint($Medium) {
+		
+	}
+
+	// LARGE STYLES
+	@include at-breakpoint($Large) {
+		button.menu {
+			display: none;
+		}
+		.nav-container {
+			display: block;
+/*		height: 100%;
+*/		margin-right: 8%;
+			text-align: right;
+			letter-spacing: 0.25em;
+			white-space: nowrap;
+			overflow: hidden;
+			padding: 0;					
+  			.nav-link {
+  				display: inline-block;
+  				text-align: center;
+  				width: 6em;
+  				line-height: 4em;
+  				font-size: 1.1em;
+  			}
+		}				
+	}
+
+	@include at-breakpoint($XL) {
+		/*.layout-header {background-color: black;}
+		.nav-container.nav-link {
+			font-size: 1.6em;
+		}*/
+	}
+
+} // end layout header
+
+
+
 // =========== INTRO ===========
+/*.home-intro {
+	position: relative;
+			
+}*/
 .intro {
-	position: relative;	
+	position: relative;
+	margin-top: $content-margin;
 	text-align: center;
 	vertical-align: middle;
 	@include single-box-shadow;
@@ -130,4 +100,6 @@
 		left:12%;
 	}
 	@include at-breakpoint($XL) {left: 16%;}
-}
+} // end intro STYLES
+
+

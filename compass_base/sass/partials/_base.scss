@@ -24,7 +24,7 @@
 }
 html {height: 100%}
 
-[href*="/"], 
+[href*="#"], 
 .mailto {text-decoration: none;}
 
 ::-moz-selection {text-shadow: none;}
@@ -77,7 +77,8 @@ article {
 // Default COLORS 
 // ================================================
 
-header, 
+header,
+.layout-header, 
 footer {
 	background-color: $color1;
 }
@@ -116,6 +117,10 @@ i:hover,
 .nav-link:hover {
 	@include transition-hover($color9, lighten($color1, 5%));
 }
+.nav-link:active {
+	@include transition-hover( darken($color9, 5%), darken($color1, 0%) );
+}
+
 .footer-link-connect:hover, .footer-link-share:hover {
 	@include transition-hover(background-image(linear-gradient(left, white, #dddddd)));
 		/*@include transition-hover($color9, lighten($color1, 5%), 1px solid $color9);*/
