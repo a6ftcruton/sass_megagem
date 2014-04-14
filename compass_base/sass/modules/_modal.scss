@@ -1,0 +1,48 @@
+// Modal menu
+
+.modal {
+	position: absolute;
+	display: block;
+	margin:0;
+	padding: 0;
+	opacity: .2;
+	z-index: 1000;
+	width: 40%;
+	height: 100%;
+	top: $content-margin;
+	right: -200em;
+	text-align: center;
+	font-size: 1.4em;
+	background-color: white;
+
+}
+.modal ul li{margin:2em auto;padding: 0;}
+
+.menu ul {margin:2em;padding: 0;}
+
+.visible {
+	opacity: 1;
+	right: 0;
+}
+.screen {
+	opacity: 0;
+	-webkit-transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	transition: all .2s ease;
+}
+
+
+// ???????
+.blind {
+	position: absolute;
+	top: $content-margin;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	z-index: 998; /*// must be less than modal window's z-index*/
+	opacity: .75;
+	background-color: grey;
+}
+.soc-link {
+	background-color: rgba(white, 0);
+}

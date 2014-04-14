@@ -10,21 +10,13 @@
 // Hover Transition
 //========================================
 @mixin transition-hover($color, $background: "", $box-shadow:""){
-	@include transition-property(color, background-color, border-bottom);
+	@include transition-property(all);
 	@include transition-duration(0.3s);
 	color: $color;
 	background-color: $background;
 	-webkit-box-shadow: $box-shadow;
 	-moz-box-shadow: $box-shadow;
 	box-shadow: $box-shadow;
-}
-
-// Active Link
-//========================================
-@mixin active-link($color){
-	@include transition-property(color);
-	@include transition-duration(0.3s);
-	color: $color;
 }
 
 

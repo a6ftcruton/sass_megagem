@@ -46,7 +46,7 @@ body {
 body {background-color: $color9;}
 p {font-family: $font-body;}
 a {font-family: $font-link;}
-h1, h2, h3, h4, h5, h6, lh, .nav-link {font-family: $font-head;}
+h1, h2, h3, h4, h5, h6, lh, .nav-link, .modal-link {font-family: $font-head;}
 
 
 
@@ -82,7 +82,7 @@ header,
 footer {
 	background-color: $color1;
 }
-.intro {
+.home {
 	@include color(darken($color4, 5%), $color3);
 }
 article p, 
@@ -104,6 +104,9 @@ lh, .footer-bio-text, .copyright{
 a, i, .footer-link-connect {
 	color: $color3;
 	}
+[class*="-section"] {
+	background-color: $color9;
+}	
 		
 
 // Link & Icon Transitions
@@ -111,6 +114,7 @@ a, i, .footer-link-connect {
 
 a:hover, 
 i:hover, 
+.menu:hover i,
 .footer-link-connect:hover>i {
 	@include transition-hover($color9);
 }
@@ -118,7 +122,11 @@ i:hover,
 	@include transition-hover($color9, lighten($color1, 5%));
 }
 .nav-link:active {
-	@include transition-hover( darken($color9, 5%), darken($color1, 0%) );
+	@include transition-hover( darken($color9, 15%), $color1 );
+}
+
+.modal-link:hover {
+	@include transition-hover($color1);
 }
 
 .footer-link-connect:hover, .footer-link-share:hover {
