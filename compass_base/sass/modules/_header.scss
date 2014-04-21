@@ -14,16 +14,6 @@
 	 			// must match content margin-top!
 	max-height: $content-margin;
 	margin: 0;
-
-	.highlight-home {
-		@include transition-hover($color9);
-		color: $color9;
-		@include transition-duration(2s);
-	}
-
-	.highlight-link {
-		@include transition-hover( $color9 );
-	}
 	
 //------------  NAV STYLES -------------//
 	.nav-container {

@@ -436,11 +436,12 @@ a, i, .footer-link-connect {
 [class*="-section"] {
   background-color: #e9dfb5; }
 
-/* line 118, ../sass/partials/_base.scss */
+/* line 119, ../sass/partials/_base.scss */
 a:hover,
 i:hover,
 .menu:hover i,
-.footer-link-connect:hover > i {
+.footer-link-connect:hover > i,
+.highlight-home:hover {
   -webkit-transition-property: all;
   -moz-transition-property: all;
   -o-transition-property: all;
@@ -455,7 +456,7 @@ i:hover,
   -moz-box-shadow: "";
   box-shadow: ""; }
 
-/* line 121, ../sass/partials/_base.scss */
+/* line 122, ../sass/partials/_base.scss */
 .nav-link:hover {
   -webkit-transition-property: all;
   -moz-transition-property: all;
@@ -471,7 +472,7 @@ i:hover,
   -moz-box-shadow: "";
   box-shadow: ""; }
 
-/* line 124, ../sass/partials/_base.scss */
+/* line 125, ../sass/partials/_base.scss */
 .nav-link:active {
   -webkit-transition-property: all;
   -moz-transition-property: all;
@@ -488,6 +489,46 @@ i:hover,
   box-shadow: ""; }
 
 /* line 128, ../sass/partials/_base.scss */
+.highlight-home {
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  color: #e9dfb5;
+  background-color: "";
+  -webkit-box-shadow: "";
+  -moz-box-shadow: "";
+  box-shadow: "";
+  -webkit-transition-property: color;
+  -moz-transition-property: color;
+  -o-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 2s;
+  -moz-transition-duration: 2s;
+  -o-transition-duration: 2s;
+  transition-duration: 2s; }
+
+/* line 133, ../sass/partials/_base.scss */
+.highlight-link {
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  color: #e9dfb5;
+  background-color: "";
+  -webkit-box-shadow: "";
+  -moz-box-shadow: "";
+  box-shadow: ""; }
+
+/* line 136, ../sass/partials/_base.scss */
 .modal-link:hover {
   -webkit-transition-property: all;
   -moz-transition-property: all;
@@ -503,7 +544,7 @@ i:hover,
   -moz-box-shadow: "";
   box-shadow: ""; }
 
-/* line 132, ../sass/partials/_base.scss */
+/* line 140, ../sass/partials/_base.scss */
 .footer-link-connect:hover, .footer-link-share:hover {
   -webkit-transition-property: all;
   -moz-transition-property: all;
@@ -547,49 +588,14 @@ i:hover,
   height: 70px;
   max-height: 70px;
   margin: 0; }
-  /* line 18, ../sass/modules/_header.scss */
-  .layout-header .highlight-home {
-    -webkit-transition-property: all;
-    -moz-transition-property: all;
-    -o-transition-property: all;
-    transition-property: all;
-    -webkit-transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    color: #e9dfb5;
-    background-color: "";
-    -webkit-box-shadow: "";
-    -moz-box-shadow: "";
-    box-shadow: "";
-    color: #e9dfb5;
-    -webkit-transition-duration: 2s;
-    -moz-transition-duration: 2s;
-    -o-transition-duration: 2s;
-    transition-duration: 2s; }
-  /* line 24, ../sass/modules/_header.scss */
-  .layout-header .highlight-link {
-    -webkit-transition-property: all;
-    -moz-transition-property: all;
-    -o-transition-property: all;
-    transition-property: all;
-    -webkit-transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    color: #e9dfb5;
-    background-color: "";
-    -webkit-box-shadow: "";
-    -moz-box-shadow: "";
-    box-shadow: ""; }
-  /* line 29, ../sass/modules/_header.scss */
+  /* line 19, ../sass/modules/_header.scss */
   .layout-header .nav-container {
     display: none; }
   @media (min-width: 60em) {
-    /* line 40, ../sass/modules/_header.scss */
+    /* line 30, ../sass/modules/_header.scss */
     .layout-header button.menu {
       display: none; }
-    /* line 43, ../sass/modules/_header.scss */
+    /* line 33, ../sass/modules/_header.scss */
     .layout-header .nav-container {
       display: block;
       /*		height: 100%;
@@ -600,7 +606,7 @@ i:hover,
       white-space: nowrap;
       overflow: hidden;
       padding: 0; }
-      /* line 52, ../sass/modules/_header.scss */
+      /* line 42, ../sass/modules/_header.scss */
       .layout-header .nav-container .nav-link {
         display: inline-block;
         text-align: center;
@@ -910,11 +916,12 @@ article {
   display: block;
   margin: 0;
   padding: 0;
-  opacity: .2;
+  opacity: 0;
   z-index: 1000;
   width: 40%;
   height: 100%;
-  top: 70px;
+  /*	top: $content-margin;
+  */
   right: -200em;
   text-align: center;
   font-size: 1.4em;
@@ -942,18 +949,19 @@ article {
   -moz-transition: all .2s ease;
   transition: all .2s ease; }
 
-/* line 36, ../sass/modules/_modal.scss */
+/* line 33, ../sass/modules/_modal.scss */
 .blind {
   position: absolute;
-  top: 70px;
+  top: 0;
   right: 0;
-  left: 0;
   bottom: 0;
+  left: 0;
   z-index: 998;
   /*// must be less than modal window's z-index*/
   opacity: .75;
-  background-color: grey; }
+  background-color: grey;
+  margin: 0; }
 
-/* line 46, ../sass/modules/_modal.scss */
+/* line 44, ../sass/modules/_modal.scss */
 .soc-link {
   background-color: rgba(255, 255, 255, 0); }

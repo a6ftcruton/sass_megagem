@@ -115,7 +115,8 @@ a, i, .footer-link-connect {
 a:hover, 
 i:hover, 
 .menu:hover i,
-.footer-link-connect:hover>i {
+.footer-link-connect:hover>i,
+.highlight-home:hover {
 	@include transition-hover($color9);
 }
 .nav-link:hover {
@@ -124,7 +125,14 @@ i:hover,
 .nav-link:active {
 	@include transition-hover( darken($color9, 15%), $color1 );
 }
-
+.highlight-home {
+	@include transition-hover($color9);
+	@include transition-property(color);
+	@include transition-duration(2s);
+}
+.highlight-link {
+	@include transition-hover( $color9 );
+}
 .modal-link:hover {
 	@include transition-hover($color1);
 }
@@ -132,5 +140,4 @@ i:hover,
 .footer-link-connect:hover, .footer-link-share:hover {
 	@include transition-hover(background-image(linear-gradient(left, white, #dddddd)));
 		/*@include transition-hover($color9, lighten($color1, 5%), 1px solid $color9);*/
-
 }
