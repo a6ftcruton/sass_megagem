@@ -1,119 +1,107 @@
-/* This is a saved working versoin so you can monkey around on the main.js file and not ruin it!
-$(document).ready( function() {
 
-	// Store references to common jQuery objects
-  var window = $(window),
-	  	page = $("html, body"),
-			nav = $(".layout-header"),
-			navLink = $(".nav-link"), 
-			home = $("#home"),
-			menu = $(".menu"),
-			modal = $(".modal");
-			blind = $(".screen");
-
-	// On page load, add highlight-link class to Home, fade this animation in...
-	$('.home-link').addClass('highlight-home');
-	// Main navigation event listener -- Scrolling & Add/Remove classes
-	navLink.on('click', function(e) {
-		var href = $(this).attr('href');		
-		// Handle clicks of nav-links (Add / remove highlight class)
-		navLink.removeClass('highlight-link highlight-home');
-		$(this).addClass('highlight-link');
-		e.preventDefault();
-		page.stop().delay(100).animate({
-			scrollTop: $(href).offset().top
-		}, 1500, 'easeInOutQuart');
-	}); // end navLink.on.'click'
-
-	// Listen for click on menu
-	menu.on('click', function(e) {
-	  var thisClicked = $(this);
-	  var currentClass = modal.attr('class');
-		console.log("Current classes on modal 0: " + currentClass);
-		e.preventDefault();
-
-		// Listen for clicks inside modal (not within if statement)
-		$('[class^="modal"]').on('click', 'a', function() {
-			var modalClick = $(this);
-			
-			console.log(modalClick);
-			if( modalClick.is('a') ) {
-				console.log("Clicked a modal link")
-			// if click is on href
-			// close navbar
-			// navigate to new offset based (scrollTop)
-			//	
-			}
-		}); // class^=modal	
-
-
-		// Make modal window visible 
-		if( !modal.hasClass('visible') ) {
-			var modalOpen = false;
-			//var currentHeight = parseInt($(window).height());
-			var navOffset = parseInt(nav.offset().top);
-			var navHeight = parseInt(nav.css("height"));
-			var calcOffsetTop = (navOffset + navHeight);
-			var currentWindowHeight = window.innerHeight || page.clientHeight; // *** This is where I'm stuck!
-			var calcOffsetBtm = (navOffset + (currentWindowHeight - navHeight));
-			var btm = $('footer').offset().top;
-			//
-			//var bottom = $('body').height();
-			//
-			console.log("modal class1: " + modal.attr('class'));
-			console.log("navOffset: " + navOffset);
-			console.log("navHeight: " + navHeight);
-			console.log("calcOffsetTop: " + calcOffsetTop);
-			console.log("calcOffsetBtm: " + calcOffsetBtm);
-			console.log("currentWindowHeight: " + currentWindowHeight);
-
-			// Set modal menu to have same offset as nav-bar
-			//blind.addClass('blind').offset({top: calcOffsetTop}).css("bottom", calcOffsetBtm + "px");
-			blind.addClass('blind')
-					 .css("bottom", -($(window).scrollTop()));
-			modal.offset({top: calcOffsetTop}); 
-		  modal.addClass('visible', 200, 'linear', function() {
-				
-				// After modal is visible, 
-				console.log("modal class2: " + modal.attr('class'));
-				modelOpen = true;
-				
-				//after modal and blind are open, store their position
-				var getModalOffset = page.find(modal).offset();
-				var getBlindOffset = page.find('.screen').offset();
-				console.log(getModalOffset);
-				console.log(getBlindOffset);
-				
-				// Detect scroll and set position of blind and modal to fixed
-				window.one("scroll", function() {
-					console.log("Scroll detected");
-					modal.css({
-						position: "fixed",
-						top: Math.round(getModalOffset.top),
-						left: Math.round(getModalOffset.left)
-					}); // modal.css
-				}); // window.one
-
-				page.on('click', function() {
-					var newClick = $(this);
-					if(modal.hasClass('visible') ) {
-						modal.removeClass('visible', 400, 'easeOutSine');
-						blind.removeClass('blind');
-					} // if(modal.hasClass)
-					
-				}); // page.on('click')
-		
-			}); // modal.addClass('visible')
-
-		} // if (!modal)
-
-	}); // menu.on('click')
+// // UPDATED VERSION:
+// //Assign this to this.node to allow global access
+// var jQ;
+// // Namespace
+// var appCapsule = {
 	
-}); // end document.ready
+// 	node: {
+// 		window: $(window),
+// 		page: $("html, body"),
+// 		nav: $(".layout-header"),
+// 		navLink: $(".nav-link"),
+// 		modalLink: $(".modal-link"),
+// 		home: $("#home"),
+// 		menu: $(".menu"),
+// 		modal: $(".modal"),
+// 		blind: $(".screen"),
+// 		link: $('[class$="-link"]')
+// 	},
+	
+// 	// Function through which all functions are run
+// 	init: function() {
+// 		jQ = this.node;
+// 		appCapsule.animateScroll();
+// 		appCapsule.toggleModal();
+// 		//appCapsule.setSectionHeight();
+// 	},
 
-// To do:
-// -set modal to remain 'fixed' on page
-// -set modal clicks to a. close modal window (fade) then b. animate scroll
-//
-//
-*/
+// 	// Functions called by appCapsule.init()
+// 	//=============================================
+// 	// setSectionHeight: function() {
+// 	// 	var innerWindow = jQ.window.innerHeight();
+// 	// 	var navHeight = jQ.nav.height();
+// 	// 	var sectionHeight = (innerWindow - navHeight);
+// 	// 	console.log("innerwindow: " + innerWindow);
+// 	// 	console.log("navHeight: " + navHeight);
+// 	// 	console.log("sectionHeight: " + sectionHeight);
+// 	// 	$('section').height(sectionHeight);
+// 	// },
+
+// 	animateScroll: function() {
+	
+// 		jQ.link.on('click', function(e) {
+// 			var href = $(this).attr('href');	
+// 			var thisClass = $(this).attr("class");	
+// 			console.log($(this));
+// 			// Handle clicks of nav-links (Add / remove highlight class)
+// 			if ($(this).hasClass('nav-link') ) {
+// 			 jQ.navLink.removeClass('highlight-link');
+// 			 $(this).addClass('highlight-link');
+// 			} else if ( $(this).hasClass('modal-link') ) {
+// 				jQ.modalLink.removeClass('highlight-modal');
+// 				$(this).addClass('highlight-modal');
+// 			}
+
+// 			//jQ.link.removeClass('[class*="highlight"]');
+// 			console.log("This : " + $(this).attr("class") );
+			
+// 			e.preventDefault();
+// 			jQ.page.stop().delay(200).animate({
+// 				scrollTop: $(href).offset().top
+// 			}, 1500, 'easeInOutQuart');
+// 		}); // end navLink.on.'click'
+// 	}, // animateScroll
+
+// 	toggleModal: function() {
+
+// 		jQ.menu.on('click', function(e) {
+
+// 			var currentClass = jQ.modal.hasClass("visible");
+// 			var navOffset = parseInt(jQ.nav.offset().top);
+// 			var navHeight = parseInt(jQ.nav.css("height"));
+// 			var calcOffsetTop = (navOffset + navHeight);
+
+// 			e.preventDefault();
+// 			if (!currentClass) {
+// 				jQ.blind.addClass('blind')
+// 					    	.css("bottom", -($(window).scrollTop()));
+// 				jQ.modal.offset({top: calcOffsetTop}) 
+// 			          .addClass('visible', 400, 'linear', function() {
+// 					//after modal and blind are open, store their position
+// 					var getModalOffset = jQ.page.find(jQ.modal).offset();
+// 					var getBlindOffset = jQ.page.find(jQ.blind).offset();
+					
+// 					jQ.window.one("scroll", function() {
+// 						console.log("Scroll detected");
+// 						jQ.modal.css({position: "fixed"});
+// 						jQ.blind.css({position: "fixed"});
+// 					});
+					
+// 					jQ.page.on('click', function() {
+
+// 						var newClick = $(this);
+// 						if( jQ.modal.hasClass('visible') ) {
+// 							jQ.modal.removeClass('visible', 200, 'easeOutSine');
+// 							jQ.blind.removeClass('blind');
+// 						} // if(modal.hasClass)
+// 					}); // jQ.page.on
+// 				}); // jQ.modal.addClass
+// 			} // if currentClass
+// 		});
+// }
+
+// }; // appCapsule
+
+// // Calls the main function
+// appCapsule.init();

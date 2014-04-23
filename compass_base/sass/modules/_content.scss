@@ -27,17 +27,14 @@
 	opacity:(0.90);
 }
 // =========== INTRO ===========
-/*.home-intro {
-	position: relative;
-			
-}*/
+
 .home {
 	position: relative;
 	margin-top: $content-margin;
 	text-align: center;
 	vertical-align: middle;
 	@include single-box-shadow;
-	@include mq-padding(2em, 1.5em, 1.5em, 1em);
+	/*@include mq-padding(2em, 1.5em, 1.5em, 1em);*/
 	}
 .home-wrapper {
 	text-align: center;
@@ -69,11 +66,9 @@
 // Section Styles
 // ===============================
 [class*="section"]{
-	min-height: 40em;
-	margin:0;
-	padding: 12% 16%;
-	font-size: 1.3em;
+	min-height: 40em;	
 	@include single-box-shadow;
+	
 }
 
 /*// Blog Styles

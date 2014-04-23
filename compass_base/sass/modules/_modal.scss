@@ -1,5 +1,8 @@
 // Modal menu
 
+.modal-container {
+	padding: 0;
+}
 .modal {
 	position: absolute;
 	display: block;
@@ -12,9 +15,10 @@
 /*	top: $content-margin;
 */	right: -200em;
 	text-align: center;
-	font-size: 1.4em;
 	background-color: white;
-
+	@include at-breakpoint($Medium) {
+		font-size: 1.4em;
+	}
 }
 .modal ul li{margin:2em auto;padding: 0;}
 
@@ -26,6 +30,7 @@
 }
 .screen {
 	opacity: 0;
+	left: 200em;
 	-webkit-transition: all .2s ease;
 	-moz-transition: all .2s ease;
 	transition: all .2s ease;

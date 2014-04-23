@@ -7,7 +7,8 @@
 	top:0;
 	z-index: 999;
 	width: 100%;
-	display: block;	
+	display: block;
+	overflow: hidden;	
 	vertical-align: middle;
 	@include single-box-shadow;
 	height: $content-margin;
@@ -18,6 +19,7 @@
 //------------  NAV STYLES -------------//
 	.nav-container {
 		display: none;
+
 	}
 
  // MEDIUM STYLES

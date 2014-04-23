@@ -30,6 +30,15 @@
 	@include at-breakpoint($XL) {font-size: $X;}
 }
 
+// Padding shorthand
+//========================================
+@mixin padding($right-left:"", $top-btm:"") {
+	padding-top: $top-btm;
+	padding-right: $right-left;
+	padding-bottom: $top-btm;
+	padding-left: $right-left;
+}
+
 // Media Query-based padding
 //========================================
 @mixin mq-padding($default, $M, $L, $X) {
