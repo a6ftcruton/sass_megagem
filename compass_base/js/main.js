@@ -13,7 +13,7 @@ var appCapsule = {
 		modalLink: $(".modal-link"),
 		home: $("#home"),
 		menu: $(".menu"),
-		modal: jQuery(".modal"),
+		modal: $(".modal"),
 		blind: $(".screen"),
 		link: $('[class$="-link"]')
 	},
@@ -40,14 +40,16 @@ var appCapsule = {
 	},
 
 	animateScroll: function() {
-	
+		$('.home-link').addClass('highlight-home');
+
 		jQ.link.on('click', function(e) {
 			var href = $(this).attr('href');	
 			var thisClass = $(this).attr("class");	
 			console.log($(this));
 			// Handle clicks of nav-links (Add / remove highlight class)
+			
 			if ($(this).hasClass('nav-link') ) {
-			 jQ.navLink.removeClass('highlight-link');
+			 jQ.navLink.removeClass('highlight-link highlight-home');
 			 $(this).addClass('highlight-link');
 			} else if ( $(this).hasClass('modal-link') ) {
 				jQ.modalLink.removeClass('highlight-modal');
@@ -79,7 +81,7 @@ var appCapsule = {
 					    	.css("bottom", -($(window).scrollTop()));
 				jQ.modal.css({position: "fixed"}) 
 								.offset({top: calcOffsetTop})
-			          .addClass('visible', 400, 'linear', function() {
+			          .addClass('visible', 500, 'linear', function() {
 					//after modal and blind are open, store their position
 					var getModalOffset = jQ.page.find(jQ.modal).offset().top;
 					var getBlindOffset = jQ.page.find(jQ.blind).offset();
@@ -88,7 +90,7 @@ var appCapsule = {
 						console.log("Scroll detected");
 						jQ.blind.css({position: "fixed"});
 					});
-					
+					// Remove modal and blind after any subsequent click
 					jQ.page.on('click', function() {
 
 						var newClick = $(this);

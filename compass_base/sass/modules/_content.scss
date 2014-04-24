@@ -34,7 +34,12 @@
 	text-align: center;
 	vertical-align: middle;
 	@include single-box-shadow;
-	/*@include mq-padding(2em, 1.5em, 1.5em, 1em);*/
+	@include at-breakpoint($Medium) {
+		@include margin(20%);
+	}
+	@include at-breakpoint($Large) {
+		@include margin(15%);
+	}
 	}
 .home-wrapper {
 	text-align: center;
@@ -68,7 +73,7 @@
 [class*="section"]{
 	min-height: 40em;	
 	@include single-box-shadow;
-	
+
 }
 
 /*// Blog Styles

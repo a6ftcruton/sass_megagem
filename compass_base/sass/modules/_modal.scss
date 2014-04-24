@@ -4,16 +4,15 @@
 	padding: 0;
 }
 .modal {
-	position: absolute;
+	position: absolute;  // Causing huge whitespace to right of all sections.
 	display: block;
 	margin:0;
 	padding: 0;
 	opacity: 0;
-	z-index: 1000;
+	z-index: 999;
 	width: 40%;
 	height: 100%;
-/*	top: $content-margin;
-*/	right: -200em;
+	/*right: -200em;*/
 	text-align: center;
 	background-color: white;
 	@include at-breakpoint($Medium) {
@@ -24,13 +23,15 @@
 
 .menu ul {margin:2em;padding: 0;}
 
+.close-modal-msg { font-size: 0.7em; color: $color3;}
+
 .visible {
 	opacity: 1;
-	right: 0;
+	right: 0;  // sticks modal to right side of viewport
 }
 .screen {
 	opacity: 0;
-	left: 200em;
+	//left: 200em;
 	-webkit-transition: all .2s ease;
 	-moz-transition: all .2s ease;
 	transition: all .2s ease;

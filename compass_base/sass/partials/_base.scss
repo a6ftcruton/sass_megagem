@@ -54,14 +54,23 @@ h1, h2, h3, h4, h5, h6, lh, .nav-link, .modal-link {font-family: $font-head;}
 // ================================================
 
 section {
-	@include mq-font-sizes(0.7em, 1.2em, 1.3em, 1.5em);
+	//Default styles
+	//(Note: home section margins have special styles applied in _content.scss;)
+	@include mq-font-sizes(0.7em, 1.2em, 1.3em, 1.5em);	
 	@include padding(5%, 20%);
+
+	// Medium Styles
 	@include at-breakpoint($Medium) {
 		@include padding(15%, 15%);
+		@include margin(100px);
 	}
+
+	// Large Styles
 	@include at-breakpoint($Large) {
 		@include padding(15%, 12%);
 	}
+
+	// XL Styles
 	@include at-breakpoint($XL) {
 		@include padding(20%, 10%);
 	}
@@ -140,10 +149,16 @@ i:hover,
 	@include transition-property(color);
 	@include transition-duration(2s);
 }
+/*.highlight-home {
+	@include transition-hover($color9);
+	@include transition-property(color);
+	@include transition-duration(2s);
+}*/
 .highlight-link {
 	@include transition-hover( $color9 );
 }
-.modal-link:hover {
+.modal-link:hover,
+.close-modal-msg:hover {
 	@include transition-hover($color1);
 }
 .modal-link:active {
