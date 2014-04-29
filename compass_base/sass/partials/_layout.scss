@@ -14,6 +14,6 @@ $container-style: fluid;
 $border-box-sizing: true;					// '@include border-box-sizing' also valid way to do this
 
 [class ^="layout"] { 
-	@include container;
+	//@include container;	** Be sure to test any effect this has before removing fully!
 	//@include susy-grid-background;
 }

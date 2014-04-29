@@ -1,17 +1,9 @@
-// To do:
-// write function that centers each section when it is scrolled
-// -so:
-//    dynamically get the size of the window
-//    set section to this size (done this already)
-//    set the content of the section to be centered
-//		set appropriate margins so that centered content isn't 'off'
-//      - (this probably entails subracting the navHeight from the centering forumula)
-//		  - add the feature that, if a user scrolls to a new hash location on his own, the 
-//			  highlight class will be added/changed 
-//				(add this functionality to the modal links too)
-//					-maybe in the form of on menu click, get current hash, if current hash doesn't have 
-//					highlight class, remove highlight class from all modal links and add class of highlight
-//		-back buttons?
-//
-//  
-// Look into adding full screen-width backgrounds (maybe this means removing Susy?, or at least the '@include container')
+/*
+ * jQuery throttle / debounce - v1.1 - 3/7/2010
+ * http://benalman.com/projects/jquery-throttle-debounce-plugin/
+ * 
+ * Copyright (c) 2010 "Cowboy" Ben Alman
+ * Dual licensed under the MIT and GPL licenses.
+ * http://benalman.com/about/license/
+ */
+(function(b,c){var $=b.jQuery||b.Cowboy||(b.Cowboy={}),a;$.throttle=a=function(e,f,j,i){var h,d=0;if(typeof f!=="boolean"){i=j;j=f;f=c}function g(){var o=this,m=+new Date()-d,n=arguments;function l(){d=+new Date();j.apply(o,n)}function k(){h=c}if(i&&!h){l()}h&&clearTimeout(h);if(i===c&&m>e){l()}else{if(f!==true){h=setTimeout(i?k:l,i===c?e-m:e)}}}if($.guid){g.guid=j.guid=j.guid||$.guid++}return g};$.debounce=function(d,e,f){return f===c?a(d,e,false):a(d,f,e!==false)}})(this);

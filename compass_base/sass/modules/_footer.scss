@@ -1,6 +1,25 @@
 // ============================================ //
 // ----------------- FOOTER  ------------------ //
 // ============================================ //
+footer {
+	background-color: $color1;
+	position: relative;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	height: 4em;
+	text-align: center;
+	.copyright {
+		margin: 0;
+		color: $color3;
+		font-family: $font-head;
+		letter-spacing: .15em;
+
+		line-height: 4em;
+	}
+}
+
+/*
 .layout-footer {
 	position: relative;
 	width: 100%;	
@@ -74,4 +93,4 @@
 	font-size: 0.6em;
 	padding: 4em 0 1em;
 	border-top: 1px solid rgba($color3, .2);
-}
+}*/

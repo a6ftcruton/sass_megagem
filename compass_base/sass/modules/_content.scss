@@ -2,6 +2,8 @@
 // ----------------- CONTENT ------------------ //
 // ============================================ //
 
+// Header Styles
+// ===============================
 .archive-wrapper {
 	display:none;  // changes to display for larger layouts
 }
@@ -26,21 +28,52 @@
 	top: 0; right: 0; bottom:0; left: 8%;
 	opacity:(0.90);
 }
-// =========== INTRO ===========
+// ===============================
+// 					Section Styles
+// ===============================
+[class*="section"]{
+	min-height: 40em;	
+	@include single-box-shadow;
+}
 
+// 					HOME Section
+// ===============================
+
+.intro-wrapper {
+	color: light grey;
+}
 .home {
 	position: relative;
 	margin-top: $content-margin;
 	text-align: center;
 	vertical-align: middle;
 	@include single-box-shadow;
-	@include at-breakpoint($Medium) {
-		@include margin(20%);
+		@include at-breakpoint($Medium) {
+			@include margin(20%);
+		}
+		@include at-breakpoint($Large) {
+			@include margin(15%);
+		}
 	}
-	@include at-breakpoint($Large) {
-		@include margin(15%);
-	}
-	}
+#home-bg {
+	position: fixed;
+	top: -50%;
+	left: -50%;
+	width: 200%;
+	height: 200%;
+	z-index: -1;
+}
+#home-bg img {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	min-width: 50%;
+	min-height: 50%;
+	z-index: 9999;
+}
 .home-wrapper {
 	text-align: center;
 	@include at-breakpoint($Large) {
@@ -64,55 +97,46 @@
 		left:12%;
 	}
 	@include at-breakpoint($XL) {left: 16%;}
+
 } // end home STYLES
 
-
-
-// Section Styles
+// 					WORK Section
 // ===============================
-[class*="section"]{
-	min-height: 40em;	
-	@include single-box-shadow;
 
-}
 
-/*// Blog Styles
+// 					ABOUT Section
+// ===============================
+.about-section {
+	
+// http://svgeneration.com/generate/Eave-Light Tiles?size=75&fill=8cb6cb&edge-size=2&edge=313763&shadow=19203d&
 
-article {
-	margin-top: 2em;
-	padding-top: 1em;
-	padding-bottom: 3em;
-	@include at-breakpoint($Medium) {
-		@include span-columns(11, 12);
-		@include pad(1, 0, 12);		// Look up the second argument of this, ya big dummy!
-		padding-top: 1.5em;
-	}
-	@include at-breakpoint($Large) {
-		@include span-columns(10, 12);
-		@include pad(2, 0, 12);
-	}
+/*background-color: #8cb6cb;
+background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnPgoJPGRlZnM+CgkJPHBhdHRlcm4gaWQ9J3RpbGUnIHBhdHRlcm5Vbml0cz0ndXNlclNwYWNlT25Vc2UnIHdpZHRoPSc3NScgaGVpZ2h0PSc3NScgdmlld0JveD0nMCAwIDUwIDUwJz4KCQkJPGxpbmUgeDE9JzEnIHkxPScwJyB4Mj0nNTEnIHkyPSc1MCcgc3Ryb2tlPScjMTkyMDNkJyBzdHJva2Utd2lkdGg9JzInLz4KCQkJPGxpbmUgeDE9JzQ5JyB5MT0nMCcgeDI9Jy0xJyB5Mj0nNTAnIHN0cm9rZT0nIzE5MjAzZCcgc3Ryb2tlLXdpZHRoPScyJy8+CgkJCTxsaW5lIHgxPSc1MCcgeTE9JzAnIHgyPScwJyB5Mj0nNTAnIHN0cm9rZT0nIzMxMzc2Mycgc3Ryb2tlLXdpZHRoPScyJy8+CgkJCTxsaW5lIHgxPScwJyB5MT0nMCcgeDI9JzUwJyB5Mj0nNTAnIHN0cm9rZT0nIzMxMzc2Mycgc3Ryb2tlLXdpZHRoPScyJy8+CgkJPC9wYXR0ZXJuPgoJCTxyYWRpYWxHcmFkaWVudCBpZD0nbCcgY3g9JzUwJScgY3k9JzIwMCUnIGZ5PScwJyByPScyMDElJz4KCQkJPHN0b3Agb2Zmc2V0PScwJScgc3R5bGU9J3N0b3AtY29sb3I6I2ZmZjsgc3RvcC1vcGFjaXR5Oi4xOycgLz4KCQkJPHN0b3Agb2Zmc2V0PScxMCUnIHN0eWxlPSdzdG9wLWNvbG9yOiMwMDA7IHN0b3Atb3BhY2l0eTowLjE7JyAvPgoJCQk8c3RvcCBvZmZzZXQ9JzMwJScgc3R5bGU9J3N0b3AtY29sb3I6IzAwMDsgc3RvcC1vcGFjaXR5OjAuMzsnIC8+CgkJCTxzdG9wIG9mZnNldD0nOTAlJyBzdHlsZT0nc3RvcC1jb2xvcjojMDAwOyBzdG9wLW9wYWNpdHk6MC41NTsnIC8+CgkJCTxzdG9wIG9mZnNldD0nMTAwJScgc3R5bGU9J3N0b3AtY29sb3I6IzAwMDsgc3RvcC1vcGFjaXR5Oi42JyAvPgoJCTwvcmFkaWFsR3JhZGllbnQ+Cgk8L2RlZnM+Cgk8cmVjdCBmaWxsPScjOGNiNmNiJyB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJy8+Cgk8cmVjdCBmaWxsPSd1cmwoI3RpbGUpJyB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJy8+Cgk8cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWxsPSd1cmwoI2wpJy8+Cjwvc3ZnPg==');*/
 }
 
-.blogtitle {
-	border-top: 3px solid $color4;
-	border-bottom: 3px solid $color4;
-	text-align: center;
-		h2, h4 {margin: 0.5em 0;}
-		@include at-breakpoint($Large) {
-			position: relative;
-			float: left;
-			clear: both;
-			max-width: 15em;
-			margin-right: 1em;
-			margin-top: 1em;
-		}
+// 					CONNECT Section
+// ===============================
+.connect-section {
+	
+// http://svgeneration.com/generate/Galaxy?background=03031a&density=0.6&star-color=ffffff&
+
+background-color: #03031a;
+background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nNjAwJyBoZWlnaHQ9JzYwMCcgdmlld0JveD0nMCAwIDE1MCAxNTAnPgo8ZmlsdGVyIGlkPSdpJyB4PScwJyB5PScwJz4KCTxmZUNvbG9yTWF0cml4IHR5cGU9J21hdHJpeCcgdmFsdWVzPScxIDAgMCAwIDAgIDAgMSAwIDAgMCAgMCAwIDEgMCAwICAwIDAgMCAwIDAnIC8+CjwvZmlsdGVyPgo8ZmlsdGVyIGlkPSduJyB4PScwJyB5PScwJz4KCTxmZVR1cmJ1bGVuY2UgdHlwZT0ndHVyYnVsZW5jZScgYmFzZUZyZXF1ZW5jeT0nLjcnIHJlc3VsdD0nZnV6eicgbnVtT2N0YXZlcz0nMicgc3RpdGNoVGlsZXM9J3N0aXRjaCcvPgoJPGZlQ29tcG9zaXRlIGluPSdTb3VyY2VHcmFwaGljJyBpbjI9J2Z1enonIG9wZXJhdG9yPSdhcml0aG1ldGljJyBrMT0nMCcgazI9JzEnIGszPSctNzMnIGs0PScuMDEnIC8+CjwvZmlsdGVyPgo8cmVjdCB3aWR0aD0nMTAyJScgaGVpZ2h0PScxMDIlJyBmaWxsPScjMDMwMzFhJy8+CjxyZWN0IHg9Jy0xJScgeT0nLTElJyB3aWR0aD0nMTAyJScgaGVpZ2h0PScxMDIlJyBmaWxsPScjZmZmZmZmJyBmaWx0ZXI9J3VybCgjbiknIG9wYWNpdHk9JzEnLz4KPHJlY3QgeD0nLTElJyB5PSctMSUnIHdpZHRoPScxMDIlJyBoZWlnaHQ9JzEwMiUnIGZpbGw9JyMwMzAzMWEnIGZpbHRlcj0ndXJsKCNpKScgb3BhY2l0eT0nMScvPgo8L3N2Zz4=');
+color: $color9;
+text-align: center;
+display: block;
+.sect-head {
+	font-size: 3em;
+	margin-bottom: 1em;
 }
-.blogtitle h2 {
-	@include at-breakpoint($Large){
-	padding-top: 0.6rem;
-	}
+.soc-link {
+	margin: 9%;
 }
-.blogtitle h4 {
-	@include at-breakpoint($Large){padding-bottom: 0.6rem;}
+.fa-envelope-o {
+	margin-top: .8em;
 }
-*/
+
+} // end connect section
+
+
+

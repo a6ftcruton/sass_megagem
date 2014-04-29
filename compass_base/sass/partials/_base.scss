@@ -43,7 +43,6 @@ body {
 // Font Family
 // ================================================
 
-body {background-color: $color9;}
 p {font-family: $font-body;}
 a {font-family: $font-link;}
 h1, h2, h3, h4, h5, h6, lh, .nav-link, .modal-link {font-family: $font-head;}
@@ -88,8 +87,8 @@ section {
 		font-size: 90%;
 	}
 }
-[class^="footer-"] {
-	@include mq-font-sizes(1rem, 1.1rem, 1.2rem, 1.35rem);
+footer {
+	@include mq-font-sizes(.7rem, .8rem, .9rem, 1rem);
 }
 
 
@@ -101,8 +100,12 @@ header,
 footer {
 	background-color: $color1;
 }
+[class*="-section"] {
+	background-color: $color9;
+}	
 .home {
-	@include color(darken($color4, 5%), $color3);
+	/*@include color(darken($color4, 5%), $color3);*/
+	background-color: rgba($color1, 0);
 }
 article p, 
 header,
@@ -122,11 +125,7 @@ lh, .footer-bio-text, .copyright{
 	}
 a, i, .footer-link-connect {
 	color: $color3;
-	}
-[class*="-section"] {
-	background-color: $color9;
-}	
-		
+	}		
 
 // Link & Icon Transitions
 // ================================================

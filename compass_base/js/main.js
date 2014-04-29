@@ -9,6 +9,7 @@ var appCapsule = {
 		window: $(window),
 		page: $("html, body"),
 		nav: $(".layout-header"),
+		section: $("section"),
 		navLink: $(".nav-link"),
 		modalLink: $(".modal-link"),
 		home: $("#home"),
@@ -21,9 +22,11 @@ var appCapsule = {
 	// Function through which all functions are run
 	init: function() {
 		jQ = this.node; // allow global access to variables for common nodes
+		//appCapsule.pgReload();
 		appCapsule.animateScroll();
 		appCapsule.toggleModal();
 		appCapsule.setSectionHeight();
+		appCapsule.trackSectionScroll();
 	},
 
 	// Functions called by appCapsule.init()
@@ -32,15 +35,41 @@ var appCapsule = {
 	setSectionHeight: function() {
 		var innerWindow = jQ.window.innerHeight();
 		var navHeight = jQ.nav.height();
-		var sectionHeight = (innerWindow - navHeight);
+		var sectionHeight = jQ.section.height()
+		var stretchHeight = (innerWindow - navHeight);
+		var dynMargin = ( (stretchHeight - sectionHeight) / 2);
 		console.log("innerwindow: " + innerWindow);
 		console.log("navHeight: " + navHeight);
 		console.log("sectionHeight: " + sectionHeight);
-		$('section').height(sectionHeight);
+		console.log("setSectionHeight: " + stretchHeight);
+		if (sectionHeight < innerWindow) {
+			jQ.section.height(stretchHeight);
+		}
+		
+		//jQ.section.height(stretchHeight - (dynMargin * 2));
+		//jQ.section.css({"padding": dynMargin});
+		// if(sectionHeight < innerWindow) {
+		// 	console.log("Adding margins to center section");
+		// 	var dynMargin = ( (stretchHeight - sectionHeight) / 2);
+		// 	jQ.section.height( stretchHeight -(dynMargin * 2) )
+		// 	.css({
+		// 		'margin-top margin-bottom': dynMargin,
+		// 	});
+		// 	console.log("margins: " + dynMargin);
+		// 	console.log("new sectionHeight: " + stretchHeight);
+		// }
 	},
 
+	// pgReload: function() {
+	// 	jQ.window.on("load", function() {
+	// 		console.log("Page loaded");
+	// 		if()
+	// 		$('.home-link').addClass('highlight-home');			
+	// 	});
+
+	// },
+
 	animateScroll: function() {
-		$('.home-link').addClass('highlight-home');
 
 		jQ.link.on('click', function(e) {
 			var href = $(this).attr('href');	
@@ -65,6 +94,40 @@ var appCapsule = {
 			}, 1500, 'easeInOutQuart');
 		}); // end navLink.on.'click'
 	}, // animateScroll
+
+// ** Need to add debounce function to handle scroll?
+	trackSectionScroll: function() {
+		jQ.window.on("scroll", jQuery.throttle( 500, true, function() { 
+		// change to 'one' so this isn't so expensive?
+		var currentTop = jQ.window.scrollTop();
+		var currentBtm = (currentTop + jQ.window.height());
+		var majorityView = Math.round( ( jQ.window.innerHeight() - jQ.nav.height() ) / 2);
+
+		jQ.section.each( function(index) {
+			var sectionOffset = $(this).offset().top;
+			//console.log( index + ": " + $(this).attr('class') + " " + $(this).offset().top)
+			if ( (sectionOffset + majorityView) > currentTop && (sectionOffset + majorityView) < currentBtm ) {
+				var currentSection = $(this).attr('id');
+				var hashSection = ("#" + currentSection);
+				console.log( "currentSection: " + currentSection );
+				console.log("hashSection: " + hashSection);
+				var sectInView = $(".nav-link").filter( function(index) {
+					return $(this).attr('href') === hashSection;
+				});
+				if ( !sectInView.hasClass('highlight-link') ) {
+					$(".nav-link").removeClass('highlight-link highlight-home');
+					sectInView.delay(1000).addClass('highlight-link');		
+				}
+				console.log(sectInView);
+			} 
+			else {console.log("not in view")};
+		});
+	})); // window.one.scroll
+}, // trackSectionScroll
+
+// throttleScroll: function() {
+// 	jQ.window.on("scroll", jQuery.throttle( 200, true, this.trackSectionScroll ) );
+// },
 
 	toggleModal: function() {
 
