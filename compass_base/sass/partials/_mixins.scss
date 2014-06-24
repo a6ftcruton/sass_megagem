@@ -32,7 +32,7 @@
 
 // Padding shorthand
 //========================================
-@mixin padding($right-left:"", $top-btm:"") {
+@mixin padding($top-btm:"", $right-left:"") {
 	padding-top: $top-btm;
 	padding-right: $right-left;
 	padding-bottom: $top-btm;
@@ -41,7 +41,7 @@
 
 // Margin shorthand
 //========================================
-@mixin margin($top-btm:"", $left-right: auto) {
+@mixin margin($top-btm:"", $left-right:"") {
 	padding-top: $top-btm;
 	padding-right: $left-right;
 	padding-bottom: $top-btm;
@@ -57,13 +57,13 @@
 	@include at-breakpoint($XL) {padding: $X;}
 }
 
-// Footer Logo Width based on Media Query
+// Logo Width based on Media Query
 //========================================
-@mixin mq-f-logo($default, $M, $L, $X) {
-	max-width: $default;
-	@include at-breakpoint($Medium) {max-width: $M;}
-	@include at-breakpoint($Large) {max-width: $L;}
-	@include at-breakpoint($XL) {max-width: $X;}
+@mixin mq-logo($default, $M, $L, $X) {
+	width: $default;
+	@include at-breakpoint($Medium) {width: $M;}
+	@include at-breakpoint($Large) {width: $L;}
+	@include at-breakpoint($XL) {width: $X;}
 }
 
 // Display 

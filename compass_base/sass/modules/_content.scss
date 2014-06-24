@@ -2,32 +2,7 @@
 // ----------------- CONTENT ------------------ //
 // ============================================ //
 
-// Header Styles
-// ===============================
-.archive-wrapper {
-	display:none;  // changes to display for larger layouts
-}
 
-/*div.wrapper {
-	margin-top: $content-margin;
-}*/
-.menu {	
-	@include sassy-button("matte", 5px, 19px, $color1, lighten($color1, 3%), #fff, "raised");
-	height: 3rem;
-	float: right;
-	margin-top: 0.7rem;
-	margin-right: 4%;
-	font-size: 0.9rem;
-}
-
-.header-logo {
-	height: 1.1rem;		// Absolute Vert Centering: define a height, pos=abs, margin=auto; Container's pos=rel
-	float: left;
-	position: absolute;
-	margin: auto 0;
-	top: 0; right: 0; bottom:0; left: 8%;
-	opacity:(0.90);
-}
 // ===============================
 // 					Section Styles
 // ===============================
@@ -40,7 +15,15 @@
 // ===============================
 
 .intro-wrapper {
-	color: light grey;
+	color: #eee;
+}
+.intro-wrapper > * {
+	//text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.4);
+	text-shadow: 
+		rgba(0,0,0,0.4) -6px 0 12px, // left
+		rgba(0,0,0,0.4) 6px 0 12px,  // right
+		rgba(0,0,0,0.4) 0 -6px 12px, // up
+		rgba(0,0,0,0.4) 0 6px 12px   // down
 }
 .home {
 	position: relative;
@@ -48,20 +31,26 @@
 	text-align: center;
 	vertical-align: middle;
 	@include single-box-shadow;
-		@include at-breakpoint($Medium) {
+		/*@include at-breakpoint($Medium) {
 			@include margin(20%);
 		}
 		@include at-breakpoint($Large) {
 			@include margin(15%);
-		}
+		}*/
 	}
 #home-bg {
+	/*top:0;
+	left:0;
+	height:100%;
+	width: auto;*/
 	position: fixed;
 	top: -50%;
 	left: -50%;
 	width: 200%;
 	height: 200%;
 	z-index: -1;
+	opacity: .9;
+	
 }
 #home-bg img {
 	position: absolute;
@@ -102,47 +91,39 @@
 
 // 					WORK Section
 // ===============================
-
+// Shift Work and About titles to right to clear logo
+.sect-title {
+	text-align: right;
+	margin-right: 10%;
+}
 
 // 					ABOUT Section
 // ===============================
 .about-section {
-	
-// http://svgeneration.com/generate/Absolute-Spotlight?center-x=1000&center-y=500&radius=1000&color-1=bed8e5&offset-1=0&color-2=8cb6cb&offset-2=60&color-3=004466&offset-3=100&
-background-color: #004466;
-background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnPgoJPHJhZGlhbEdyYWRpZW50IGlkPSdnbG93JyBncmFkaWVudFVuaXRzPSd1c2VyU3BhY2VPblVzZScgY3g9JzEwMDAnIGN5PSc1MDAnIHI9JzEwMDAnPgoJCTxzdG9wIG9mZnNldD0nMCUnIHN0b3AtY29sb3I9JyNiZWQ4ZTUnIC8+CgkJPHN0b3Agb2Zmc2V0PSc2MCUnIHN0b3AtY29sb3I9JyM4Y2I2Y2InIC8+CgkJPHN0b3Agb2Zmc2V0PScxMDAlJyBzdG9wLWNvbG9yPScjMDA0NDY2JyAvPgoJPC9yYWRpYWxHcmFkaWVudD4KCTxyZWN0IGZpbGw9J3VybCgjZ2xvdyknIHg9Jy0xJScgeT0nLTElJyB3aWR0aD0nMTAyJScgaGVpZ2h0PScxMDIlJy8+Cjwvc3ZnPg==');
-
-
-
-
-
-
-
-
-
+	// http://svgeneration.com/generate/Absolute-Spotlight?center-x=1000&center-y=500&radius=1000&color-1=bed8e5&offset-1=0&color-2=8cb6cb&offset-2=60&color-3=004466&offset-3=100&
+	background-color: #004466;
+	background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnPgoJPHJhZGlhbEdyYWRpZW50IGlkPSdnbG93JyBncmFkaWVudFVuaXRzPSd1c2VyU3BhY2VPblVzZScgY3g9JzEwMDAnIGN5PSc1MDAnIHI9JzEwMDAnPgoJCTxzdG9wIG9mZnNldD0nMCUnIHN0b3AtY29sb3I9JyNiZWQ4ZTUnIC8+CgkJPHN0b3Agb2Zmc2V0PSc2MCUnIHN0b3AtY29sb3I9JyM4Y2I2Y2InIC8+CgkJPHN0b3Agb2Zmc2V0PScxMDAlJyBzdG9wLWNvbG9yPScjMDA0NDY2JyAvPgoJPC9yYWRpYWxHcmFkaWVudD4KCTxyZWN0IGZpbGw9J3VybCgjZ2xvdyknIHg9Jy0xJScgeT0nLTElJyB3aWR0aD0nMTAyJScgaGVpZ2h0PScxMDIlJy8+Cjwvc3ZnPg==');
 }
 
 // 					CONNECT Section
 // ===============================
 .connect-section {
-	
-// http://svgeneration.com/generate/Galaxy?background=03031a&density=0.6&star-color=ffffff&
-
-background-color: #03031a;
-background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nNjAwJyBoZWlnaHQ9JzYwMCcgdmlld0JveD0nMCAwIDE1MCAxNTAnPgo8ZmlsdGVyIGlkPSdpJyB4PScwJyB5PScwJz4KCTxmZUNvbG9yTWF0cml4IHR5cGU9J21hdHJpeCcgdmFsdWVzPScxIDAgMCAwIDAgIDAgMSAwIDAgMCAgMCAwIDEgMCAwICAwIDAgMCAwIDAnIC8+CjwvZmlsdGVyPgo8ZmlsdGVyIGlkPSduJyB4PScwJyB5PScwJz4KCTxmZVR1cmJ1bGVuY2UgdHlwZT0ndHVyYnVsZW5jZScgYmFzZUZyZXF1ZW5jeT0nLjcnIHJlc3VsdD0nZnV6eicgbnVtT2N0YXZlcz0nMicgc3RpdGNoVGlsZXM9J3N0aXRjaCcvPgoJPGZlQ29tcG9zaXRlIGluPSdTb3VyY2VHcmFwaGljJyBpbjI9J2Z1enonIG9wZXJhdG9yPSdhcml0aG1ldGljJyBrMT0nMCcgazI9JzEnIGszPSctNzMnIGs0PScuMDEnIC8+CjwvZmlsdGVyPgo8cmVjdCB3aWR0aD0nMTAyJScgaGVpZ2h0PScxMDIlJyBmaWxsPScjMDMwMzFhJy8+CjxyZWN0IHg9Jy0xJScgeT0nLTElJyB3aWR0aD0nMTAyJScgaGVpZ2h0PScxMDIlJyBmaWxsPScjZmZmZmZmJyBmaWx0ZXI9J3VybCgjbiknIG9wYWNpdHk9JzEnLz4KPHJlY3QgeD0nLTElJyB5PSctMSUnIHdpZHRoPScxMDIlJyBoZWlnaHQ9JzEwMiUnIGZpbGw9JyMwMzAzMWEnIGZpbHRlcj0ndXJsKCNpKScgb3BhY2l0eT0nMScvPgo8L3N2Zz4=');
-color: $color9;
-text-align: center;
-display: block;
-.sect-head {
-	font-size: 3em;
-	margin-bottom: 1em;
-}
-.soc-link {
-	margin: 9%;
-}
-.fa-envelope-o {
-	margin-top: .8em;
-}
+	// http://svgeneration.com/generate/Galaxy?background=03031a&density=0.6&star-color=ffffff&
+	background-color: #03031a;
+	background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nNjAwJyBoZWlnaHQ9JzYwMCcgdmlld0JveD0nMCAwIDE1MCAxNTAnPgo8ZmlsdGVyIGlkPSdpJyB4PScwJyB5PScwJz4KCTxmZUNvbG9yTWF0cml4IHR5cGU9J21hdHJpeCcgdmFsdWVzPScxIDAgMCAwIDAgIDAgMSAwIDAgMCAgMCAwIDEgMCAwICAwIDAgMCAwIDAnIC8+CjwvZmlsdGVyPgo8ZmlsdGVyIGlkPSduJyB4PScwJyB5PScwJz4KCTxmZVR1cmJ1bGVuY2UgdHlwZT0ndHVyYnVsZW5jZScgYmFzZUZyZXF1ZW5jeT0nLjcnIHJlc3VsdD0nZnV6eicgbnVtT2N0YXZlcz0nMicgc3RpdGNoVGlsZXM9J3N0aXRjaCcvPgoJPGZlQ29tcG9zaXRlIGluPSdTb3VyY2VHcmFwaGljJyBpbjI9J2Z1enonIG9wZXJhdG9yPSdhcml0aG1ldGljJyBrMT0nMCcgazI9JzEnIGszPSctNzMnIGs0PScuMDEnIC8+CjwvZmlsdGVyPgo8cmVjdCB3aWR0aD0nMTAyJScgaGVpZ2h0PScxMDIlJyBmaWxsPScjMDMwMzFhJy8+CjxyZWN0IHg9Jy0xJScgeT0nLTElJyB3aWR0aD0nMTAyJScgaGVpZ2h0PScxMDIlJyBmaWxsPScjZmZmZmZmJyBmaWx0ZXI9J3VybCgjbiknIG9wYWNpdHk9JzEnLz4KPHJlY3QgeD0nLTElJyB5PSctMSUnIHdpZHRoPScxMDIlJyBoZWlnaHQ9JzEwMiUnIGZpbGw9JyMwMzAzMWEnIGZpbHRlcj0ndXJsKCNpKScgb3BhY2l0eT0nMScvPgo8L3N2Zz4=');
+	color: $color9;
+	text-align: center;
+	display: block;
+	.sect-head {
+		font-size: 3em;
+		margin-bottom: 1em;
+	}
+	.soc-link {
+		margin: 9%;
+	}
+	.fa-envelope-o {
+		margin-top: .8em;
+	}
 
 } // end connect section
 

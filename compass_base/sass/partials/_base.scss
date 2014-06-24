@@ -22,7 +22,10 @@
 	@include bs(border-box); 
 	list-style: none; 
 }
-html {height: 100%}
+html {
+	height: 100%;
+	height: auto; // allows jQuery to continue setting section height 
+}
 
 [href*="#"], 
 .mailto {text-decoration: none;}
@@ -37,6 +40,7 @@ html {height: 100%}
 body {	
 	font-size: 1em;
 	line-height: 1.4;
+	width: 100vw;
 }
 
 
@@ -49,7 +53,7 @@ h1, h2, h3, h4, h5, h6, lh, .nav-link, .modal-link {font-family: $font-head;}
 
 
 
-// Font Size
+// Section layout (margins/padding)
 // ================================================
 
 section {
@@ -57,23 +61,29 @@ section {
 	//(Note: home section margins have special styles applied in _content.scss;)
 	@include mq-font-sizes(0.7em, 1.2em, 1.3em, 1.5em);	
 	@include padding(5%, 20%);
+	@include margin(100px);
 
 	// Medium Styles
 	@include at-breakpoint($Medium) {
-		@include padding(15%, 15%);
+		@include padding(30%, 15%);
 		@include margin(100px);
 	}
 
 	// Large Styles
 	@include at-breakpoint($Large) {
-		@include padding(15%, 12%);
+		@include padding(18%, 12%);
+		
 	}
 
 	// XL Styles
 	@include at-breakpoint($XL) {
 		@include padding(20%, 10%);
+		
 	}
 }
+
+// Font Size
+// ================================================
 
 .intro {
 	@include mq-font-sizes(1rem, 1.2rem, 1.35rem, 1.6rem);
@@ -88,7 +98,7 @@ section {
 	}
 }
 footer {
-	@include mq-font-sizes(.7rem, .8rem, .9rem, 1rem);
+	@include mq-font-sizes(.4rem, .8rem, .9rem, 1rem);
 }
 
 
@@ -107,6 +117,7 @@ footer {
 	/*@include color(darken($color4, 5%), $color3);*/
 	background-color: rgba($color1, 0);
 }
+
 article p, 
 header,
 .title {

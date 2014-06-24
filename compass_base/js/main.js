@@ -16,7 +16,8 @@ var appCapsule = {
 		menu: $(".menu"),
 		modal: $(".modal"),
 		blind: $(".screen"),
-		link: $('[class$="-link"]')
+		link: $('[class$="-link"]'),
+		logo: $(".header-logo")
 	},
 	
 	// Function through which all functions are run
@@ -27,6 +28,7 @@ var appCapsule = {
 		appCapsule.toggleModal();
 		appCapsule.setSectionHeight();
 		appCapsule.trackSectionScroll();
+		appCapsule.logoReplace();
 	},
 
 	// Functions called by appCapsule.init()
@@ -94,6 +96,22 @@ var appCapsule = {
 			}, 1500, 'easeInOutQuart');
 		}); // end navLink.on.'click'
 	}, // animateScroll
+
+	logoReplace: function() {
+		jQ.navLink.on('click', function() {
+			var origLogo = "img/bronco-logo.svg";
+			var hiddenLogo = "img/hidden-bronco-logo.svg";
+			var returnLogo = function() {
+				jQ.logo.attr("src", origLogo);
+				console.log("LOGO SET TIMEOUT")
+			}
+			jQ.logo.attr("src", hiddenLogo);
+			window.setTimeout(returnLogo, 1500);
+
+			// var hiddenLogo = "./img/hidden-bronco-logo.svg";
+			// $(".header-logo").attr("src", hiddenLogo);
+		}); // jQ.navlink.on 'click'
+	},
 
 // ** Need to add debounce function to handle scroll?
 	trackSectionScroll: function() {
