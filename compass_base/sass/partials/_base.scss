@@ -24,7 +24,8 @@
 }
 html {
 	height: 100%;
-	height: auto; // allows jQuery to continue setting section height 
+	height: auto; // allows jQuery to continue setting section height
+	width: 100%; 
 }
 
 [href*="#"], 
@@ -40,7 +41,8 @@ html {
 body {	
 	font-size: 1em;
 	line-height: 1.4;
-	width: 100vw;
+	width: 100%;
+	height: 100%;
 }
 
 
@@ -59,6 +61,8 @@ h1, h2, h3, h4, h5, h6, lh, .nav-link, .modal-link {font-family: $font-head;}
 section {
 	//Default styles
 	//(Note: home section margins have special styles applied in _content.scss;)
+	position: relative;
+	height: 100%;
 	@include mq-font-sizes(0.7em, 1.2em, 1.3em, 1.5em);	
 	@include padding(5%, 20%);
 	@include margin(100px);
@@ -72,13 +76,11 @@ section {
 	// Large Styles
 	@include at-breakpoint($Large) {
 		@include padding(18%, 12%);
-		
 	}
 
 	// XL Styles
 	@include at-breakpoint($XL) {
 		@include padding(20%, 10%);
-		
 	}
 }
 

@@ -7,7 +7,8 @@ $color3: lighten(#4B88A6, 20%);				// body bg
 $color4: #002232; 										// body text and headings
 $color9: desaturate(#FAE9A4, 35%);		// CREAMISH
 $hover : #B8B3D6;
-
+$desktp: darken(#FFD39B, 10%);
+$desk  : #FFD39B;
 
 
 // Font Stacks
@@ -22,10 +23,11 @@ $font-head: Oswald, Helvetica, serif;
 
 // Media Query Variables (default styles < 45em | Mobile First)
 //=============================================================
+$Small: 280px;   // used only in special cases, not included in any mixins
 
 $Medium: 45em;	// < ~ 750px wide with 16px body font
-$Large: 60em; // < ~ 1200px wide with 16px body font
-$XL: 78em;
+$Large: 60em;   // < ~ 1200px wide with 16px body font
+$XL: 78em;      // real big
 
 // Layout Variables
 //=============================================================

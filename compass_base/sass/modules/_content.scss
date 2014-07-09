@@ -25,6 +25,10 @@
 		rgba(0,0,0,0.4) 0 -6px 12px, // up
 		rgba(0,0,0,0.4) 0 6px 12px   // down
 }
+.intro-pic {
+	height: auto;
+	@include mq-logo(14em, 10em, 12em, 15em);
+}
 .home {
 	position: relative;
 	margin-top: $content-margin;
@@ -101,9 +105,30 @@
 // ===============================
 .about-section {
 	// http://svgeneration.com/generate/Absolute-Spotlight?center-x=1000&center-y=500&radius=1000&color-1=bed8e5&offset-1=0&color-2=8cb6cb&offset-2=60&color-3=004466&offset-3=100&
-	background-color: #004466;
-	background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnPgoJPHJhZGlhbEdyYWRpZW50IGlkPSdnbG93JyBncmFkaWVudFVuaXRzPSd1c2VyU3BhY2VPblVzZScgY3g9JzEwMDAnIGN5PSc1MDAnIHI9JzEwMDAnPgoJCTxzdG9wIG9mZnNldD0nMCUnIHN0b3AtY29sb3I9JyNiZWQ4ZTUnIC8+CgkJPHN0b3Agb2Zmc2V0PSc2MCUnIHN0b3AtY29sb3I9JyM4Y2I2Y2InIC8+CgkJPHN0b3Agb2Zmc2V0PScxMDAlJyBzdG9wLWNvbG9yPScjMDA0NDY2JyAvPgoJPC9yYWRpYWxHcmFkaWVudD4KCTxyZWN0IGZpbGw9J3VybCgjZ2xvdyknIHg9Jy0xJScgeT0nLTElJyB3aWR0aD0nMTAyJScgaGVpZ2h0PScxMDIlJy8+Cjwvc3ZnPg==');
+	// background-color: #004466;
+	//background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnPgoJPHJhZGlhbEdyYWRpZW50IGlkPSdnbG93JyBncmFkaWVudFVuaXRzPSd1c2VyU3BhY2VPblVzZScgY3g9JzEwMDAnIGN5PSc1MDAnIHI9JzEwMDAnPgoJCTxzdG9wIG9mZnNldD0nMCUnIHN0b3AtY29sb3I9JyNiZWQ4ZTUnIC8+CgkJPHN0b3Agb2Zmc2V0PSc2MCUnIHN0b3AtY29sb3I9JyM4Y2I2Y2InIC8+CgkJPHN0b3Agb2Zmc2V0PScxMDAlJyBzdG9wLWNvbG9yPScjMDA0NDY2JyAvPgoJPC9yYWRpYWxHcmFkaWVudD4KCTxyZWN0IGZpbGw9J3VybCgjZ2xvdyknIHg9Jy0xJScgeT0nLTElJyB3aWR0aD0nMTAyJScgaGVpZ2h0PScxMDIlJy8+Cjwvc3ZnPg==');
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+		// Wall color: #8cb6cb;
+		// Desk color: ;
+    background: $color3; // Old browser fallback
+    background: -moz-linear-gradient(top, $color3 0%, $color3 60%, $desktp 60%, $desk 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color3), color-stop(60%,$color3), color-stop(60%,$desktp), color-stop(100%,$desk)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, $color3 0%,$color3 60%,$desktp 60%,$desk 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, $color3 0%,$color3 60%,$desktp 60%,$desk 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, $color3 0%,$color3 60%,$desktp 60%,$desk 100%); /* IE10+ */
+    background: linear-gradient(top, $color3 0%,$color3 60%,$desktp 60%,$desk 100%); /* W3C */
 }
+
+.laptop {
+	//padding-left: 30em;
+}
+.books {
+	/*position:relative;
+	top: 10em;
+*/}
 
 // 					CONNECT Section
 // ===============================
@@ -120,9 +145,6 @@
 	}
 	.soc-link {
 		margin: 9%;
-	}
-	.fa-envelope-o {
-		margin-top: .8em;
 	}
 
 } // end connect section
