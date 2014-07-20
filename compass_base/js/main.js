@@ -17,7 +17,9 @@ var appCapsule = {
 		modal: $(".modal"),
 		blind: $(".screen"),
 		link: $('[class$="-link"]'),
-		logo: $(".header-logo")
+		logo: $(".header-logo"),
+		laptop: $(".laptop-text")
+		// laptop: $(".laptop-text tspan.tspan-body")
 	},
 	
 	// Function through which all functions are run
@@ -29,6 +31,7 @@ var appCapsule = {
 		appCapsule.setSectionHeight();
 		appCapsule.trackSectionScroll();
 		appCapsule.logoReplace();
+		appCapsule.aboutHover();
 	},
 
 	// Functions called by appCapsule.init()
@@ -112,6 +115,66 @@ var appCapsule = {
 			// $(".header-logo").attr("src", hiddenLogo);
 		}); // jQ.navlink.on 'click'
 	},
+
+	aboutHover: function() {
+		var originalText = "Hover and Discover";
+		//History
+		$("#history").hover( 
+			function(){
+				jQ.laptop.fadeOut('300', function() {
+					jQ.laptop.text("New text enters here and should be very very long text to see what happens to the screen size").fadeIn('300');
+				});
+			},
+		  function(){
+				jQ.laptop.fadeOut('300', function() {
+					jQ.laptop.text(originalText).fadeIn('300');
+				});
+			}
+		)
+		//Philosophy
+		$("#philosophy").hover( 
+			function(){
+				jQ.laptop.fadeOut('300', function() {
+					jQ.laptop.text("Philosophy text enters").fadeIn('300');
+				});
+			},
+		  function(){
+				jQ.laptop.fadeOut('300', function() {
+					jQ.laptop.text(originalText).fadeIn('300');
+				});
+			}
+		)
+
+		//Passport
+    $("#passport").hover( 
+			function(){
+				jQ.laptop.fadeOut('300', function() {
+					jQ.laptop.text("Passport text enters").fadeIn('300');
+				});
+			},
+		  function(){
+				jQ.laptop.fadeOut('300', function() {
+					jQ.laptop.text(originalText).fadeIn('300');
+				});
+			}
+		)
+
+		//Unicorn
+    $("#unicorn").hover( 
+			function(){
+				jQ.laptop.fadeOut('300', function() {
+					jQ.laptop.text("Unicorn text enters").fadeIn('300');
+				});
+			},
+		  function(){
+				jQ.laptop.fadeOut('300', function() {
+					jQ.laptop.text(originalText).fadeIn('300');
+				});
+			}
+		)
+
+
+	}, // end aboutHover
 
 // ** Need to add debounce function to handle scroll?
 	trackSectionScroll: function() {

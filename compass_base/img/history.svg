@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="118px" height="455px" viewBox="0 0 118 455" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.0.3 (7891) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Artboard-4" sketch:type="MSArtboardGroup">
+            <g id="Group-2" sketch:type="MSLayerGroup" transform="translate(58.500000, 227.000000) rotate(94.000000) translate(-58.500000, -227.000000) translate(-168.000000, 161.000000)">
+                <path d="M357.159128,50.9580502 L425.931923,103.934703 L73.4896118,128.558057 L2.59434047,76.824962 L122.827183,67.9827472 L2.65852033,76.5137164 L357.414187,50.3256938 L357.159128,50.9580502 Z" id="Line-2" stroke="#979797" stroke-linecap="square" fill="#8B4513" sketch:type="MSShapeGroup" transform="translate(214.107803, 89.359867) rotate(1.000000) translate(-214.107803, -89.359867) "></path>
+                <path d="M3.84568714,30.4313559 L71.4159102,82.102703 L438.24879,57.177539 L369.36334,4.01042699 L367.917936,4.11348514 L367.879224,3.56853003 L367.38048,3.60395987 L1.38048041,29.6039599 L0.881737258,29.6393897 L0.95259694,30.636876 L1.45134009,30.6014462 L3.84568714,30.4313559 Z" id="Line" stroke="#979797" stroke-linecap="square" fill="#8B4513" sketch:type="MSShapeGroup" transform="translate(219.415910, 43.102703) rotate(1.000000) translate(-219.415910, -43.102703) "></path>
+                <g id="Group" transform="translate(5.000000, 28.000000)" sketch:type="MSShapeGroup">
+                    <path d="M1.97657694,42.5376124 L73.8099452,95.7781272 L72.6316714,57.1354743 L0.792340452,0.7608271 L0.827558417,2.8184025 C0.985786911,3.19015053 2.12961895,6.09297752 0.946351495,9.75877262 L0.954728299,10.2481793 C6.75550763,13.9619808 2.09984239,13.256578 1.02001395,14.06243 L1.21588855,25.5062133 C3.49091433,25.8017336 2.14425526,28.7201962 1.31444605,31.2643394 L1.38497049,35.3846613 C1.51252542,36.0184796 1.493309,36.478847 1.41028799,36.8638115 L1.46163533,39.86373 C2.28488879,41.002563 2.26220506,41.8945992 1.97657694,42.5376124 Z" id="Path-9" fill="#FFEBCD" transform="translate(37.309945, 48.278127) rotate(1.000000) translate(-37.309945, -48.278127) "></path>
+                    <path d="M0.760388349,0.814718122 C0.760388349,0.814718122 2.20244584,5.84281921 0.760388349,9.86032271 C7.24964712,14.0350797 0.760388349,12.6434942 0.760388349,14.0350799 L0.760388349,24.8123295 C4.35769102,24.81233 0.760388349,30.100068 0.760388349,32.7439372 C2.20244584,36.2573678 0.760388349,36.31194 0.760388349,38.0959414 C3.67266891,41.1289957 3.68700192,43.1035287 3.68700192,43.1035287" id="Line" stroke="#979797" stroke-linecap="square" transform="translate(2.260388, 22.162451) rotate(1.000000) translate(-2.260388, -22.162451) "></path>
+                    <path d="M1.13082763,42.4513164 L69.3154744,92.5024259" id="Line" stroke="#979797" stroke-linecap="square" transform="translate(35.469852, 67.748979) rotate(1.000000) translate(-35.469852, -67.748979) "></path>
+                    <path d="M1.5,16.5 L70.5,71.5" id="Line" stroke="#979797" stroke-linecap="square" opacity="0.0915928172"></path>
+                    <path d="M2.5,27.5 L71.5,82.5" id="Line-6" stroke="#979797" stroke-linecap="square" opacity="0.0915928172"></path>
+                    <path d="M15.5,45.5 L69.5,88.5" id="Line-7" stroke="#979797" stroke-linecap="square" opacity="0.0915928172"></path>
+                    <path d="M1.5,11.5 L70.5,66.5" id="Line-10" stroke="#979797" stroke-linecap="square" opacity="0.0915928172"></path>
+                    <path d="M2.5,6.5 L66.5,57.5" id="Line-11" stroke="#979797" stroke-linecap="square" opacity="0.0915928172"></path>
+                    <path d="M2.5,22.5 L71.5,77.5" id="Line-8" stroke="#979797" stroke-linecap="square" opacity="0.0915928172"></path>
+                    <path d="M15.5,40.5 L69.5,83.5" id="Line-9" stroke="#979797" stroke-linecap="square" opacity="0.0915928172"></path>
+                </g>
+                <path d="M79.4723444,67.9687229 C72.8436834,67.9687229 69.9716313,72.7110588 72.5702661,78.8119068 C72.5702661,78.8119068 75.5868961,81.4223392 75.5868961,93.2716398 C75.5868961,105.12094 72.8953921,106.303344 72.8953921,106.303344 C69.8990815,112.19367 72.8440356,116.968723 79.4723444,116.968723 L431.786729,116.968723 C438.41539,116.968723 446.570969,112.384994 449.309675,106.35074 C449.309675,106.35074 451.905785,105.844417 451.905786,93.196944 C451.905787,80.5494708 449.00981,78.7475652 449.00981,78.7475652 C446.126426,72.794575 438.415038,67.9687229 431.786729,67.9687229 L79.4723444,67.9687229 Z" id="Rectangle-8" stroke="#979797" fill="#8B4513" sketch:type="MSShapeGroup" transform="translate(261.732005, 92.468723) rotate(-3.000000) translate(-261.732005, -92.468723) "></path>
+                <text id="HISTORY" stroke="#D8D8D8" sketch:type="MSTextLayer" transform="translate(261.452034, 90.126438) rotate(-3.000000) translate(-261.452034, -90.126438) " font-family="Baskerville" font-size="46" font-weight="normal" sketch:alignment="middle" letter-spacing="2.75999928" fill="#FFD700">
+                    <tspan x="149.471236" y="105.126438">HISTORY</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
