@@ -80,7 +80,7 @@ section {
 
 	// XL Styles
 	@include at-breakpoint($XL) {
-		@include padding(20%, 10%);
+		@include padding(10%, 10%);
 	}
 }
 
@@ -142,7 +142,6 @@ a, i, .footer-link-connect {
 
 // Link & Icon Transitions
 // ================================================
-
 a:hover, 
 i:hover, 
 .menu:hover i,

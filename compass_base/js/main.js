@@ -83,17 +83,18 @@ var appCapsule = {
 			// Handle clicks of nav-links (Add / remove highlight class)
 			
 			if ($(this).hasClass('nav-link') ) {
-			 jQ.navLink.removeClass('highlight-link highlight-home');
-			 $(this).addClass('highlight-link');
+			  jQ.navLink.removeClass('highlight-link highlight-home');
+			  $(this).addClass('highlight-link');
+        e.preventDefault();
 			} else if ( $(this).hasClass('modal-link') ) {
-				jQ.modalLink.removeClass('highlight-modal');
-				$(this).addClass('highlight-modal');
-			}
+          jQ.modalLink.removeClass('highlight-modal');
+          $(this).addClass('highlight-modal');
+          e.preventDefault();
+			} 
 
 			//jQ.link.removeClass('[class*="highlight"]');
 			console.log("This : " + $(this).attr("class") );
 			
-			e.preventDefault();
 			jQ.page.stop().delay(200).animate({
 				scrollTop: $(href).offset().top
 			}, 1500, 'easeInOutQuart');
