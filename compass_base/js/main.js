@@ -18,7 +18,8 @@ var appCapsule = {
 		blind: $(".screen"),
 		link: $('[class$="-link"]'),
 		logo: $(".header-logo"),
-		laptop: $(".laptop-text")
+		laptop: $(".laptop-text"),
+    video: $(".video")
 		// laptop: $(".laptop-text tspan.tspan-body")
 	},
 	
@@ -32,11 +33,18 @@ var appCapsule = {
 		appCapsule.trackSectionScroll();
 		appCapsule.logoReplace();
 		appCapsule.aboutHover();
+    appCapsule.videoHover();
 	},
 
 	// Functions called by appCapsule.init()
 	//=============================================
 	
+  videoHover: function() {
+    jQ.video.hover( startVideo, stopVideo );
+    function startVideo(e) { $('video', this).get(0).play(); }
+    function stopVideo(e) { $('video', this).get(0).pause(); }
+  },
+
 	setSectionHeight: function() {
 		var innerWindow = jQ.window.innerHeight();
 		var navHeight = jQ.nav.height();
