@@ -200,6 +200,10 @@ var appCapsule = {
 					$(".nav-link").removeClass('highlight-link highlight-home');
 					sectInView.delay(1000).addClass('highlight-link');		
 				}
+        if (currentSection == "connect") {
+          $('.connect-container').stop().delay(200).animate({ marginTop: "-60px" }, 60);
+          $('.connect-container').stop().animate({ marginTop: "40px" }, 1000, 'easeInOutBack');
+        }
 				console.log(sectInView);
 			} 
 			else {console.log("not in view")};

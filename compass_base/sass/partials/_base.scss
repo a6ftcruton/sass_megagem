@@ -75,12 +75,12 @@ section {
 
 	// Large Styles
 	@include at-breakpoint($Large) {
-		@include padding(18%, 12%);
+		@include padding(20%, 12%);
 	}
 
 	// XL Styles
 	@include at-breakpoint($XL) {
-		@include padding(10%, 10%);
+		@include padding(15%, 10%);
 	}
 }
 
