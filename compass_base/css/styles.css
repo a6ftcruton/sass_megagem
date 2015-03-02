@@ -1,8 +1,5 @@
 @import url("http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
-@import url("http://fonts.googleapis.com/css?family=Tenor+Sans");
-@import url("http://fonts.googleapis.com/css?family=PT+Sans");
-@import url("http://fonts.googleapis.com/css?family=PT+Serif");
-@import url("http://fonts.googleapis.com/css?family=Oswald");
+@import url("http://fonts.googleapis.com/css?family=Tenor+Sans|PT+Sans|PT+Serif|Oswald");
 /* line 55, ../sass/partials/_normalize.scss */
 article,
 aside,
@@ -289,52 +286,52 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* line 21, ../sass/partials/_base.scss */
+/* line 18, ../sass/partials/_base.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   list-style: none; }
 
-/* line 25, ../sass/partials/_base.scss */
+/* line 22, ../sass/partials/_base.scss */
 html {
   height: 100%;
   height: auto;
   width: 100%; }
 
-/* line 32, ../sass/partials/_base.scss */
+/* line 29, ../sass/partials/_base.scss */
 [href*="#"],
 .mailto {
   text-decoration: none; }
 
-/* line 34, ../sass/partials/_base.scss */
+/* line 31, ../sass/partials/_base.scss */
 ::-moz-selection {
   text-shadow: none; }
 
-/* line 36, ../sass/partials/_base.scss */
+/* line 33, ../sass/partials/_base.scss */
 ::selection {
   text-shadow: none; }
 
-/* line 41, ../sass/partials/_base.scss */
+/* line 38, ../sass/partials/_base.scss */
 body {
   font-size: 1em;
   line-height: 1.4;
   width: 100%;
   height: 100%; }
 
-/* line 52, ../sass/partials/_base.scss */
+/* line 49, ../sass/partials/_base.scss */
 p {
   font-family: Tenor Sans, Georgia, serif; }
 
-/* line 53, ../sass/partials/_base.scss */
+/* line 50, ../sass/partials/_base.scss */
 a {
   font-family: PT Sans, serif; }
 
-/* line 54, ../sass/partials/_base.scss */
+/* line 51, ../sass/partials/_base.scss */
 h1, h2, h3, h4, h5, h6, lh, .nav-link, .modal-link {
   font-family: Oswald, Helvetica, serif; }
 
-/* line 61, ../sass/partials/_base.scss */
+/* line 58, ../sass/partials/_base.scss */
 section {
   position: relative;
   height: 100%;
@@ -348,19 +345,19 @@ section {
   padding-bottom: 100px;
   padding-left: ""; }
   @media (min-width: 45em) {
-    /* line 61, ../sass/partials/_base.scss */
+    /* line 58, ../sass/partials/_base.scss */
     section {
       font-size: 1.2em; } }
   @media (min-width: 60em) {
-    /* line 61, ../sass/partials/_base.scss */
+    /* line 58, ../sass/partials/_base.scss */
     section {
       font-size: 1.3em; } }
   @media (min-width: 78em) {
-    /* line 61, ../sass/partials/_base.scss */
+    /* line 58, ../sass/partials/_base.scss */
     section {
       font-size: 1.5em; } }
   @media (min-width: 45em) {
-    /* line 61, ../sass/partials/_base.scss */
+    /* line 58, ../sass/partials/_base.scss */
     section {
       padding-top: 30%;
       padding-right: 15%;
@@ -371,104 +368,104 @@ section {
       padding-bottom: 100px;
       padding-left: ""; } }
   @media (min-width: 60em) {
-    /* line 61, ../sass/partials/_base.scss */
+    /* line 58, ../sass/partials/_base.scss */
     section {
       padding-top: 20%;
       padding-right: 12%;
       padding-bottom: 20%;
       padding-left: 12%; } }
   @media (min-width: 78em) {
-    /* line 61, ../sass/partials/_base.scss */
+    /* line 58, ../sass/partials/_base.scss */
     section {
       padding-top: 15%;
       padding-right: 10%;
       padding-bottom: 15%;
       padding-left: 10%; } }
 
-/* line 90, ../sass/partials/_base.scss */
+/* line 87, ../sass/partials/_base.scss */
 .intro {
   font-size: 1rem; }
   @media (min-width: 45em) {
-    /* line 90, ../sass/partials/_base.scss */
+    /* line 87, ../sass/partials/_base.scss */
     .intro {
       font-size: 1.2rem; } }
   @media (min-width: 60em) {
-    /* line 90, ../sass/partials/_base.scss */
+    /* line 87, ../sass/partials/_base.scss */
     .intro {
       font-size: 1.35rem; } }
   @media (min-width: 78em) {
-    /* line 90, ../sass/partials/_base.scss */
+    /* line 87, ../sass/partials/_base.scss */
     .intro {
       font-size: 1.6rem; } }
 
-/* line 93, ../sass/partials/_base.scss */
+/* line 90, ../sass/partials/_base.scss */
 .intro-headline {
   font-weight: 600; }
-  /* line 95, ../sass/partials/_base.scss */
+  /* line 92, ../sass/partials/_base.scss */
   .intro-headline .intro-enlarge {
     font-size: 110%;
     letter-spacing: 0.08em; }
-  /* line 98, ../sass/partials/_base.scss */
+  /* line 95, ../sass/partials/_base.scss */
   .intro-headline .quote {
     font-size: 90%; }
 
-/* line 102, ../sass/partials/_base.scss */
+/* line 99, ../sass/partials/_base.scss */
 footer {
   font-size: 0.4rem; }
   @media (min-width: 45em) {
-    /* line 102, ../sass/partials/_base.scss */
+    /* line 99, ../sass/partials/_base.scss */
     footer {
       font-size: 0.8rem; } }
   @media (min-width: 60em) {
-    /* line 102, ../sass/partials/_base.scss */
+    /* line 99, ../sass/partials/_base.scss */
     footer {
       font-size: 0.9rem; } }
   @media (min-width: 78em) {
-    /* line 102, ../sass/partials/_base.scss */
+    /* line 99, ../sass/partials/_base.scss */
     footer {
       font-size: 1rem; } }
 
-/* line 112, ../sass/partials/_base.scss */
+/* line 109, ../sass/partials/_base.scss */
 header,
 .layout-header,
 footer {
   background-color: #00334d; }
 
-/* line 115, ../sass/partials/_base.scss */
+/* line 112, ../sass/partials/_base.scss */
 [class*="-section"] {
   background-color: #e9dfb5; }
 
-/* line 118, ../sass/partials/_base.scss */
+/* line 115, ../sass/partials/_base.scss */
 .home {
   /*@include color(darken($color4, 5%), $color3);*/
   background-color: rgba(0, 51, 77, 0); }
 
-/* line 125, ../sass/partials/_base.scss */
+/* line 122, ../sass/partials/_base.scss */
 article p,
 header,
 .title {
   color: #002232;
   border-color: #002232; }
 
-/* line 129, ../sass/partials/_base.scss */
+/* line 126, ../sass/partials/_base.scss */
 [class="fa fa-bars fa-2x"] {
   color: #8cb6cb; }
 
-/* line 133, ../sass/partials/_base.scss */
+/* line 130, ../sass/partials/_base.scss */
 .nav-link,
 .soc-link {
   color: #8cb6cb;
   background-color: #00334d; }
 
-/* line 136, ../sass/partials/_base.scss */
+/* line 133, ../sass/partials/_base.scss */
 lh, .footer-bio-text, .copyright {
   color: #d8c57a; }
 
-/* line 139, ../sass/partials/_base.scss */
+/* line 136, ../sass/partials/_base.scss */
 a, i, .footer-link-connect {
   color: #8cb6cb; }
 
-/* line 149, ../sass/partials/_base.scss */
+/* line 146, ../sass/partials/_base.scss */
 a:hover,
 i:hover,
 .menu:hover i,
@@ -488,7 +485,7 @@ i:hover,
   -moz-box-shadow: "";
   box-shadow: ""; }
 
-/* line 152, ../sass/partials/_base.scss */
+/* line 149, ../sass/partials/_base.scss */
 .nav-link:hover {
   -webkit-transition-property: all;
   -moz-transition-property: all;
@@ -504,7 +501,7 @@ i:hover,
   -moz-box-shadow: "";
   box-shadow: ""; }
 
-/* line 155, ../sass/partials/_base.scss */
+/* line 152, ../sass/partials/_base.scss */
 .nav-link:active {
   -webkit-transition-property: all;
   -moz-transition-property: all;
@@ -520,7 +517,7 @@ i:hover,
   -moz-box-shadow: "";
   box-shadow: ""; }
 
-/* line 158, ../sass/partials/_base.scss */
+/* line 155, ../sass/partials/_base.scss */
 .highlight-home {
   -webkit-transition-property: all;
   -moz-transition-property: all;
@@ -549,7 +546,7 @@ i:hover,
 	@include transition-property(color);
 	@include transition-duration(2s);
 }*/
-/* line 168, ../sass/partials/_base.scss */
+/* line 165, ../sass/partials/_base.scss */
 .highlight-link {
   -webkit-transition-property: all;
   -moz-transition-property: all;
@@ -565,7 +562,7 @@ i:hover,
   -moz-box-shadow: "";
   box-shadow: ""; }
 
-/* line 172, ../sass/partials/_base.scss */
+/* line 169, ../sass/partials/_base.scss */
 .modal-link:hover,
 .close-modal-msg:hover {
   -webkit-transition-property: all;
@@ -582,11 +579,11 @@ i:hover,
   -moz-box-shadow: "";
   box-shadow: ""; }
 
-/* line 175, ../sass/partials/_base.scss */
+/* line 172, ../sass/partials/_base.scss */
 .modal-link:active {
   color: #d8c57a; }
 
-/* line 178, ../sass/partials/_base.scss */
+/* line 175, ../sass/partials/_base.scss */
 .highlight-modal {
   -webkit-transition-property: all;
   -moz-transition-property: all;
@@ -602,11 +599,11 @@ i:hover,
   -moz-box-shadow: "";
   box-shadow: ""; }
 
-/* line 181, ../sass/partials/_base.scss */
+/* line 178, ../sass/partials/_base.scss */
 .highlight-modal:active {
   color: #e9dfb5; }
 
-/* line 184, ../sass/partials/_base.scss */
+/* line 181, ../sass/partials/_base.scss */
 .highlight-modal:hover {
   -webkit-transition-property: all;
   -moz-transition-property: all;
@@ -622,7 +619,7 @@ i:hover,
   -moz-box-shadow: "";
   box-shadow: ""; }
 
-/* line 188, ../sass/partials/_base.scss */
+/* line 185, ../sass/partials/_base.scss */
 .footer-link-connect:hover, .footer-link-share:hover {
   -webkit-transition-property: all;
   -moz-transition-property: all;
