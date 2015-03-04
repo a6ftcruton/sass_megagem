@@ -102,6 +102,28 @@
 	text-align: right;
 	margin-right: 10%;
 }
+.project-title {
+  font-family: 'Oswald', sans-serif;
+  padding: 5px;
+}
+.video-wrapper {
+  text-align: center;
+}
+.video {
+  margin: 8% 0 12%;
+  @include at-breakpoint($Small) {
+    width: 100px;
+  }
+  @include at-breakpoint($Medium) {
+    width: 400px;
+  }
+  @include at-breakpoint($Large) {
+    width: 720px;
+  }
+  @include at-breakpoint($XL) {
+    width: 1000px;
+  }
+}
 
 // 					ABOUT Section
 // ===============================
