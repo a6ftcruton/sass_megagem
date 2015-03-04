@@ -102,29 +102,37 @@
 	text-align: right;
 	margin-right: 10%;
 }
+.video-container {
+  position: relative;
+  margin: 10%;
+}
+.project-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 10% 10%;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+}
 .project-title {
-  font-family: 'Oswald', sans-serif;
+  font-family: $font-head; 
+  letter-spacing: 0.1em;
   padding: 5px;
 }
-.video-wrapper {
-  text-align: center;
+.hover-for-demo {
+  font-family: $font-head;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.1em;
 }
 .video {
-  margin: 8% 0 12%;
-  @include at-breakpoint($Small) {
-    width: 100px;
-  }
-  @include at-breakpoint($Medium) {
-    width: 400px;
-  }
-  @include at-breakpoint($Large) {
-    width: 720px;
-  }
-  @include at-breakpoint($XL) {
-    width: 1000px;
-  }
+  width: 100%;
 }
-
 // 					ABOUT Section
 // ===============================
 .about-section {
