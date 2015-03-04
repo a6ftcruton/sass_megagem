@@ -932,7 +932,11 @@ i:hover,
 .video {
   width: 100%; }
 
-/* line 138, ../sass/modules/_content.scss */
+/* line 139, ../sass/modules/_content.scss */
+.hidden {
+  z-index: -100; }
+
+/* line 144, ../sass/modules/_content.scss */
 .about-section {
   /*height: 100%;    ???
   width: 100%;*/
@@ -977,7 +981,7 @@ i:hover,
 	width: 450px;	
 	//margin:0 auto;
 }*/
-/* line 177, ../sass/modules/_content.scss */
+/* line 183, ../sass/modules/_content.scss */
 #complete-desktop {
   width: 98%;
   position: relative;
@@ -987,29 +991,29 @@ i:hover,
   display: block;
   margin: auto; }
 
-/* line 186, ../sass/modules/_content.scss */
+/* line 192, ../sass/modules/_content.scss */
 rect {
   overflow: hidden; }
 
-/* line 189, ../sass/modules/_content.scss */
+/* line 195, ../sass/modules/_content.scss */
 .tspan-body {
   overflow: hidden; }
 
-/* line 195, ../sass/modules/_content.scss */
+/* line 201, ../sass/modules/_content.scss */
 .connect-section {
   background-color: #03031a;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nNjAwJyBoZWlnaHQ9JzYwMCcgdmlld0JveD0nMCAwIDE1MCAxNTAnPgo8ZmlsdGVyIGlkPSdpJyB4PScwJyB5PScwJz4KCTxmZUNvbG9yTWF0cml4IHR5cGU9J21hdHJpeCcgdmFsdWVzPScxIDAgMCAwIDAgIDAgMSAwIDAgMCAgMCAwIDEgMCAwICAwIDAgMCAwIDAnIC8+CjwvZmlsdGVyPgo8ZmlsdGVyIGlkPSduJyB4PScwJyB5PScwJz4KCTxmZVR1cmJ1bGVuY2UgdHlwZT0ndHVyYnVsZW5jZScgYmFzZUZyZXF1ZW5jeT0nLjcnIHJlc3VsdD0nZnV6eicgbnVtT2N0YXZlcz0nMicgc3RpdGNoVGlsZXM9J3N0aXRjaCcvPgoJPGZlQ29tcG9zaXRlIGluPSdTb3VyY2VHcmFwaGljJyBpbjI9J2Z1enonIG9wZXJhdG9yPSdhcml0aG1ldGljJyBrMT0nMCcgazI9JzEnIGszPSctNzMnIGs0PScuMDEnIC8+CjwvZmlsdGVyPgo8cmVjdCB3aWR0aD0nMTAyJScgaGVpZ2h0PScxMDIlJyBmaWxsPScjMDMwMzFhJy8+CjxyZWN0IHg9Jy0xJScgeT0nLTElJyB3aWR0aD0nMTAyJScgaGVpZ2h0PScxMDIlJyBmaWxsPScjZmZmZmZmJyBmaWx0ZXI9J3VybCgjbiknIG9wYWNpdHk9JzEnLz4KPHJlY3QgeD0nLTElJyB5PSctMSUnIHdpZHRoPScxMDIlJyBoZWlnaHQ9JzEwMiUnIGZpbGw9JyMwMzAzMWEnIGZpbHRlcj0ndXJsKCNpKScgb3BhY2l0eT0nMScvPgo8L3N2Zz4=");
   color: #e9dfb5;
   text-align: center;
   display: block; }
-  /* line 197, ../sass/modules/_content.scss */
+  /* line 203, ../sass/modules/_content.scss */
   .connect-section #connect.connect-section {
     padding: 0; }
-  /* line 205, ../sass/modules/_content.scss */
+  /* line 211, ../sass/modules/_content.scss */
   .connect-section .sect-head {
     font-size: 3em;
     margin-bottom: 1em; }
-  /* line 209, ../sass/modules/_content.scss */
+  /* line 215, ../sass/modules/_content.scss */
   .connect-section .soc-link {
     margin: 9%; }
 

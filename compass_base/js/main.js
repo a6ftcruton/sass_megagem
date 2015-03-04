@@ -19,7 +19,7 @@ var appCapsule = {
 		link: $('[class$="-link"]'),
 		logo: $(".header-logo"),
 		laptop: $(".laptop-text"),
-    video: $(".video")
+    video: $(".video-container")
 		// laptop: $(".laptop-text tspan.tspan-body")
 	},
 	
@@ -33,16 +33,28 @@ var appCapsule = {
 		appCapsule.trackSectionScroll();
 		appCapsule.logoReplace();
 		appCapsule.aboutHover();
+    appCapsule.descriptionHover();
     appCapsule.videoHover();
 	},
 
 	// Functions called by appCapsule.init()
 	//=============================================
 	
+
+  descriptionHover: function() {
+    $('.project-description').hover(function() {
+      $(this).addClass("hidden");
+    });
+
+    $('.video-container').mouseleave(function() {
+      $('.project-description').removeClass("hidden");
+    });
+  },
+
   videoHover: function() {
-    jQ.video.hover( startVideo, stopVideo );
-    function startVideo(e) { $('video', this).get(0).play(); }
-    function stopVideo(e) { $('video', this).get(0).pause(); }
+      jQ.video.hover( startVideo, stopVideo );
+      function startVideo(e) { $('video', this).get(0).play(); }
+      function stopVideo(e) { $('video', this).get(0).pause(); }
   },
 
 	setSectionHeight: function() {
