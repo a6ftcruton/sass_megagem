@@ -19,8 +19,10 @@ var appCapsule = {
 		link: $('[class$="-link"]'),
 		logo: $(".header-logo"),
 		laptop: $(".laptop-text"),
-    video: $(".video-container")
-		// laptop: $(".laptop-text tspan.tspan-body")
+    video: $(".video-container"),
+    addyCaddyDescription: $('#addy-caddy').find('.body-text').text(),
+    habitRabbitDescription: $('#habit-rabbit').find('.body-text').text(),
+    airliftDescription: $('#airlift').find('.body-text').text()
 	},
 	
 	// Function through which all functions are run
@@ -35,27 +37,51 @@ var appCapsule = {
 		appCapsule.aboutHover();
     appCapsule.descriptionHover();
     appCapsule.videoHover();
-    appCapsule.showSpecs();
+    appCapsule.toggleProjectText();
+    //appCapsule.showSpecs();
 	},
 
 	// Functions called by appCapsule.init()
 	//=============================================
-	
-  showSpecs: function() {
-    var specs = "specs";
-    var description = "description";
+  
+  toggleProjectText: function() {
+    var addyCaddySpecs = "THIS IS ADDY CADDY SPEC TEXT"
+    var habitRabbitSpecs = "THIS IS habit rabbit CADDY SPEC TEXT"
+    var airliftSpecs = "THIS IS airlift SPEC TEXT"
     $('.tech-specs').click(function() {
-      var leftText = $(this).closest('.video-info-wrapper').find('.left');
+      var clicked = $(this).closest(".video-info-wrapper").find('.video-container').attr("id"); 
+      switch(clicked) {
+        case "addy-caddy":
+          //toggleProjectText
+          //toggleProjectOption
+          appCapsule.showSpecs(addyCaddySpecs, jQ.addyCaddyDescription); //AddyCaddy
+          break;
+        case "habit-rabbit":
+          appCapsule.showSpecs(habitRabbitSpecs, jQ.habitRabbitDescription); //Habit Rabbit
+          break;
+        case "airlift":
+          appCapsule.showSpecs(airliftSpecs, jQ.airliftDescription); //Airlift
+          break;
+        default:
+          alert("wha happen?");
+      }
+    });
+  },
+
+
+  showSpecs: function(specText, descriptionText) {
+    $('.tech-specs').click(function() {
+      //e.stopPropagation();
+      var specs = "specs"; // this.spec = spec
+      var description = "description";
       var rightText = $(this).closest('.video-info-wrapper').find('.right');
       var bodyText = $(this).closest('.video-info-wrapper').find('.body-text');
-      if(leftText.text() === description){
-        leftText.text(specs);
-        rightText.text(description);
-        bodyText.text("Tech stuff goes here mang"); 
-      } else {
-        leftText.text(description);
+      if(rightText.text() === descriptionText){
         rightText.text(specs);
-        bodyText.text("Description of project goes here"); 
+        bodyText.text(descriptionText); 
+      } else {
+        rightText.text(description);
+        bodyText.text(specText); 
       }
     });
   },

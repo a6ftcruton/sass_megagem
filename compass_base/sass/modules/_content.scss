@@ -161,15 +161,16 @@
   //border-top-right-radius: 30px; 
   //border-bottom-right-radius: 30px; 
 }
-.left {
-  display: inline-block;
-  text-align: left !important;
-  width: 50%;
+.line {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  width: 90%;
+  margin-left: 1%;
 }
 .right {
   display: inline-block;
-  text-align: right !important;
-  width: 50%;
+  text-align:center; 
+  width: 10%;
+  margin-left: 1%;
 }
 // 					ABOUT Section
 // ===============================
