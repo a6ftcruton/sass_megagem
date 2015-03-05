@@ -190,48 +190,6 @@
   background: -ms-linear-gradient(top, $color3 0%,$color3 40%,$desktp 40%,$desk 100%); /* IE10+ */
   background: linear-gradient(top, $color3 0%,$color3 40%,$desktp 40%,$desk 100%); /* W3C */
 }
-/*.desktop-right {
-  width:10em;
-  height: auto;
-}
-.laptop-container {
-	position: relative;
-	z-index: 1;
-	text-align: left;
-	top: 2em;
-	left: 2em;
-}
-.laptop {
-	position: relative;
-	left: 0;
-	top: 0;
-	width: 10em;
-}
-.laptop-screen {
-	position: absolute;
-	left:0;
-	top: 0;
-	background: #ddd;
-	height: 336px;
-	width: 450px;	
-	//margin:0 auto;
-}*/
-
-#complete-desktop {
-	width: 98%;
-	position: relative;
-	top: -5em;
-	left: 0;
-	right:0;
-	display: block;
-	margin: auto;
-}
-rect {
-	overflow: hidden;
-}
-.tspan-body {
-overflow: hidden;
-}
 
 // 					CONNECT Section
 // ===============================
