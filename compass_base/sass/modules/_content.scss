@@ -156,19 +156,23 @@
   align-items: center;
   margin: 20% 0;
   border-radius: 50px;
-  //border: 4px solid white; // ????
   box-shadow: 0px 1px 8px 0px rgba(50, 50, 50, 1);
-  //border-top-right-radius: 30px; 
-  //border-bottom-right-radius: 30px; 
 }
 .line {
   border-bottom: 2px solid rgba(255, 255, 255, 0.5);
   width: 90%;
   margin-left: 1%;
 }
+.click-for {
+  position:absolute;
+  font-size: 0.6em;
+  color: rgba( $hover, 0.5);
+  padding: 0 1% 1% 0;
+}
+.click-for,
 .right {
   display: inline-block;
-  text-align:center; 
+  text-align: center; 
   width: 10%;
   margin-left: 1%;
 }

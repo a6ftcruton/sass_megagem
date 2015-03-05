@@ -20,6 +20,7 @@ var appCapsule = {
 		logo: $(".header-logo"),
 		laptop: $(".laptop-text"),
     video: $(".video-container"),
+    textOption: $(".tech-specs"),
     addyCaddyDescription: $('#addy-caddy').find('.body-text').text(),
     habitRabbitDescription: $('#habit-rabbit').find('.body-text').text(),
     airliftDescription: $('#airlift').find('.body-text').text()
@@ -37,13 +38,61 @@ var appCapsule = {
 		appCapsule.aboutHover();
     appCapsule.descriptionHover();
     appCapsule.videoHover();
-    appCapsule.toggleProjectText();
+    appCapsule.toggleOption();
+    appCapsule.toggleDescription();
+   //*  appCapsule.toggleProjectText();
     //appCapsule.showSpecs();
 	},
 
 	// Functions called by appCapsule.init()
 	//=============================================
   
+  toggleOption: function() {
+    jQ.textOption.click(function() {
+      var current = $(this).find(".right");
+      var description = "description";
+      var specs = "specs";
+      if(current.text()  === description){
+        current.text(specs);
+      } else {
+        current.text(description);
+      }   
+    });
+  },
+
+  toggleDescription: function() {
+    jQ.textOption.click(function() {
+      var projectName = $(this).closest(".video-info-wrapper").attr("id");
+      var project = $(this).closest('.video-info-wrapper').find('.body-text');
+      
+      switch(projectName) {
+        case "addy-caddy":
+          if (project.text() === jQ.addyCaddyDescription ){
+            project.text("Spec text here")
+          } else {
+            project.text(jQ.addyCaddyDescription);
+          }
+          break;
+        case "habit-rabbit":
+          if (project.text() === jQ.habitRabbitDescription ){
+            project.text("Spec text here")
+          } else {
+            project.text(jQ.habitRabbitDescription);
+          }
+          break;
+        case "airlift":
+          if (project.text() === jQ.airliftDescription ){
+            project.text("Spec text here")
+          } else {
+            project.text(jQ.airliftDescription);
+          }
+          break;
+      }
+    });
+  },
+  
+
+
   toggleProjectText: function() {
     var addyCaddySpecs = "THIS IS ADDY CADDY SPEC TEXT"
     var habitRabbitSpecs = "THIS IS habit rabbit CADDY SPEC TEXT"
@@ -76,7 +125,7 @@ var appCapsule = {
       var description = "description";
       var rightText = $(this).closest('.video-info-wrapper').find('.right');
       var bodyText = $(this).closest('.video-info-wrapper').find('.body-text');
-      if(rightText.text() === descriptionText){
+      if(rightText.text() === description){
         rightText.text(specs);
         bodyText.text(descriptionText); 
       } else {
@@ -108,10 +157,6 @@ var appCapsule = {
 		var sectionHeight = jQ.section.height()
 		var stretchHeight = (innerWindow - navHeight);
 		var dynMargin = ( (stretchHeight - sectionHeight) / 2);
-		console.log("innerwindow: " + innerWindow);
-		console.log("navHeight: " + navHeight);
-		console.log("sectionHeight: " + sectionHeight);
-		console.log("setSectionHeight: " + stretchHeight);
 		if (sectionHeight < innerWindow) {
 			jQ.section.height(stretchHeight);
 		}
@@ -144,7 +189,6 @@ var appCapsule = {
 		jQ.link.on('click', function(e) {
 			var href = $(this).attr('href');	
 			var thisClass = $(this).attr("class");	
-			console.log($(this));
 			// Handle clicks of nav-links (Add / remove highlight class)
 			
 			if ($(this).hasClass('nav-link') ) {
@@ -158,7 +202,6 @@ var appCapsule = {
 			} 
 
 			//jQ.link.removeClass('[class*="highlight"]');
-			console.log("This : " + $(this).attr("class") );
 			
 			jQ.page.stop().delay(200).animate({
 				scrollTop: $(href).offset().top
@@ -172,7 +215,6 @@ var appCapsule = {
 			var hiddenLogo = "img/hidden-bronco-logo.svg";
 			var returnLogo = function() {
 				jQ.logo.attr("src", origLogo);
-				console.log("LOGO SET TIMEOUT")
 			}
 			jQ.logo.attr("src", hiddenLogo);
 			window.setTimeout(returnLogo, 1500);
@@ -252,12 +294,9 @@ var appCapsule = {
 
 		jQ.section.each( function(index) {
 			var sectionOffset = $(this).offset().top;
-			//console.log( index + ": " + $(this).attr('class') + " " + $(this).offset().top)
 			if ( (sectionOffset + majorityView) > currentTop && (sectionOffset + majorityView) < currentBtm ) {
 				var currentSection = $(this).attr('id');
 				var hashSection = ("#" + currentSection);
-				console.log( "currentSection: " + currentSection );
-				console.log("hashSection: " + hashSection);
 				var sectInView = $(".nav-link").filter( function(index) {
 					return $(this).attr('href') === hashSection;
 				});
@@ -269,7 +308,6 @@ var appCapsule = {
         //  $('.connect-container').stop().delay(200).animate({ marginTop: "-60px" }, 60);
         //  $('.connect-container').stop().animate({ marginTop: "40px" }, 1000, 'easeInOutBack');
         //}
-				console.log(sectInView);
 			} 
 		});
 	})); // window.one.scroll
@@ -300,7 +338,6 @@ var appCapsule = {
 					var getBlindOffset = jQ.page.find(jQ.blind).offset();
 					
 					jQ.window.one("scroll", function() {
-						console.log("Scroll detected");
 						jQ.blind.css({position: "fixed"});
 					});
 					// Remove modal and blind after any subsequent click
