@@ -42,20 +42,20 @@ var appCapsule = {
 	//=============================================
 	
   showSpecs: function() {
-    var descriptionOpt = "description";
-    var techOpt = "specs";
+    var specs = "specs";
+    var description = "description";
     $('.tech-specs').click(function() {
-      var optionText = $(this);
-      var content = $(this).closest('.video-info-wrapper').find('.desc-text');
-      console.log(optionText.text());
-      if(optionText.text() === descriptionOpt){
-        optionText.text(techOpt);
-        content.text("Tech stuff goes here mang"); 
-        console.log(optionText, descriptionOpt);
+      var leftText = $(this).closest('.video-info-wrapper').find('.left');
+      var rightText = $(this).closest('.video-info-wrapper').find('.right');
+      var bodyText = $(this).closest('.video-info-wrapper').find('.body-text');
+      if(leftText.text() === description){
+        leftText.text(specs);
+        rightText.text(description);
+        bodyText.text("Tech stuff goes here mang"); 
       } else {
-        optionText.text(descriptionOpt);
-        content.text("Description goes here mAAAANNG");
-        console.log(optionText, descriptionOpt);
+        leftText.text(description);
+        rightText.text(specs);
+        bodyText.text("Description of project goes here"); 
       }
     });
   },
