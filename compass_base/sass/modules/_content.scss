@@ -98,13 +98,18 @@
 // 					WORK Section
 // ===============================
 // Shift Work and About titles to right to clear logo
+.work-section {
+  padding-top: 5%;
+}
 .sect-title {
 	text-align: right;
 	margin-right: 10%;
+  font-size: 3em;
 }
 .video-container {
   position: relative;
   margin: 10%;
+  border-radius: 25px;
 }
 .project-description {
   position: absolute;
@@ -112,33 +117,45 @@
   left: 0;
   bottom: 0;
   right: 0;
-  padding: 10% 10%;
+  padding: 10%;
   text-align: center;
-  color: rgba(255, 255, 255, 1);
   width: 100%;
   height: 100%;
+  color: rgba(255, 255, 255, 1);
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 100;
+  border-radius: 25px;
 }
 .project-title {
   font-family: $font-head; 
   letter-spacing: 0.1em;
   padding: 5px;
 }
-.hover-for-demo {
-  font-family: $font-head;
-  color: rgba(255, 255, 255, 0.6);
-  letter-spacing: 0.1em;
-}
 .video {
   width: 100%;
+  border-radius: 25px;
 }
-//.project-description:hover {
-//  opacity: 0;
-//}
-.hidden {
-  z-index: -100;
+.hover-for-demo {
+  font-family: $font-head;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.1em;
 }
+.video-info-wrapper {
+  position: relative;
+}
+.tech-specs {
+  position: absolute;
+  background-color: #00334d;
+  color: $hover;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding:2em;
+  margin: 20% 0;
+  border-top-right-radius: 30px; 
+  border-bottom-right-radius: 30px; 
+}
+
 // 					ABOUT Section
 // ===============================
 .about-section {

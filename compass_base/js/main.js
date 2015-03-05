@@ -35,19 +35,38 @@ var appCapsule = {
 		appCapsule.aboutHover();
     appCapsule.descriptionHover();
     appCapsule.videoHover();
+    appCapsule.showSpecs();
 	},
 
 	// Functions called by appCapsule.init()
 	//=============================================
 	
+  showSpecs: function() {
+      var descriptionOpt = "show description";
+      var techOpt = "show specs";
+    $('.tech-specs').click(function() {
+      var optionText = $(this);
+      var content = $(this).closest('.video-info-wrapper').find('.desc-text');
+      console.log(optionText.text());
+      if(optionText.text() === descriptionOpt){
+        optionText.text(techOpt);
+        content.text("Tech stuff goes here mang"); 
+        console.log(optionText, descriptionOpt);
+      } else {
+        optionText.text(descriptionOpt);
+        content.text("Description goes here mAAAANNG");
+        console.log(optionText, descriptionOpt);
+      }
+    });
+  },
 
   descriptionHover: function() {
     $('.project-description').hover(function() {
-      $(this).addClass("hidden");
+      $(this).fadeOut(250);
     });
 
     $('.video-container').mouseleave(function() {
-      $('.project-description').removeClass("hidden");
+      $('.project-description').fadeIn(250);
     });
   },
 
@@ -226,7 +245,6 @@ var appCapsule = {
         //}
 				console.log(sectInView);
 			} 
-			else {console.log("not in view")};
 		});
 	})); // window.one.scroll
 }, // trackSectionScroll
