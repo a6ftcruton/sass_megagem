@@ -42,8 +42,8 @@ var appCapsule = {
 	//=============================================
 	
   showSpecs: function() {
-      var descriptionOpt = "show description";
-      var techOpt = "show specs";
+    var descriptionOpt = "description";
+    var techOpt = "specs";
     $('.tech-specs').click(function() {
       var optionText = $(this);
       var content = $(this).closest('.video-info-wrapper').find('.desc-text');
