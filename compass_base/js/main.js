@@ -29,7 +29,6 @@ var appCapsule = {
 		appCapsule.setSectionHeight();
 		appCapsule.trackSectionScroll();
 		appCapsule.logoReplace();
-		appCapsule.aboutHover();
     appCapsule.descriptionHover();
     appCapsule.videoHover();
     appCapsule.toggleOption();
@@ -42,7 +41,7 @@ var appCapsule = {
   toggleOption: function() {
     jQ.textOption.click(function() {
       var current = $(this).find(".right");
-      var description = "description";
+      var description = "overview";
       var specs = "specs";
       if(current.text()  === description){
         current.text(specs);

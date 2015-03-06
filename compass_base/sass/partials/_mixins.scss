@@ -48,6 +48,14 @@
 	padding-left: $left-right;
 }
 
+// Media Query-based margin
+//========================================
+@mixin mq-margin($default, $M, $L, $X) {
+	margin: $default;
+	@include at-breakpoint($Medium) {margin: $M;}
+	@include at-breakpoint($Large) {margin: $L;}
+	@include at-breakpoint($XL) {padding: $X;}
+}
 // Media Query-based padding
 //========================================
 @mixin mq-padding($default, $M, $L, $X) {
