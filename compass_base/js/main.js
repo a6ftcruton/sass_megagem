@@ -1,8 +1,6 @@
-
-// UPDATED VERSION:
 //jQ in global namespace
 var jQ;
-// Namespace
+
 var appCapsule = {
 	
 	node: {
@@ -21,15 +19,11 @@ var appCapsule = {
 		laptop: $(".laptop-text"),
     video: $(".video-container"),
     textOption: $(".tech-specs"),
-    addyCaddyDescription: $('#addy-caddy').find('.body-text').text(),
-    habitRabbitDescription: $('#habit-rabbit').find('.body-text').text(),
-    airliftDescription: $('#airlift').find('.body-text').text()
 	},
 	
 	// Function through which all functions are run
 	init: function() {
 		jQ = this.node; // allow global access to variables for common nodes
-		//appCapsule.pgReload();
 		appCapsule.animateScroll();
 		appCapsule.toggleModal();
 		appCapsule.setSectionHeight();
@@ -40,8 +34,6 @@ var appCapsule = {
     appCapsule.videoHover();
     appCapsule.toggleOption();
     appCapsule.toggleDescription();
-   //*  appCapsule.toggleProjectText();
-    //appCapsule.showSpecs();
 	},
 
 	// Functions called by appCapsule.init()
@@ -64,77 +56,12 @@ var appCapsule = {
     jQ.textOption.click(function() {
       var projectName = $(this).closest(".video-info-wrapper").attr("id");
       var project = $(this).closest('.video-info-wrapper').find('.body-text');
-      
-      switch(projectName) {
-        case "addy-caddy":
-          if (project.text() === jQ.addyCaddyDescription ){
-            project.text("Spec text here")
-          } else {
-            project.text(jQ.addyCaddyDescription);
-          }
-          break;
-        case "habit-rabbit":
-          if (project.text() === jQ.habitRabbitDescription ){
-            project.text("Spec text here")
-          } else {
-            project.text(jQ.habitRabbitDescription);
-          }
-          break;
-        case "airlift":
-          if (project.text() === jQ.airliftDescription ){
-            project.text("Spec text here")
-          } else {
-            project.text(jQ.airliftDescription);
-          }
-          break;
-      }
+      var projectText = $(this).closest('.video-info-wrapper');
+      projectText.find('.body-text').toggleClass("hidden");
+      projectText.find('.spec-text').toggleClass("hidden");
     });
   },
   
-
-
-  toggleProjectText: function() {
-    var addyCaddySpecs = "THIS IS ADDY CADDY SPEC TEXT"
-    var habitRabbitSpecs = "THIS IS habit rabbit CADDY SPEC TEXT"
-    var airliftSpecs = "THIS IS airlift SPEC TEXT"
-    $('.tech-specs').click(function() {
-      var clicked = $(this).closest(".video-info-wrapper").find('.video-container').attr("id"); 
-      switch(clicked) {
-        case "addy-caddy":
-          //toggleProjectText
-          //toggleProjectOption
-          appCapsule.showSpecs(addyCaddySpecs, jQ.addyCaddyDescription); //AddyCaddy
-          break;
-        case "habit-rabbit":
-          appCapsule.showSpecs(habitRabbitSpecs, jQ.habitRabbitDescription); //Habit Rabbit
-          break;
-        case "airlift":
-          appCapsule.showSpecs(airliftSpecs, jQ.airliftDescription); //Airlift
-          break;
-        default:
-          alert("wha happen?");
-      }
-    });
-  },
-
-
-  showSpecs: function(specText, descriptionText) {
-    $('.tech-specs').click(function() {
-      //e.stopPropagation();
-      var specs = "specs"; // this.spec = spec
-      var description = "description";
-      var rightText = $(this).closest('.video-info-wrapper').find('.right');
-      var bodyText = $(this).closest('.video-info-wrapper').find('.body-text');
-      if(rightText.text() === description){
-        rightText.text(specs);
-        bodyText.text(descriptionText); 
-      } else {
-        rightText.text(description);
-        bodyText.text(specText); 
-      }
-    });
-  },
-
   descriptionHover: function() {
     $('.project-description').hover(function() {
       $(this).fadeOut(250);
@@ -190,7 +117,6 @@ var appCapsule = {
 			var href = $(this).attr('href');	
 			var thisClass = $(this).attr("class");	
 			// Handle clicks of nav-links (Add / remove highlight class)
-			
 			if ($(this).hasClass('nav-link') ) {
 			  jQ.navLink.removeClass('highlight-link highlight-home');
 			  $(this).addClass('highlight-link');
@@ -200,9 +126,6 @@ var appCapsule = {
           $(this).addClass('highlight-modal');
           e.preventDefault();
 			} 
-
-			//jQ.link.removeClass('[class*="highlight"]');
-			
 			jQ.page.stop().delay(200).animate({
 				scrollTop: $(href).offset().top
 			}, 1500, 'easeInOutQuart');
@@ -218,76 +141,11 @@ var appCapsule = {
 			}
 			jQ.logo.attr("src", hiddenLogo);
 			window.setTimeout(returnLogo, 1500);
-
-			// var hiddenLogo = "./img/hidden-bronco-logo.svg";
-			// $(".header-logo").attr("src", hiddenLogo);
 		}); // jQ.navlink.on 'click'
 	},
 
-	aboutHover: function() {
-		var originalText = "Hover and Discover";
-		//History
-		$("#history").hover( 
-			function(){
-				jQ.laptop.fadeOut('300', function() {
-					jQ.laptop.text("New text enters here and should be very very long text to see what happens to the screen size").fadeIn('300');
-				});
-			},
-		  function(){
-				jQ.laptop.fadeOut('300', function() {
-					jQ.laptop.text(originalText).fadeIn('300');
-				});
-			}
-		)
-		//Philosophy
-		$("#philosophy").hover( 
-			function(){
-				jQ.laptop.fadeOut('300', function() {
-					jQ.laptop.text("Philosophy text enters").fadeIn('300');
-				});
-			},
-		  function(){
-				jQ.laptop.fadeOut('300', function() {
-					jQ.laptop.text(originalText).fadeIn('300');
-				});
-			}
-		)
-
-		//Passport
-    $("#passport").hover( 
-			function(){
-				jQ.laptop.fadeOut('300', function() {
-					jQ.laptop.text("Passport text enters").fadeIn('300');
-				});
-			},
-		  function(){
-				jQ.laptop.fadeOut('300', function() {
-					jQ.laptop.text(originalText).fadeIn('300');
-				});
-			}
-		)
-
-		//Unicorn
-    $("#unicorn").hover( 
-			function(){
-				jQ.laptop.fadeOut('300', function() {
-					jQ.laptop.text("Unicorn text enters").fadeIn('300');
-				});
-			},
-		  function(){
-				jQ.laptop.fadeOut('300', function() {
-					jQ.laptop.text(originalText).fadeIn('300');
-				});
-			}
-		)
-
-
-	}, // end aboutHover
-
-// ** Need to add debounce function to handle scroll?
 	trackSectionScroll: function() {
 		jQ.window.on("scroll", jQuery.throttle( 500, true, function() { 
-		// change to 'one' so this isn't so expensive?
 		var currentTop = jQ.window.scrollTop();
 		var currentBtm = (currentTop + jQ.window.height());
 		var majorityView = Math.round( ( jQ.window.innerHeight() - jQ.nav.height() ) / 2);
@@ -312,10 +170,6 @@ var appCapsule = {
 		});
 	})); // window.one.scroll
 }, // trackSectionScroll
-
-// throttleScroll: function() {
-// 	jQ.window.on("scroll", jQuery.throttle( 200, true, this.trackSectionScroll ) );
-// },
 
 	toggleModal: function() {
 
@@ -356,5 +210,4 @@ var appCapsule = {
 
 }; // appCapsule
 
-// Calls the main function
 appCapsule.init();

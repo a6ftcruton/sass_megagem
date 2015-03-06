@@ -126,6 +126,16 @@
   z-index: 100;
   border-radius: 25px;
 }
+.hidden {
+  display: none;
+}
+.spec-text {
+  text-align: left;
+}
+.spec-text li {
+  display: list-item;
+  list-style-type: disc;
+}
 .project-title {
   font-family: $font-head; 
   letter-spacing: 0.1em;
