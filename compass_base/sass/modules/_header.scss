@@ -37,8 +37,8 @@
 	position: absolute;
 	margin: auto 0;
 	top: 5%;
-	left: 5%;
-	@include mq-logo(11em,12em,13em,14em);
+	left: 3%;
+	@include mq-logo(7em,9em,11em,13em);
 }
 
 
@@ -59,8 +59,7 @@
 		}
 		.nav-container {
 			display: block;
-/*		height: 100%;
-*/		margin-right: 8%;
+  		margin-right: 8%;
 			text-align: right;
 			letter-spacing: 0.25em;
 			white-space: nowrap;
@@ -77,12 +76,10 @@
 	}
 
 	@include at-breakpoint($XL) {
-		/*.layout-header {background-color: black;}
 		.nav-container.nav-link {
 			font-size: 1.6em;
-		}*/
+		}
 	}
 
 } // end layout header
-
 

@@ -144,6 +144,7 @@
 .spec-text {
   font-family: $font-body;
   text-align: left;
+  margin-top: 0;
   padding-left: 10%;
 }
 .spec-text > li{
@@ -279,10 +280,11 @@
 		margin-bottom: 1em;
 	}
 	.soc-link {
-		margin: 9%;
+    margin: 5%;
+    @include at-breakpoint($Medium) {
+      margin: 9%;
+    }
 	}
 
 } // end connect section
-
-
 
