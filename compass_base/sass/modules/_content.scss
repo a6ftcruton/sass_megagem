@@ -133,17 +133,25 @@
   display: none;
 }
 .body-text {
-  @include mq-font-sizes(0.1em, 0.85em, 1em, 0.9em);
+  position: relative;
+  top: 10%;
+	-webkit-transform: translateY(-10%);
+ 	-ms-transform: translateY(-10%);
+ 	transform: translateY(-10%);
+  @include mq-font-sizes(0.05em, 0.85em, 1em, 0.9em);
   @include mq-margin(0, 1%, 2%, 0);
 }
 .spec-text {
   font-family: $font-body;
   text-align: left;
-  @include mq-font-sizes(0.6em, 0.8em, 0.8em, 0.9em);
+  padding-left: 10%;
+}
+.spec-text > li{
+  @include mq-font-sizes(8px, 0.8em, 0.8em, 0.9em);
 }
 .spec-heading {
   font-family: $font-head;
-  @include mq-font-sizes(0.4em, 0.8em, 1em, 1em);
+  @include mq-font-sizes(08px, 0.8em, 1em, 1em);
 }
 .spec-text li {
   display: list-item;
@@ -181,22 +189,28 @@
   position: relative;
 }
 .tech-specs {
-  position: absolute;
-  background-color: #00334d;
-  color: $hover;
-  top: 0;
-  bottom: 0;
-  right: -3em;
-  left: -3em;
-  padding: 1em;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: no-wrap;
-  justify-content: center;
-  align-items: center;
-  margin: 20% 0;
-  border-radius: 50px;
-  box-shadow: 0px 1px 8px 0px rgba(50, 50, 50, 1);
+    position: absolute;
+    top: -1em;
+    bottom: -1em;
+    left: -2.5em;
+    right: -2.5em;
+    background-color: #00334d;
+    color: $hover;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20% 0;
+    border-radius: 50px;
+    box-shadow: 0px 1px 8px 0px rgba(50, 50, 50, 1);
+    @include at-breakpoint($Medium) {
+      top: 0;
+      bottom: 0;
+      right: -3em;
+      left: -3em;
+    }
 }
 .left,
 .right,
