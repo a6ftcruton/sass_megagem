@@ -26,7 +26,7 @@ var appCapsule = {
 		jQ = this.node; // allow global access to variables for common nodes
 		appCapsule.animateScroll();
 		appCapsule.toggleModal();
-		//appCapsule.setSectionHeight();
+//		appCapsule.setSectionHeight();
 		appCapsule.trackSectionScroll();
 		appCapsule.logoReplace();
     appCapsule.descriptionHover();
@@ -78,7 +78,9 @@ var appCapsule = {
   },
 
 	setSectionHeight: function() {
-		var innerWindow = jQ.window.innerHeight();
+  var innerWindow = jQ.window.innerHeight();
+   if (innerWindow < 680) {   
+     console.log("small window");
 		var navHeight = jQ.nav.height();
 		var sectionHeight = jQ.section.height()
 		var stretchHeight = (innerWindow - navHeight);
@@ -86,19 +88,19 @@ var appCapsule = {
 		if (sectionHeight < innerWindow) {
 			jQ.section.height(stretchHeight);
 		}
-		
-		jQ.section.height(stretchHeight - (dynMargin * 2));
-		jQ.section.css({"padding": dynMargin});
-		 if(sectionHeight < innerWindow) {
-		 	console.log("Adding margins to center section");
-		 	var dynMargin = ( (stretchHeight - sectionHeight) / 2);
-		 	jQ.section.height( stretchHeight -(dynMargin * 2) )
-		 	.css({
-		 		'margin-top margin-bottom': dynMargin,
-		 	});
-		 	console.log("margins: " + dynMargin);
-		 	console.log("new sectionHeight: " + stretchHeight);
-		 }
+   }		
+//		jQ.section.height(stretchHeight - (dynMargin * 2));
+//		jQ.section.css({"padding": dynMargin});
+//		 if(sectionHeight < innerWindow) {
+//		 	console.log("Adding margins to center section");
+//		 	var dynMargin = ( (stretchHeight - sectionHeight) / 2);
+//		 	jQ.section.height( stretchHeight -(dynMargin * 2) )
+//		 	.css({
+//		 		'margin-top margin-bottom': dynMargin,
+//		 	});
+//		 	console.log("margins: " + dynMargin);
+//		 	console.log("new sectionHeight: " + stretchHeight);
+//		 }
 	},
 
 	// pgReload: function() {

@@ -334,11 +334,12 @@ h1, h2, h3, h4, h5, h6, lh, .nav-link, .modal-link {
 /* line 58, ../sass/partials/_base.scss */
 section {
   position: relative;
-  height: 100%;
+  height: 670px;
+  min-height: 670px;
   font-size: 0.7em;
-  padding-top: 5%;
+  padding-top: 30%;
   padding-right: 20%;
-  padding-bottom: 5%;
+  padding-bottom: 30%;
   padding-left: 20%;
   padding-top: 100px;
   padding-right: "";
@@ -359,6 +360,7 @@ section {
   @media (min-width: 45em) {
     /* line 58, ../sass/partials/_base.scss */
     section {
+      height: 100%;
       padding-top: 30%;
       padding-right: 15%;
       padding-bottom: 30%;
@@ -382,90 +384,90 @@ section {
       padding-bottom: 15%;
       padding-left: 10%; } }
 
-/* line 87, ../sass/partials/_base.scss */
+/* line 89, ../sass/partials/_base.scss */
 .intro {
   font-size: 1rem; }
   @media (min-width: 45em) {
-    /* line 87, ../sass/partials/_base.scss */
+    /* line 89, ../sass/partials/_base.scss */
     .intro {
       font-size: 1.2rem; } }
   @media (min-width: 60em) {
-    /* line 87, ../sass/partials/_base.scss */
+    /* line 89, ../sass/partials/_base.scss */
     .intro {
       font-size: 1.35rem; } }
   @media (min-width: 78em) {
-    /* line 87, ../sass/partials/_base.scss */
+    /* line 89, ../sass/partials/_base.scss */
     .intro {
       font-size: 1.6rem; } }
 
-/* line 90, ../sass/partials/_base.scss */
+/* line 92, ../sass/partials/_base.scss */
 .intro-headline {
   font-weight: 600; }
-  /* line 92, ../sass/partials/_base.scss */
+  /* line 94, ../sass/partials/_base.scss */
   .intro-headline .intro-enlarge {
     font-size: 110%;
     letter-spacing: 0.08em; }
-  /* line 95, ../sass/partials/_base.scss */
+  /* line 97, ../sass/partials/_base.scss */
   .intro-headline .quote {
     font-size: 90%; }
 
-/* line 99, ../sass/partials/_base.scss */
+/* line 101, ../sass/partials/_base.scss */
 footer {
   font-size: 0.4rem; }
   @media (min-width: 45em) {
-    /* line 99, ../sass/partials/_base.scss */
+    /* line 101, ../sass/partials/_base.scss */
     footer {
       font-size: 0.8rem; } }
   @media (min-width: 60em) {
-    /* line 99, ../sass/partials/_base.scss */
+    /* line 101, ../sass/partials/_base.scss */
     footer {
       font-size: 0.9rem; } }
   @media (min-width: 78em) {
-    /* line 99, ../sass/partials/_base.scss */
+    /* line 101, ../sass/partials/_base.scss */
     footer {
       font-size: 1rem; } }
 
-/* line 109, ../sass/partials/_base.scss */
+/* line 111, ../sass/partials/_base.scss */
 header,
 .layout-header,
 footer {
   background-color: #00334d; }
 
-/* line 112, ../sass/partials/_base.scss */
+/* line 114, ../sass/partials/_base.scss */
 [class*="-section"] {
   background-color: #e9dfb5; }
 
-/* line 115, ../sass/partials/_base.scss */
+/* line 117, ../sass/partials/_base.scss */
 .home {
   /*@include color(darken($color4, 5%), $color3);*/
   background-color: rgba(0, 51, 77, 0); }
 
-/* line 122, ../sass/partials/_base.scss */
+/* line 124, ../sass/partials/_base.scss */
 article p,
 header,
 .title {
   color: #002232;
   border-color: #002232; }
 
-/* line 126, ../sass/partials/_base.scss */
+/* line 128, ../sass/partials/_base.scss */
 [class="fa fa-bars fa-2x"] {
   color: #8cb6cb; }
 
-/* line 130, ../sass/partials/_base.scss */
+/* line 132, ../sass/partials/_base.scss */
 .nav-link,
 .soc-link {
   color: #8cb6cb;
   background-color: #00334d; }
 
-/* line 133, ../sass/partials/_base.scss */
+/* line 135, ../sass/partials/_base.scss */
 lh, .footer-bio-text, .copyright {
   color: #d8c57a; }
 
-/* line 136, ../sass/partials/_base.scss */
+/* line 138, ../sass/partials/_base.scss */
 a, i, .footer-link-connect {
   color: #8cb6cb; }
 
-/* line 146, ../sass/partials/_base.scss */
+/* line 148, ../sass/partials/_base.scss */
 a:hover,
 i:hover,
 .menu:hover i,
@@ -485,7 +487,7 @@ i:hover,
   -moz-box-shadow: "";
   box-shadow: ""; }
 
-/* line 149, ../sass/partials/_base.scss */
+/* line 151, ../sass/partials/_base.scss */
 .nav-link:hover {
   -webkit-transition-property: all;
   -moz-transition-property: all;
@@ -501,7 +503,7 @@ i:hover,
   -moz-box-shadow: "";
   box-shadow: ""; }
 
-/* line 152, ../sass/partials/_base.scss */
+/* line 154, ../sass/partials/_base.scss */
 .nav-link:active {
   -webkit-transition-property: all;
   -moz-transition-property: all;
@@ -517,7 +519,7 @@ i:hover,
   -moz-box-shadow: "";
   box-shadow: ""; }
 
-/* line 155, ../sass/partials/_base.scss */
+/* line 157, ../sass/partials/_base.scss */
 .highlight-home {
   -webkit-transition-property: all;
   -moz-transition-property: all;
@@ -546,7 +548,7 @@ i:hover,
 	@include transition-property(color);
 	@include transition-duration(2s);
 }*/
-/* line 165, ../sass/partials/_base.scss */
+/* line 167, ../sass/partials/_base.scss */
 .highlight-link {
   -webkit-transition-property: all;
   -moz-transition-property: all;
@@ -562,7 +564,7 @@ i:hover,
   -moz-box-shadow: "";
   box-shadow: ""; }
 
-/* line 169, ../sass/partials/_base.scss */
+/* line 171, ../sass/partials/_base.scss */
 .modal-link:hover,
 .close-modal-msg:hover {
   -webkit-transition-property: all;
@@ -579,11 +581,11 @@ i:hover,
   -moz-box-shadow: "";
   box-shadow: ""; }
 
-/* line 172, ../sass/partials/_base.scss */
+/* line 174, ../sass/partials/_base.scss */
 .modal-link:active {
   color: #d8c57a; }
 
-/* line 175, ../sass/partials/_base.scss */
+/* line 177, ../sass/partials/_base.scss */
 .highlight-modal {
   -webkit-transition-property: all;
   -moz-transition-property: all;
@@ -599,11 +601,11 @@ i:hover,
   -moz-box-shadow: "";
   box-shadow: ""; }
 
-/* line 178, ../sass/partials/_base.scss */
+/* line 180, ../sass/partials/_base.scss */
 .highlight-modal:active {
   color: #e9dfb5; }
 
-/* line 181, ../sass/partials/_base.scss */
+/* line 183, ../sass/partials/_base.scss */
 .highlight-modal:hover {
   -webkit-transition-property: all;
   -moz-transition-property: all;
@@ -619,7 +621,7 @@ i:hover,
   -moz-box-shadow: "";
   box-shadow: ""; }
 
-/* line 185, ../sass/partials/_base.scss */
+/* line 187, ../sass/partials/_base.scss */
 .footer-link-connect:hover, .footer-link-share:hover {
   -webkit-transition-property: all;
   -moz-transition-property: all;

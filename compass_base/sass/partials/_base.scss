@@ -59,13 +59,15 @@ section {
 	//Default styles
 	//(Note: home section margins have special styles applied in _content.scss;)
 	position: relative;
-	height: 100%;
+	height: 670px;
+  min-height: 670px;
 	@include mq-font-sizes(0.7em, 1.2em, 1.3em, 1.5em);	
-	@include padding(5%, 20%);
+	@include padding(30%, 20%);
 	@include margin(100px);
 
 	// Medium Styles
 	@include at-breakpoint($Medium) {
+    height: 100%;
 		@include padding(30%, 15%);
 		@include margin(100px);
 	}
