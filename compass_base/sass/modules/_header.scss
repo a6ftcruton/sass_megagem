@@ -8,11 +8,10 @@
 	z-index: 999;
 	width: 100%;
 	display: block;
-	/*overflow: hidden;	*/
+  /* overflow: hidden */
 	vertical-align: middle;
 	@include single-box-shadow;
-	height: $content-margin;
-	 			// must match content margin-top!
+	height: $content-margin; // must match content margin-top!
 	max-height: $content-margin;
 	margin: 0;
 	
@@ -20,9 +19,6 @@
 	display:none;  // changes to display for larger layouts
 }
 
-/*div.wrapper {
-	margin-top: $content-margin;
-}*/
 .menu {	
 	@include sassy-button("matte", 5px, 19px, $color1, lighten($color1, 3%), #fff, "raised");
 	height: 3rem;

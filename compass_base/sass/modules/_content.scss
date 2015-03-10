@@ -13,7 +13,6 @@
 
 // 					HOME Section
 // ===============================
-
 .intro-wrapper {
 	color: #eee;
 }
@@ -45,10 +44,6 @@
 		}
 	}
 #home-bg {
-	/*top:0;
-	left:0;
-	height:100%;
-	width: auto;*/
 	position: fixed;
 	top: -50%;
 	left: -50%;
@@ -56,7 +51,6 @@
 	height: 200%;
 	z-index: -1;
 	opacity: .9;
-	
 }
 #home-bg img {
 	position: absolute;
@@ -92,7 +86,6 @@
 		left:12%;
 	}
 	@include at-breakpoint($XL) {left: 16%;}
-
 } // end home STYLES
 
 // 					WORK Section
@@ -152,7 +145,7 @@
 }
 .spec-heading {
   font-family: $font-head;
-  @include mq-font-sizes(08px, 0.8em, 1em, 1em);
+  @include mq-font-sizes(8px, 0.8em, 1em, 1em);
 }
 .spec-text li {
   display: list-item;
@@ -173,14 +166,14 @@
 .hover-for-demo {
   display: none;
   @include at-breakpoint($Medium) {
-  display: block;
-  font-family: $font-head;
-  color: rgba(255, 255, 255, 0.7);
-  letter-spacing: 0.1em;
-  position: absolute;
-  bottom: -0.5em;
-  left: 0;
-  right: 0;
+    display: block;
+    font-family: $font-head;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.1em;
+    position: absolute;
+    bottom: -0.5em;
+    left: 0;
+    right: 0;
   }
   @include at-breakpoint($Large) {
     bottom: 0;
@@ -190,28 +183,28 @@
   position: relative;
 }
 .tech-specs {
-    position: absolute;
-    top: -1em;
+  position: absolute;
+  top: -3em;
+  bottom: -3em;
+  left: -2.5em;
+  right: -2.5em;
+  background-color: #00334d;
+  color: $hover;
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20% 0;
+  border-radius: 50px;
+  box-shadow: 0px 1px 8px 0px rgba(50, 50, 50, 1);
+  @include at-breakpoint($Medium) {
+    top: -1em ;
     bottom: -1em;
-    left: -2.5em;
-    right: -2.5em;
-    background-color: #00334d;
-    color: $hover;
-    padding: 1em;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: no-wrap;
-    justify-content: center;
-    align-items: center;
-    margin: 20% 0;
-    border-radius: 50px;
-    box-shadow: 0px 1px 8px 0px rgba(50, 50, 50, 1);
-    @include at-breakpoint($Medium) {
-      top: 0;
-      bottom: 0;
-      right: -3em;
-      left: -3em;
-    }
+    right: -3em;
+    left: -3em;
+  }
 }
 .left,
 .right,
@@ -251,30 +244,70 @@
 // 					ABOUT Section
 // ===============================
 .about-section {
-	/*height: 100%;    ???
-	width: 100%;*/
-	padding: 10em 2em 1em;
+  position: relative;
+	@include mq-padding(50% 10%, 20% 10%, 8% 10%, 2px 0);
   background: $color3; // Old browser fallback
-  background: -moz-linear-gradient(top, $color3 0%, $color3 40%, $desktp 40%, $desk 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color3), color-stop(40%,$color3), color-stop(40%,$desktp), color-stop(100%,$desk)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, $color3 0%,$color3 40%,$desktp 40%,$desk 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, $color3 0%,$color3 40%,$desktp 40%,$desk 100%); /* Opera11.10+ */
-  background: -ms-linear-gradient(top, $color3 0%,$color3 40%,$desktp 40%,$desk 100%); /* IE10+ */
-  background: linear-gradient(top, $color3 0%,$color3 40%,$desktp 40%,$desk 100%); /* W3C */
+}
+.helmet-left, 
+.helmet-right {
+  width: 20%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.helmet-right {
+  left: 0;
+}
+.helmet-left {
+  right: 0;
+}
+.about-text {
+  position: absolute;
+  top: 0;
+   right:0;
+  bottom:0;
+  left:0;
+   width: 50%;
+  height: 60%;
+  margin: auto;
+   overflow: auto;
+  text-align: left;
+
+  
+  // width: 70%;
+  
+  // border-radius: 10px;
+  // box-shadow: inset 0 0 9px $color1;
+  // background-color: rgba($color1, 0.1);
+  // padding: 3%;
+  // right: 18%;
+  // width: 70%;
+}
+.about-text > h1 {
+  margin-right: 8%;
+  text-align: right;
+  color: rgba($color1, 0.9); 
+}
+.about-question {
+  margin-bottom: 0;
+  @include mq-font-sizes(0.4em, 0.6em, 0.8em, 0.8em);
+}
+.about-answer {
+  margin-top: 1%;
+  font-size: 16px;
 }
 
 // 					CONNECT Section
 // ===============================
 .connect-section {
 	// http://svgeneration.com/generate/Galaxy?background=03031a&density=0.6&star-color=ffffff&
-  #connect.connect-section {
-    padding: 0;
-  }
-	background-color: #03031a;
-	background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nNjAwJyBoZWlnaHQ9JzYwMCcgdmlld0JveD0nMCAwIDE1MCAxNTAnPgo8ZmlsdGVyIGlkPSdpJyB4PScwJyB5PScwJz4KCTxmZUNvbG9yTWF0cml4IHR5cGU9J21hdHJpeCcgdmFsdWVzPScxIDAgMCAwIDAgIDAgMSAwIDAgMCAgMCAwIDEgMCAwICAwIDAgMCAwIDAnIC8+CjwvZmlsdGVyPgo8ZmlsdGVyIGlkPSduJyB4PScwJyB5PScwJz4KCTxmZVR1cmJ1bGVuY2UgdHlwZT0ndHVyYnVsZW5jZScgYmFzZUZyZXF1ZW5jeT0nLjcnIHJlc3VsdD0nZnV6eicgbnVtT2N0YXZlcz0nMicgc3RpdGNoVGlsZXM9J3N0aXRjaCcvPgoJPGZlQ29tcG9zaXRlIGluPSdTb3VyY2VHcmFwaGljJyBpbjI9J2Z1enonIG9wZXJhdG9yPSdhcml0aG1ldGljJyBrMT0nMCcgazI9JzEnIGszPSctNzMnIGs0PScuMDEnIC8+CjwvZmlsdGVyPgo8cmVjdCB3aWR0aD0nMTAyJScgaGVpZ2h0PScxMDIlJyBmaWxsPScjMDMwMzFhJy8+CjxyZWN0IHg9Jy0xJScgeT0nLTElJyB3aWR0aD0nMTAyJScgaGVpZ2h0PScxMDIlJyBmaWxsPScjZmZmZmZmJyBmaWx0ZXI9J3VybCgjbiknIG9wYWNpdHk9JzEnLz4KPHJlY3QgeD0nLTElJyB5PSctMSUnIHdpZHRoPScxMDIlJyBoZWlnaHQ9JzEwMiUnIGZpbGw9JyMwMzAzMWEnIGZpbHRlcj0ndXJsKCNpKScgb3BhY2l0eT0nMScvPgo8L3N2Zz4=');
-	color: $color9;
+  @include mq-padding(40% 0, 30% 0%, 15% 20%, 10% 20%);
+ 	color: $color9;
 	text-align: center;
 	display: block;
+	background-color: #03031a;
+	background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nNjAwJyBoZWlnaHQ9JzYwMCcgdmlld0JveD0nMCAwIDE1MCAxNTAnPgo8ZmlsdGVyIGlkPSdpJyB4PScwJyB5PScwJz4KCTxmZUNvbG9yTWF0cml4IHR5cGU9J21hdHJpeCcgdmFsdWVzPScxIDAgMCAwIDAgIDAgMSAwIDAgMCAgMCAwIDEgMCAwICAwIDAgMCAwIDAnIC8+CjwvZmlsdGVyPgo8ZmlsdGVyIGlkPSduJyB4PScwJyB5PScwJz4KCTxmZVR1cmJ1bGVuY2UgdHlwZT0ndHVyYnVsZW5jZScgYmFzZUZyZXF1ZW5jeT0nLjcnIHJlc3VsdD0nZnV6eicgbnVtT2N0YXZlcz0nMicgc3RpdGNoVGlsZXM9J3N0aXRjaCcvPgoJPGZlQ29tcG9zaXRlIGluPSdTb3VyY2VHcmFwaGljJyBpbjI9J2Z1enonIG9wZXJhdG9yPSdhcml0aG1ldGljJyBrMT0nMCcgazI9JzEnIGszPSctNzMnIGs0PScuMDEnIC8+CjwvZmlsdGVyPgo8cmVjdCB3aWR0aD0nMTAyJScgaGVpZ2h0PScxMDIlJyBmaWxsPScjMDMwMzFhJy8+CjxyZWN0IHg9Jy0xJScgeT0nLTElJyB3aWR0aD0nMTAyJScgaGVpZ2h0PScxMDIlJyBmaWxsPScjZmZmZmZmJyBmaWx0ZXI9J3VybCgjbiknIG9wYWNpdHk9JzEnLz4KPHJlY3QgeD0nLTElJyB5PSctMSUnIHdpZHRoPScxMDIlJyBoZWlnaHQ9JzEwMiUnIGZpbGw9JyMwMzAzMWEnIGZpbHRlcj0ndXJsKCNpKScgb3BhY2l0eT0nMScvPgo8L3N2Zz4=');
 	.sect-head {
 		font-size: 3em;
 		margin-bottom: 1em;

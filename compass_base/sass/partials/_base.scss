@@ -56,13 +56,12 @@ h1, h2, h3, h4, h5, h6, lh, .nav-link, .modal-link {font-family: $font-head;}
 // ================================================
 
 section {
-	//Default styles
 	//(Note: home section margins have special styles applied in _content.scss;)
 	position: relative;
 	height: 670px;
   min-height: 670px;
 	@include mq-font-sizes(0.7em, 1.2em, 1.3em, 1.5em);	
-	@include padding(30%, 20%);
+	//@include padding(30%, 20%);
 	@include margin(100px);
 
 	// Medium Styles
