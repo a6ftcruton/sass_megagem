@@ -184,8 +184,11 @@
   background-color: #00334d;
   color: $hover;
   padding: 1em;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: row;
   flex-direction: row;
+  -webkit-flex-wrap: no-wrap;
   flex-wrap: no-wrap;
   justify-content: center;
   align-items: center;
@@ -212,6 +215,7 @@
 }
 .left {
   text-align: center; 
+  display: -webkit-flex;
   display: flex;
   justify-content: space-around;
 }

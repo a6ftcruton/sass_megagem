@@ -1,7 +1,6 @@
 // Box Sizing
 //========================================
 @mixin bs($bs-type) {
-  -webkit-box-sizing: $bs-type;
   -moz-box-sizing: $bs-type;
   box-sizing: $bs-type;
 }
@@ -13,8 +12,6 @@
   @include transition-duration(0.3s);
   color: $color;
   background-color: $background;
-  -webkit-box-shadow: $box-shadow;
-  -moz-box-shadow: $box-shadow;
   box-shadow: $box-shadow;
 }
 
