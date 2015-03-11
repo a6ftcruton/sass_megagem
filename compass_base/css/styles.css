@@ -1208,46 +1208,56 @@ i:hover,
 
 /* line 265, ../sass/modules/_content.scss */
 .about-text {
+  position: relative;
+  overflow: auto;
+  text-align: left;
+  padding-right: 15%;
+  margin: 5%; }
+  @media (min-width: 45em) {
+    /* line 265, ../sass/modules/_content.scss */
+    .about-text {
+      margin: 7%; } }
+  @media (min-width: 60em) {
+    /* line 265, ../sass/modules/_content.scss */
+    .about-text {
+      margin: 8%; } }
+  @media (min-width: 78em) {
+    /* line 265, ../sass/modules/_content.scss */
+    .about-text {
+      padding: 10%; } }
+
+/* line 283, ../sass/modules/_content.scss */
+.about-section > h1 {
   position: absolute;
   top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 50%;
-  height: 60%;
-  margin: auto;
-  overflow: auto;
-  text-align: left; }
-
-/* line 287, ../sass/modules/_content.scss */
-.about-text > h1 {
-  margin-right: 8%;
-  text-align: right;
+  right: 10%;
   color: rgba(0, 51, 77, 0.9); }
+
+/* line 289, ../sass/modules/_content.scss */
+.about-answer {
+  font-size: 0.6rem; }
+  @media (min-width: 45em) {
+    /* line 289, ../sass/modules/_content.scss */
+    .about-answer {
+      font-size: 0.9rem; } }
+  @media (min-width: 60em) {
+    /* line 289, ../sass/modules/_content.scss */
+    .about-answer {
+      font-size: 1rem; } }
+  @media (min-width: 78em) {
+    /* line 289, ../sass/modules/_content.scss */
+    .about-answer {
+      font-size: 1.2rem; } }
 
 /* line 292, ../sass/modules/_content.scss */
 .about-question {
-  margin-bottom: 0;
-  font-size: 0.4em; }
-  @media (min-width: 45em) {
-    /* line 292, ../sass/modules/_content.scss */
-    .about-question {
-      font-size: 0.6em; } }
-  @media (min-width: 60em) {
-    /* line 292, ../sass/modules/_content.scss */
-    .about-question {
-      font-size: 0.8em; } }
-  @media (min-width: 78em) {
-    /* line 292, ../sass/modules/_content.scss */
-    .about-question {
-      font-size: 0.8em; } }
+  margin-bottom: 0; }
 
-/* line 296, ../sass/modules/_content.scss */
+/* line 295, ../sass/modules/_content.scss */
 .about-answer {
-  margin-top: 1%;
-  font-size: 16px; }
+  margin-top: 1%; }
 
-/* line 303, ../sass/modules/_content.scss */
+/* line 301, ../sass/modules/_content.scss */
 .connect-section {
   padding: 40% 0;
   color: #e9dfb5;
@@ -1256,26 +1266,26 @@ i:hover,
   background-color: #03031a;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nNjAwJyBoZWlnaHQ9JzYwMCcgdmlld0JveD0nMCAwIDE1MCAxNTAnPgo8ZmlsdGVyIGlkPSdpJyB4PScwJyB5PScwJz4KCTxmZUNvbG9yTWF0cml4IHR5cGU9J21hdHJpeCcgdmFsdWVzPScxIDAgMCAwIDAgIDAgMSAwIDAgMCAgMCAwIDEgMCAwICAwIDAgMCAwIDAnIC8+CjwvZmlsdGVyPgo8ZmlsdGVyIGlkPSduJyB4PScwJyB5PScwJz4KCTxmZVR1cmJ1bGVuY2UgdHlwZT0ndHVyYnVsZW5jZScgYmFzZUZyZXF1ZW5jeT0nLjcnIHJlc3VsdD0nZnV6eicgbnVtT2N0YXZlcz0nMicgc3RpdGNoVGlsZXM9J3N0aXRjaCcvPgoJPGZlQ29tcG9zaXRlIGluPSdTb3VyY2VHcmFwaGljJyBpbjI9J2Z1enonIG9wZXJhdG9yPSdhcml0aG1ldGljJyBrMT0nMCcgazI9JzEnIGszPSctNzMnIGs0PScuMDEnIC8+CjwvZmlsdGVyPgo8cmVjdCB3aWR0aD0nMTAyJScgaGVpZ2h0PScxMDIlJyBmaWxsPScjMDMwMzFhJy8+CjxyZWN0IHg9Jy0xJScgeT0nLTElJyB3aWR0aD0nMTAyJScgaGVpZ2h0PScxMDIlJyBmaWxsPScjZmZmZmZmJyBmaWx0ZXI9J3VybCgjbiknIG9wYWNpdHk9JzEnLz4KPHJlY3QgeD0nLTElJyB5PSctMSUnIHdpZHRoPScxMDIlJyBoZWlnaHQ9JzEwMiUnIGZpbGw9JyMwMzAzMWEnIGZpbHRlcj0ndXJsKCNpKScgb3BhY2l0eT0nMScvPgo8L3N2Zz4="); }
   @media (min-width: 45em) {
-    /* line 303, ../sass/modules/_content.scss */
+    /* line 301, ../sass/modules/_content.scss */
     .connect-section {
       padding: 30% 0%; } }
   @media (min-width: 60em) {
-    /* line 303, ../sass/modules/_content.scss */
+    /* line 301, ../sass/modules/_content.scss */
     .connect-section {
       padding: 15% 20%; } }
   @media (min-width: 78em) {
-    /* line 303, ../sass/modules/_content.scss */
+    /* line 301, ../sass/modules/_content.scss */
     .connect-section {
       padding: 10% 20%; } }
-  /* line 311, ../sass/modules/_content.scss */
+  /* line 309, ../sass/modules/_content.scss */
   .connect-section .sect-head {
     font-size: 3em;
     margin-bottom: 1em; }
-  /* line 315, ../sass/modules/_content.scss */
+  /* line 313, ../sass/modules/_content.scss */
   .connect-section .soc-link {
     margin: 5%; }
     @media (min-width: 45em) {
-      /* line 315, ../sass/modules/_content.scss */
+      /* line 313, ../sass/modules/_content.scss */
       .connect-section .soc-link {
         margin: 9%; } }
 

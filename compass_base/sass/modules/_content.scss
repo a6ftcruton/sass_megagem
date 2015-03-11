@@ -263,16 +263,12 @@
   right: 0;
 }
 .about-text {
-  position: absolute;
-  top: 0;
-   right:0;
-  bottom:0;
-  left:0;
-   width: 50%;
-  height: 60%;
-  margin: auto;
-   overflow: auto;
+  position: relative;
+  overflow: auto;
   text-align: left;
+  padding-right: 15%; 
+  @include mq-margin(5%, 7%, 8%, 10%);
+  // @include at-breakpoint($XL) { padding-right: 15% }
 
   
   // width: 70%;
@@ -284,18 +280,20 @@
   // right: 18%;
   // width: 70%;
 }
-.about-text > h1 {
-  margin-right: 8%;
-  text-align: right;
+.about-section > h1 {
+  position: absolute;
+  top: 0;
+  right: 10%;
   color: rgba($color1, 0.9); 
+}
+.about-answer {
+  @include mq-font-sizes(0.6rem, 0.9rem, 1rem, 1.2rem);
 }
 .about-question {
   margin-bottom: 0;
-  @include mq-font-sizes(0.4em, 0.6em, 0.8em, 0.8em);
 }
 .about-answer {
   margin-top: 1%;
-  font-size: 16px;
 }
 
 // 					CONNECT Section
