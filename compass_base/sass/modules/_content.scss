@@ -210,6 +210,11 @@
   text-align: center;
   margin: auto;
 }
+.right,
+.click-for {
+  font-family: $font-body; 
+  font-weight: bold;
+}
 .right { 
   @include mq-font-sizes(0.3em, 0.8em, 1em, 1em);
 }

@@ -9,7 +9,7 @@
 @import url('http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
 
 // Google Fonts
-@import url('http://fonts.googleapis.com/css?family=Tenor+Sans|PT+Sans|PT+Serif|Oswald');
+@import url('http://fonts.googleapis.com/css?family=Tenor+Sans|Oswald');
 
 //   Default Styles 
 // ================================================
@@ -41,7 +41,6 @@ body {
 // Font Family
 // ================================================
 p {font-family: $font-body;}
-a {font-family: $font-link;}
 h1, h2, h3, h4, h5, h6, lh, .nav-link, .modal-link {font-family: $font-head;}
 
 // Section layout (margins/padding)
