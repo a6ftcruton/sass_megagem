@@ -93,13 +93,16 @@
   text-align: right;
   margin-right: 10%;
   font-size: 3em;
+  @include mq-font-sizes(0.7em, 1.2em, 1.3em, 1.5em);	
 }
 .video-container {
   position: relative;
   margin: 10%;
   border-radius: 25px;
+  line-height: 0;
 }
 .project-description {
+  line-height: 1.4em;
   position: absolute;
   top: 0;
   left: 0;
@@ -123,9 +126,11 @@
   position: relative;
   top: 10%;
   -webkit-transform: translateY(-10%);
+  -moz-transform: translateY(-10%);
   -ms-transform: translateY(-10%);
  	transform: translateY(-10%);
-  @include mq-font-sizes(0.05em, 0.85em, 1em, 0.9em);
+  // @include mq-font-sizes(0.05em, 0.85em, 1em, 0.9em);
+  font-size: .8em;
   @include mq-margin(0, 1%, 2%, 0);
 }
 .spec-text {
@@ -133,6 +138,7 @@
   text-align: left;
   margin-top: 0;
   padding-left: 10%;
+  font-size: .8em;
 }
 .spec-text > li{
   @include mq-font-sizes(8px, 0.8em, 0.8em, 0.9em);
@@ -150,19 +156,23 @@
   letter-spacing: 0.1em;
   text-align: center;
   padding: 5px;
-  @include mq-font-sizes(0.1em, 0.9em, 1.1em, 1.2em);
+  @include mq-font-sizes(0.7em, 0.9em, 1.1em, 1.2em);
   @include mq-margin(0, 2% 4%, 4% 8%, 1% 10%);
 }
 .video {
   width: 100%;
   border-radius: 25px;
+  border: 15px solid rgba($color1, 1);
+  // fix bug where chrome leaves half-pixel between right border and video element
+  box-shadow: inset 0px 0px 0px 10px rgba($color1, 1); 
 }
 .hover-for-demo {
   display: none;
   @include at-breakpoint($Medium) {
     display: block;
     font-family: $font-head;
-    color: rgba(255, 255, 255, 0.7);
+    color: #fff; 
+    opacity: 0.6; // older firefox
     letter-spacing: 0.1em;
     position: absolute;
     bottom: -0.5em;
@@ -217,12 +227,13 @@
   font-weight: bold;
 }
 .right { 
-  @include mq-font-sizes(0.3em, 0.8em, 1em, 1em);
+  @include mq-font-sizes(0.7em, 0.9em, 1em, 1.1em);
 }
 .left {
   text-align: center; 
   display: -webkit-flex;
   display: flex;
+  -webkit-justify-content: space-around;
   justify-content: space-around;
 }
 .left > a > .fa {
@@ -237,9 +248,12 @@
   display: none;
   @include at-breakpoint($Large) {
     display: inline-block;
-    position:absolute;
+    position: absolute;
+    top: 20%;
+    right: 0.5em;
     font-size: 0.6em;
-    color: rgba( $hover, 0.5);
+    opacity: 0.5; // older firefox
+    color: $hover;
     padding: 0 2% 1% 0;
   }
 }
@@ -264,7 +278,8 @@
   position: absolute;
   top: 15%;
   right: 0;
-    transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
   @include at-breakpoint($Medium) {
     border-bottom: 2px solid rgba($color1, 0.1);
     top: 45%;
