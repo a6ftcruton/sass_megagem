@@ -1,7 +1,5 @@
-
 // Colors:
 //=============================================================
-
 $color1: darken(#006699, 15%);  			// header/footer bg
 $color3: lighten(#4B88A6, 20%);				// body bg
 $color4: #002232; 										// body text and headings
@@ -10,18 +8,14 @@ $hover : #B8B3D6;
 
 // Font Stacks
 //=============================================================
-
 $font-body: Tenor Sans, Georgia, serif;
 $font-header: PT Serif, Helvetica, serif;
 $font-link: PT Sans, serif;
 $font-head: Oswald, Helvetica, serif;
 
-
-
 // Media Query Variables (default styles < 45em | Mobile First)
 //=============================================================
-$Small: 280px;   // used only in special cases, not included in any mixins
-
+$Small: 280px;   // ! used only in special cases, not included in any mixins
 $Medium: 45em;	// < ~ 750px wide with 16px body font
 $Large: 60em;   // < ~ 1200px wide with 16px body font
 $XL: 78em;      // real big

@@ -1,52 +1,34 @@
-// Modal menu
-
 .modal-container {
-	padding: 0;
+  padding: 0;
 }
 .modal {
-	position: absolute;  // Causing huge whitespace to right of all sections.
-	display: block;
-	margin:0;
-	padding: 0;
-	opacity: 0;
-	z-index: 999;
-	width: 40%;
-	height: 100%;
-	/*right: -200em;*/
-	text-align: center;
-	background-color: white;
-	@include at-breakpoint($Medium) {
-		font-size: 1.4em;
-	}
+  position: absolute;  // Causing huge whitespace to right of all sections.
+  display: block;
+  margin:0;
+  padding: 0;
+  opacity: 0;
+  z-index: 999;
+  width: 40%;
+  height: 100%;
+  text-align: center;
+  background-color: white;
+  @include at-breakpoint($Medium) {
+    font-size: 1.4em;
+  }
 }
 .modal ul li{margin:2em auto;padding: 0;}
-
 .menu ul {margin:2em;padding: 0;}
-
 .close-modal-msg { font-size: 0.7em; color: $color3;}
-
 .visible {
-	opacity: 1;
-	right: 0;  // sticks modal to right side of viewport
+  opacity: 1;
+  right: 0;  // sticks modal to right side of viewport
 }
 .screen {
-	opacity: 0;
-	//left: 200em;
-	-webkit-transition: all .2s ease;
-	-moz-transition: all .2s ease;
-	transition: all .2s ease;
+  opacity: 0;
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  transition: all .2s ease;
 }
-/*.blind {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: 998; // must be less than modal window's z-index
-	opacity: .75;
-	background-color: grey;
-	margin: 0;
-}*/
 .soc-link {
-	background-color: rgba(white, 0);
+  background-color: rgba(white, 0);
 }

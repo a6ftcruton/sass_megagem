@@ -1,91 +1,88 @@
 // Box Sizing
 //========================================
 @mixin bs($bs-type) {
-	-webkit-box-sizing: $bs-type;
-	-moz-box-sizing: $bs-type;
-	box-sizing: $bs-type;
+  -webkit-box-sizing: $bs-type;
+  -moz-box-sizing: $bs-type;
+  box-sizing: $bs-type;
 }
-
 
 // Hover Transition
 //========================================
 @mixin transition-hover($color, $background: "", $box-shadow:""){
-	@include transition-property(all);
-	@include transition-duration(0.3s);
-	color: $color;
-	background-color: $background;
-	-webkit-box-shadow: $box-shadow;
-	-moz-box-shadow: $box-shadow;
-	box-shadow: $box-shadow;
+  @include transition-property(all);
+  @include transition-duration(0.3s);
+  color: $color;
+  background-color: $background;
+  -webkit-box-shadow: $box-shadow;
+  -moz-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
 }
-
-
 
 // Media Query-based font-sizes
 //========================================
 @mixin mq-font-sizes($default, $M, $L, $X) {
-	font-size: $default;
-	@include at-breakpoint($Medium) {font-size: $M;}
-	@include at-breakpoint($Large) {font-size: $L;}
-	@include at-breakpoint($XL) {font-size: $X;}
+  font-size: $default;
+  @include at-breakpoint($Medium) { font-size: $M; }
+  @include at-breakpoint($Large) { font-size: $L; }
+  @include at-breakpoint($XL) { font-size: $X; }
 }
 
 // Padding shorthand
 //========================================
 @mixin padding($top-btm:"", $right-left:"") {
-	padding-top: $top-btm;
-	padding-right: $right-left;
-	padding-bottom: $top-btm;
-	padding-left: $right-left;
+  padding-top: $top-btm;
+  padding-right: $right-left;
+  padding-bottom: $top-btm;
+  padding-left: $right-left;
 }
 
 // Margin shorthand
 //========================================
 @mixin margin($top-btm:"", $left-right:"") {
-	padding-top: $top-btm;
-	padding-right: $left-right;
-	padding-bottom: $top-btm;
-	padding-left: $left-right;
+  padding-top: $top-btm;
+  padding-right: $left-right;
+  padding-bottom: $top-btm;
+  padding-left: $left-right;
 }
 
 // Media Query-based margin
 //========================================
 @mixin mq-margin($default, $M, $L, $X) {
-	margin: $default;
-	@include at-breakpoint($Medium) {margin: $M;}
-	@include at-breakpoint($Large) {margin: $L;}
-	@include at-breakpoint($XL) {padding: $X;}
+  margin: $default;
+  @include at-breakpoint($Medium) {margin: $M;}
+  @include at-breakpoint($Large) {margin: $L;}
+  @include at-breakpoint($XL) {padding: $X;}
 }
 // Media Query-based padding
 //========================================
 @mixin mq-padding($default, $M, $L, $X) {
-	padding: $default;
-	@include at-breakpoint($Medium) {padding: $M;}
-	@include at-breakpoint($Large) {padding: $L;}
-	@include at-breakpoint($XL) {padding: $X;}
+  padding: $default;
+  @include at-breakpoint($Medium) {padding: $M;}
+  @include at-breakpoint($Large) {padding: $L;}
+  @include at-breakpoint($XL) {padding: $X;}
 }
 
 // Logo Width based on Media Query
 //========================================
 @mixin mq-logo($default, $M, $L, $X) {
-	width: $default;
-	@include at-breakpoint($Medium) {width: $M;}
-	@include at-breakpoint($Large) {width: $L;}
-	@include at-breakpoint($XL) {width: $X;}
+  width: $default;
+  @include at-breakpoint($Medium) {width: $M;}
+  @include at-breakpoint($Large) {width: $L;}
+  @include at-breakpoint($XL) {width: $X;}
 }
 
 // Display 
 //========================================
 @mixin fulldisplay($display: inline, $overflow: visible, $width: 100%, $height: auto) {
-	display: $display;
-	overflow: $overflow;
-	width: $width;
-	height: $height;
+  display: $display;
+  overflow: $overflow;
+  width: $width;
+  height: $height;
 }
 
 // Color + Background-Color
 //========================================
 @mixin color($color, $background) {
-	color: $color;
-	background-color: $background;
+  color: $color;
+  background-color: $background;
 }

@@ -1,81 +1,67 @@
-// ============================================ //
-// -----------------  HEADER ------------------ //
-// ============================================ //
-
 .layout-header {
-	position: fixed;  // fixed = positioned relative to document, not to parent
-	top:0;
-	z-index: 999;
-	width: 100%;
-	display: block;
+  position: fixed;  // fixed = positioned relative to document, not to parent
+  top:0;
+  z-index: 999;
+  width: 100%;
+  display: block;
   /* overflow: hidden */
-	vertical-align: middle;
-	@include single-box-shadow;
-	height: $content-margin; // must match content margin-top!
-	max-height: $content-margin;
-	margin: 0;
+  vertical-align: middle;
+  @include single-box-shadow;
+  height: $content-margin; // must match content margin-top!
+  max-height: $content-margin;
+  margin: 0;
 	
 .archive-wrapper {
-	display:none;  // changes to display for larger layouts
+  display:none;  // changes to display for larger layouts
 }
-
 .menu {	
-	@include sassy-button("matte", 5px, 19px, $color1, lighten($color1, 3%), #fff, "raised");
-	height: 3rem;
-	float: right;
-	margin-top: 0.7rem;
-	margin-right: 4%;
-	font-size: 0.9rem;
+  @include sassy-button("matte", 5px, 19px, $color1, lighten($color1, 3%), #fff, "raised");
+  height: 3rem;
+  float: right;
+  margin-top: 0.7rem;
+  margin-right: 4%;
+  font-size: 0.9rem;
 }
-
 .header-logo {
-	display: block;
-	position: absolute;
-	margin: auto 0;
-	top: 5%;
-	left: 3%;
-	@include mq-logo(7em,9em,11em,13em);
+  display: block;
+  position: absolute;
+  margin: auto 0;
+  top: 5%;
+  left: 3%;
+  @include mq-logo(7em,9em,11em,13em);
 }
 
+//              NAV STYLES             
+//====================================
+  .nav-container {
+    display: none;
+  }
+  @include at-breakpoint($Large) {
+    button.menu {
+      display: none;
+  }
+    .nav-container {
+      display: block;
+      margin-right: 8%;
+      text-align: right;
+      letter-spacing: 0.25em;
+      white-space: nowrap;
+      overflow: hidden;
+      padding: 0;					
+        .nav-link {
+          display: inline-block;
+          text-align: center;
+          width: 6em;
+          line-height: 4em;
+          font-size: 1.1em;
+        }
+      }				
+  }
 
-//------------  NAV STYLES -------------//
-	.nav-container {
-		display: none;
-	}
+  @include at-breakpoint($XL) {
+    .nav-container.nav-link {
+      font-size: 1.6em;
+    }
+  }
 
- // MEDIUM STYLES
-	@include at-breakpoint($Medium) {
-		
-	}
-
-	// LARGE STYLES
-	@include at-breakpoint($Large) {
-		button.menu {
-			display: none;
-		}
-		.nav-container {
-			display: block;
-  		margin-right: 8%;
-			text-align: right;
-			letter-spacing: 0.25em;
-			white-space: nowrap;
-			overflow: hidden;
-			padding: 0;					
-  			.nav-link {
-  				display: inline-block;
-  				text-align: center;
-  				width: 6em;
-  				line-height: 4em;
-  				font-size: 1.1em;
-  			}
-		}				
-	}
-
-	@include at-breakpoint($XL) {
-		.nav-container.nav-link {
-			font-size: 1.6em;
-		}
-	}
-
-} // end layout header
-
+}

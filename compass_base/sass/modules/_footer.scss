@@ -1,42 +1,40 @@
-// ============================================ //
-// ----------------- FOOTER  ------------------ //
-// ============================================ //
 footer {
-	background-color: $color1;
-	position: relative;
-	bottom: 0;
-	right: 0;
-	left: 0;
-	height: 4em;
-	text-align: center;
-	.copyright {
-			margin: 0;
-			color: $color3;
-			font-family: $font-head;
-			letter-spacing: .15em;
-			line-height: 4em;
-	}
+	@include mq-font-sizes(.4rem, .8rem, .9rem, 1rem);
+  background-color: $color1;
+  position: relative;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 4em;
+  text-align: center;
 
-	.footer-logo {
-		position: absolute;
-		bottom: -2em;
-		bottom: 0;
-		width: 6em;
-		height: auto;
-		@include at-breakpoint($Medium) {
-			width: 10em;
-		}
-	}
-	.footer-chase {
-		left: 1%;
-		@include at-breakpoint($Medium) {left:5%;}
-		@include at-breakpoint($Large) {left:8%;}
-		@include at-breakpoint($XL) {left:12%;}
-	}
-	.footer-bronco {
-		right: 1%;
-		@include at-breakpoint($Medium) {right:5%;}		
-		@include at-breakpoint($Large) {right:8%;}
-		@include at-breakpoint($XL) {right:12%;}
-	}
+  .copyright {
+    margin: 0;
+    color: $color3;
+    font-family: $font-head;
+    letter-spacing: .15em;
+    line-height: 4em;
+  }
+  .footer-logo {
+    position: absolute;
+    bottom: -2em;
+    bottom: 0;
+    width: 6em;
+    height: auto;
+    @include at-breakpoint($Medium) {
+      width: 10em;
+    }
+  }
+  .footer-chase {
+    left: 1%;
+    @include at-breakpoint($Medium) {left:5%;}
+    @include at-breakpoint($Large) {left:8%;}
+    @include at-breakpoint($XL) {left:12%;}
+  }
+  .footer-bronco {
+    right: 1%;
+    @include at-breakpoint($Medium) {right:5%;}		
+    @include at-breakpoint($Large) {right:8%;}
+    @include at-breakpoint($XL) {right:12%;}
+  }
 }

@@ -11,20 +11,17 @@
 // Google Fonts
 @import url('http://fonts.googleapis.com/css?family=Tenor+Sans|PT+Sans|PT+Serif|Oswald');
 
-
 //   Default Styles 
 // ================================================
-
 * {
-	@include bs(border-box); 
-	list-style: none; 
+  @include bs(border-box); 
+  list-style: none; 
 }
 html {
-	height: 100%;
-	height: auto; // allows jQuery to continue setting section height
-	width: 100%; 
+  height: 100%;
+  height: auto; // allows jQuery to continue setting section height
+  width: 100%; 
 }
-
 [href*="#"], 
 .mailto {text-decoration: none;}
 
@@ -32,111 +29,90 @@ html {
 
 ::selection {text-shadow: none;}
 
-
-// Default Font Size
+//  Default Font Size
 // ================================================
 body {	
-	font-size: 1em;
-	line-height: 1.4;
-	width: 100%;
-	height: 100%;
+  font-size: 1em;
+  line-height: 1.4;
+  width: 100%;
+  height: 100%;
 }
-
 
 // Font Family
 // ================================================
-
 p {font-family: $font-body;}
 a {font-family: $font-link;}
 h1, h2, h3, h4, h5, h6, lh, .nav-link, .modal-link {font-family: $font-head;}
-
-
 
 // Section layout (margins/padding)
 // ================================================
 
 section {
-	//(Note: home section margins have special styles applied in _content.scss;)
-	position: relative;
-	height: 670px;
+  position: relative;
+  height: 670px;
   min-height: 670px;
-	@include mq-font-sizes(0.7em, 1.2em, 1.3em, 1.5em);	
-	//@include padding(30%, 20%);
-	@include margin(100px);
-
-	// Medium Styles
+  @include mq-font-sizes(0.7em, 1.2em, 1.3em, 1.5em);	
+  @include margin(100px);
 	@include at-breakpoint($Medium) {
     height: 100%;
-		@include padding(30%, 15%);
-		@include margin(100px);
-	}
-
-	// Large Styles
-	@include at-breakpoint($Large) {
-		@include padding(20%, 12%);
-	}
-
-	// XL Styles
-	@include at-breakpoint($XL) {
-		@include padding(15%, 10%);
-	}
+    @include padding(30%, 15%);
+    @include margin(100px);
+  }
+  @include at-breakpoint($Large) {
+    @include padding(20%, 12%);
+  }
+  @include at-breakpoint($XL) {
+    @include padding(15%, 10%);
+  }
 }
 
 // Font Size
 // ================================================
-
 .intro {
-	@include mq-font-sizes(1rem, 1.2rem, 1.35rem, 1.6rem);
+  @include mq-font-sizes(1rem, 1.2rem, 1.35rem, 1.6rem);
 }
 .intro-headline {
-	font-weight: 600;
-	.intro-enlarge {
-		font-size: 110%; letter-spacing: 0.08em;
-	}
-	.quote {
-		font-size: 90%;
-	}
+  font-weight: 600;
+  .intro-enlarge {
+    font-size: 110%; letter-spacing: 0.08em;
+  }
+  .quote {
+    font-size: 90%;
+  }
 }
-footer {
-	@include mq-font-sizes(.4rem, .8rem, .9rem, 1rem);
-}
-
 
 // Default COLORS 
 // ================================================
-
 header,
 .layout-header, 
 footer {
-	background-color: $color1;
+  background-color: $color1;
 }
 [class*="-section"] {
-	background-color: $color9;
+  background-color: $color9;
 }	
 .home {
-	/*@include color(darken($color4, 5%), $color3);*/
-	background-color: rgba($color1, 0);
+  background-color: rgba($color1, 0);
 }
-
 article p, 
 header,
 .title {
-	color: $color4;
-	border-color: $color4;
+  color: $color4;
+  border-color: $color4;
 }
-[class="fa fa-bars fa-2x"]{   				
-	color: $color3;
+[class="fa fa-bars fa-2x"] {
+  color: $color3;
 }
 .nav-link, 
 .soc-link {
-	@include color($color3, $color1);
+  @include color($color3, $color1);
 }
 lh, .footer-bio-text, .copyright{
-		color: darken($color9, 15%);			
-	}
+  color: darken($color9, 15%);			
+}
 a, i, .footer-link-connect {
-	color: $color3;
-	}		
+  color: $color3;
+}		
 
 // Link & Icon Transitions
 // ================================================
@@ -145,45 +121,38 @@ i:hover,
 .menu:hover i,
 .footer-link-connect:hover>i,
 .highlight-home:hover {
-	@include transition-hover($color9);
+  @include transition-hover($color9);
 }
 .nav-link:hover {
-	@include transition-hover($color9, lighten($color1, 5%));
+  @include transition-hover($color9, lighten($color1, 5%));
 }
 .nav-link:active {
-	@include transition-hover( darken($color9, 15%), $color1 );
+  @include transition-hover( darken($color9, 15%), $color1 );
 }
 .highlight-home {
-	@include transition-hover($color9);
-	@include transition-property(color);
-	@include transition-duration(2s);
+  @include transition-hover($color9);
+  @include transition-property(color);
+  @include transition-duration(2s);
 }
-/*.highlight-home {
-	@include transition-hover($color9);
-	@include transition-property(color);
-	@include transition-duration(2s);
-}*/
 .highlight-link {
-	@include transition-hover( $color9 );
+  @include transition-hover( $color9 );
 }
 .modal-link:hover,
 .close-modal-msg:hover {
-	@include transition-hover($color1);
+  @include transition-hover($color1);
 }
 .modal-link:active {
-	color: darken($color9, 15%);
+  color: darken($color9, 15%);
 }
 .highlight-modal {
-	@include transition-hover($color1);
+  @include transition-hover($color1);
 }
 .highlight-modal:active {
-	color: $color9;
+  color: $color9;
 }
 .highlight-modal:hover {
-	@include transition-hover($color1);
+  @include transition-hover($color1);
 }
-
 .footer-link-connect:hover, .footer-link-share:hover {
-	@include transition-hover(background-image(linear-gradient(left, white, #dddddd)));
-		/*@include transition-hover($color9, lighten($color1, 5%), 1px solid $color9);*/
+  @include transition-hover(background-image(linear-gradient(left, white, #dddddd)));
 }
