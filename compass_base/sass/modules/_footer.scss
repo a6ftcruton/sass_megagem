@@ -19,11 +19,8 @@ footer {
     position: absolute;
     bottom: -2em;
     bottom: 0;
-    width: 6em;
+    width: 10em;
     height: auto;
-    @include at-breakpoint($Medium) {
-      width: 10em;
-    }
   }
   .footer-chase {
     left: 1%;

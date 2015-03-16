@@ -34,7 +34,7 @@
     @include margin(13%);
   }
   @include at-breakpoint($XL) {
-    @include margin(8%);
+    @include margin(6%);
   }
 }
 #home-bg {
@@ -129,7 +129,6 @@
   -moz-transform: translateY(-10%);
   -ms-transform: translateY(-10%);
  	transform: translateY(-10%);
-  // @include mq-font-sizes(0.05em, 0.85em, 1em, 0.9em);
   font-size: .8em;
   @include mq-margin(0, 1%, 2%, 0);
 }
@@ -160,11 +159,16 @@
   @include mq-margin(0, 2% 4%, 4% 8%, 1% 10%);
 }
 .video {
-  width: 100%;
-  border-radius: 25px;
-  border: 15px solid rgba($color1, 1);
-  // fix bug where chrome leaves half-pixel between right border and video element
-  box-shadow: inset 0px 0px 0px 10px rgba($color1, 1); 
+    display: block;
+    width: 100%;
+    border-radius: 25px;
+    border: 15px solid rgba($color1, 1);
+    // fix bug where chrome leaves half-pixel between right border and video element
+    box-shadow: inset 0px 0px 0px 10px rgba($color1, 1); 
+}
+// hide play button on iOS 
+video::-webkit-media-controls {
+    display:none !important;
 }
 .hover-for-demo {
   display: none;
@@ -233,11 +237,17 @@
   text-align: center; 
   display: -webkit-flex;
   display: flex;
-  -webkit-justify-content: space-around;
-  justify-content: space-around;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  @include at-breakpoint($Medium) {
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+  }
 }
 .left > a > .fa {
-  @include mq-font-sizes(1.2em, 1.3em, 1.5em, 1.6em);
+  @include mq-font-sizes(1.7em, 1.7em, 1.7em, 1.8em);
 }
 .line {
   border-bottom: 2px solid rgba(255, 255, 255, 0.5);
@@ -261,16 +271,17 @@
 // 					ABOUT Section
 // ===============================
 .about-section {
-  padding: 0;
+  height: 100%;
   background: $color3; // Old browser fallback
   display: -webkit-flex;
   display: flex;
+  padding: 0;
   justify-content: center;
   align-items: center;
 }
 .about-text {
   text-align: left;
-  @include mq-margin(15% 22% 0 5%, 0 22% 0 20%, 0 22% 0 18%, 0 22% 0 12%);
+  @include mq-margin(15% 22% 15% 5%, 10% 22% 10% 20%, 10% 22% 10% 18%, 15% 22% 15% 12%);
   @include mq-padding(0, 0, 0, 0);
 }
 .about-section > h1 {
@@ -300,7 +311,7 @@
   }
 }
 .about-answer {
-  @include mq-font-sizes(0.6rem, 0.9rem, 1rem, 1.2rem);
+  @include mq-font-sizes(0.8rem, 1rem, 1.1rem, 1.3rem);
 }
 .about-question {
   margin-bottom: 0;
